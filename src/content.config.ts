@@ -36,8 +36,6 @@ const cases = defineCollection({
       })
       .optional(),
     sources: z.array(z.object({ title: z.string(), url: z.string().url() })).min(1),
-    // Visual theme slug; each case with a drawing gets its own look (see [data-theme] blocks in global.css)
-    theme: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });

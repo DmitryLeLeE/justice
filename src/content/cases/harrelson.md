@@ -11,7 +11,6 @@ lng: -95.3698
 yearStart: 1982
 summary: A man was tried for the murder of a US federal judge. The trial was heard in Houston and drawn for the press.
 outcome: On 14 December 1982 Charles Harrelson, father of the actor Woody Harrelson, was convicted of murdering Judge John H. Wood Jr.
-theme: harrelson
 image:
   src: https://tile.loc.gov/storage-services/service/pnp/ppmsca/51600/51607v.jpg
   alt: Colored-pencil courtroom drawing on purple-gray paper from the Harrelson trial, signed Myrick 82

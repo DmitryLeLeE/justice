@@ -8,21 +8,23 @@ export async function getStaticPaths() {
   const cases = await getCases();
   return cases.map((entry, i) => ({
     params: { id: entry.id },
-    props: { entry, prev: cases[i - 1] ?? null, next: cases[i + 1] ?? null },
+    props: { entry, number: i + 1, prev: cases[i - 1] ?? null, next: cases[i + 1] ?? null },
   }));
 }
 
-const { entry, prev, next } = Astro.props;
+const { entry, number, prev, next } = Astro.props;
+const fileNo = `AJ-${String(number).padStart(3, '0')}`;
 const d = entry.data;
 const { Content } = await render(entry);
 ---
 
-<Base title={d.title} description={d.summary} theme={d.theme}>
-  <article class="case">
+<Base title={d.title} description={d.summary}>
+  <article class="case dossier">
+    <div class="form-head"><span>Official case file</span><span>No. {fileNo}</span></div>
     <p class="crumbs">
       <a href={url(`#${entry.id}`)}>← Back to the map</a>
     </p>
-    <p class="stamp">Case file · {CATEGORIES[d.category]}</p>
+    <p class="stamp">{CATEGORIES[d.category]}</p>
     <h1>{d.title}</h1>
     {d.titleOriginal && <p class="orig">{d.titleOriginal}</p>}
 
@@ -39,7 +41,7 @@ const { Content } = await render(entry);
       {
         d.image && (
           <figcaption>
-            {d.image.caption && <>{d.image.caption}. </>}
+            <strong>Exhibit A.</strong> {d.image.caption && <>{d.image.caption}. </>}
             {d.image.artist && <>Artist: {d.image.artist}. </>}
             Credit: {d.image.license}. <a href={d.image.sourceUrl} rel="noopener">Source</a>
           </figcaption>

@@ -29,7 +29,7 @@ import Base from '../layouts/Base.astro';
     <h2>Adding a case</h2>
     <p>
       Each case is one Markdown file in <code>src/content/cases/</code>: data at the top, the write-up below. A case is
-      shown only if it has an <code>image</code> block with the URL of the drawing; set <code>theme</code> to give it its own look.
+      shown only if it has an <code>image</code> block with the URL of the drawing.
     </p>
     <pre><code>---
 title: Name of the proceeding
@@ -44,7 +44,6 @@ yearStart: 1899
 yearEnd: 1906         # optional
 summary: One or two sentences for the card.
 outcome: How it ended.
-theme: my-case       # optional, matches a [data-theme] block in global.css
 image:
   src: https://example.org/drawing.jpg
   alt: What the drawing shows

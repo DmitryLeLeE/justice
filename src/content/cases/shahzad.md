@@ -11,7 +11,6 @@ lng: -74.002
 yearStart: 2010
 summary: A man who tried to detonate a car bomb in Times Square in May 2010 pleaded guilty and was sentenced in a Manhattan federal court. Cameras are barred from federal courtrooms, so the hearing was drawn.
 outcome: Faisal Shahzad pleaded guilty in June 2010 and was sentenced on 5 October 2010 to life in prison.
-theme: shahzad
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Faisal%20Shahzad%20sentencing%20001.jpg?width=1400
   alt: Courtroom drawing of Faisal Shahzad's sentencing hearing

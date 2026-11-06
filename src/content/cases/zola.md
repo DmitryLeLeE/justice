@@ -11,7 +11,6 @@ lng: 2.345
 yearStart: 1898
 summary: The novelist who accused the army of covering up the Dreyfus miscarriage was tried for libel. The courtroom became a stage for the Dreyfus Affair, though the court barred most questions about the case itself.
 outcome: On 23 February 1898 Zola was sentenced to one year in prison and a 3,000-franc fine. The Court of Cassation annulled the verdict on 2 April; at the retrial in July he fled to London.
-theme: zola
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Proc%C3%A8s%20Zola%2C%20r%C3%A9quisitoire%20%28Petit%20Journal%20illustr%C3%A9%2C%201898-03-06%29.jpeg?width=1400
   alt: Illustration of the prosecutor's closing address at the Zola trial

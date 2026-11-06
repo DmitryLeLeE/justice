@@ -11,7 +11,6 @@ lng: -77.0165
 yearStart: 1865
 summary: Eight people were tried by a military commission for the murder of President Abraham Lincoln. The proceedings were drawn for the illustrated weeklies, since photographs of a courtroom were not yet practical.
 outcome: Four defendants were hanged on 7 July 1865. The other four received prison terms.
-theme: lincoln
 image:
   src: https://hd.housedivided.dickinson.edu/sites/default/files/images/HD_TrialH650603p344z.jpg
   alt: Wood engraving of the courtroom in the Old Penitentiary Building during the trial of the Lincoln conspirators

@@ -12,7 +12,6 @@ yearStart: 1899
 yearEnd: 1906
 summary: Captain Alfred Dreyfus, convicted of espionage in 1894, was tried a second time. By then the evidence was known to be forged and another officer had written the key document. A military court convicted him anyway.
 outcome: On 9 September 1899 the court voted 5 to 2 to find Dreyfus guilty "with extenuating circumstances" and sentenced him to ten years. Ten days later President Loubet pardoned him. On 12 July 1906 the Court of Cassation annulled the verdict without sending the case back for retrial.
-theme: dreyfus
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Alfred%20Dreyfus%20Rennes%20Trial%20opening%20session%201899-08-07.jpg?width=1400
   alt: Illustration of the opening session of Dreyfus's second court martial at Rennes
