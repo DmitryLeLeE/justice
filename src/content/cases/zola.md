@@ -11,6 +11,14 @@ lng: 2.345
 yearStart: 1898
 summary: The novelist who accused the army of covering up the Dreyfus miscarriage was tried for libel. The courtroom became a stage for the Dreyfus Affair, though the court barred most questions about the case itself.
 outcome: On 23 February 1898 Zola was sentenced to one year in prison and a 3,000-franc fine. The Court of Cassation annulled the verdict on 2 April; at the retrial in July he fled to London.
+theme: zola
+image:
+  src: https://commons.wikimedia.org/wiki/Special:FilePath/Proc%C3%A8s%20Zola%2C%20r%C3%A9quisitoire%20%28Petit%20Journal%20illustr%C3%A9%2C%201898-03-06%29.jpeg?width=1400
+  alt: Illustration of the prosecutor's closing address at the Zola trial
+  caption: The prosecutor's closing address at the Zola trial, Le Petit Journal illustré, 6 March 1898
+  artist: Le Petit Journal illustré (engraving after Henri Meyer)
+  license: Public domain (Wikimedia Commons)
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Proc%C3%A8s_Zola%2C_r%C3%A9quisitoire_%28Petit_Journal_illustr%C3%A9%2C_1898-03-06%29.jpeg
 sources:
   - title: Le procès Zola devant la Cour d'assises de la Seine (1898), stenographic record, Internet Archive
     url: https://archive.org/details/leprocszoladev01zola/leprocszoladev01zola

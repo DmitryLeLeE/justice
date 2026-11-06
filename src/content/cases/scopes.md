@@ -11,6 +11,7 @@ lng: -85.01
 yearStart: 1925
 summary: A schoolteacher was tried for teaching evolution. A trial planned in advance became a public duel between William Jennings Bryan and Clarence Darrow over the Bible and science.
 outcome: On 21 July 1925 the jury found Scopes guilty and the judge fined him $100. In 1927 the state Supreme Court overturned the fine on a technicality. The Butler Act was repealed only in 1967.
+draft: true
 sources:
   - title: Britannica, Scopes Trial
     url: https://www.britannica.com/event/Scopes-Trial

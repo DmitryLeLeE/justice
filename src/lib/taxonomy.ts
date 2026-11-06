@@ -14,6 +14,7 @@ export const CATEGORIES = {
   miscarriage: 'Miscarriages of justice',
   society: 'Science & society',
   hearing: 'Public inquiries',
+  crime: 'Crime trials',
 } as const;
 
 export type RegionKey = keyof typeof REGIONS;

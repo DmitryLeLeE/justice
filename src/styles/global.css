@@ -247,3 +247,87 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem 3rem; }
   .brand { font-size: 1.4rem; }
 }
 .leaflet-bar a.leaflet-disabled { background: var(--bg-2); color: #5a5148; }
+
+/* ───────────────────────── Per-case themes ─────────────────────────
+   Each case with a drawing has its own look. A theme sets the palette on the case page and on that
+   case's card on the map page, and adds a few structural touches on the case page. */
+
+/* Dreyfus: court-martial dossier. Cold steel, stencil stamp, paper clip feel. */
+[data-theme='dreyfus'] { --bg: #0c1116; --bg-2: #131b23; --bg-3: #1a2530; --bone: #d5dde3; --bone-2: #8c9aa6; --line: #2f3d4a; --blood: #3d6b8f; --blood-2: #6fa3cc; --tape: #c9d3dc; --head: 'Special Elite', 'Courier New', monospace; }
+body[data-theme='dreyfus'] { background: repeating-linear-gradient(0deg, transparent 0 31px, rgba(111, 163, 204, 0.05) 31px 32px), radial-gradient(ellipse at 80% -10%, rgba(61, 107, 143, 0.3), transparent 55%), var(--bg); }
+body[data-theme='dreyfus'] .case h1 { letter-spacing: 0; text-transform: uppercase; font-size: clamp(1.9rem, 6vw, 3.2rem); line-height: 1.15; text-shadow: none; }
+body[data-theme='dreyfus'] .stamp { border: 3px double var(--blood-2); letter-spacing: 0.3em; transform: rotate(-3deg); }
+body[data-theme='dreyfus'] .case figure .frame { border: 1px solid var(--blood-2); box-shadow: 0 0 0 8px #0c1116, 0 0 0 9px var(--blood-2); background: #fff; }
+body[data-theme='dreyfus'] .case figure img { filter: grayscale(1) contrast(1.05); mix-blend-mode: multiply; }
+body[data-theme='dreyfus'] .tape { background: repeating-linear-gradient(90deg, #6fa3cc 0 6px, transparent 6px 14px); height: 6px; }
+
+/* Zola: front page of a newspaper. Newsprint cream, heavy black, one red word. */
+[data-theme='zola'] { --bg: #ece4d0; --bg-2: #e2d8bf; --bg-3: #f4eedd; --bone: #17130e; --bone-2: #4d4435; --line: #17130e; --blood: #a3141b; --blood-2: #a3141b; --tape: #17130e; --head: 'Libre Baskerville', Georgia, serif; }
+body[data-theme='zola'] { background: var(--bg); color: var(--bone); }
+body[data-theme='zola']::before { opacity: 0.18; mix-blend-mode: multiply; }
+body[data-theme='zola'] .tape { background: var(--bone); height: 5px; border-bottom: 3px double var(--bone); }
+body[data-theme='zola'] .brand, body[data-theme='zola'] .site-header nav a, body[data-theme='zola'] .site-footer { color: var(--bone); }
+body[data-theme='zola'] .case h1 { font-family: 'Libre Baskerville', serif; font-weight: 700; font-size: clamp(2.2rem, 7vw, 4rem); letter-spacing: -0.02em; line-height: 1.05; text-shadow: none; border-top: 4px solid var(--bone); border-bottom: 1px solid var(--bone); padding: 0.6rem 0; text-align: center; }
+body[data-theme='zola'] .stamp { display: block; text-align: center; border: none; border-bottom: 1px solid var(--bone); color: var(--blood); transform: none; letter-spacing: 0.3em; }
+body[data-theme='zola'] .case .orig { text-align: center; }
+body[data-theme='zola'] .case figure .frame { border: 1px solid var(--bone); box-shadow: none; transform: none; background: #fff; }
+body[data-theme='zola'] .case figure img { filter: grayscale(1) contrast(1.1) sepia(0.2); }
+body[data-theme='zola'] .prose { column-count: 2; column-gap: 2rem; column-rule: 1px solid var(--bone-2); text-align: justify; hyphens: auto; }
+body[data-theme='zola'] .prose p:first-child::first-letter { color: var(--blood); }
+body[data-theme='zola'] .facts dt, body[data-theme='zola'] .sources h2, body[data-theme='zola'] .case h2, body[data-theme='zola'] .kicker { color: var(--blood); }
+body[data-theme='zola'] .sources a, body[data-theme='zola'] .pager a, body[data-theme='zola'] .crumbs a, body[data-theme='zola'] .case figcaption a { color: var(--blood); }
+@media (max-width: 640px) { body[data-theme='zola'] .prose { column-count: 1; } }
+
+/* Lincoln: 1865 broadside. Aged parchment, double rules, black letter weight. */
+[data-theme='lincoln'] { --bg: #2a1d12; --bg-2: #35261a; --bg-3: #45331f; --bone: #efdfb8; --bone-2: #bca57a; --line: #7a5b36; --blood: #8f1d12; --blood-2: #d05a3a; --tape: #e2b45a; --head: 'Libre Baskerville', Georgia, serif; }
+body[data-theme='lincoln'] { background: radial-gradient(ellipse at 50% 0%, rgba(226, 180, 90, 0.16), transparent 60%), var(--bg); }
+body[data-theme='lincoln'] .tape { background: repeating-linear-gradient(90deg, #e2b45a 0 3px, transparent 3px 9px); height: 8px; }
+body[data-theme='lincoln'] .case h1 { font-family: 'Libre Baskerville', serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: clamp(1.9rem, 6vw, 3.3rem); line-height: 1.15; text-align: center; border-top: 3px double var(--tape); border-bottom: 3px double var(--tape); padding: 0.8rem 0; text-shadow: none; }
+body[data-theme='lincoln'] .stamp { display: block; text-align: center; border: none; color: var(--tape); transform: none; letter-spacing: 0.35em; }
+body[data-theme='lincoln'] .case .orig { text-align: center; }
+body[data-theme='lincoln'] .case figure .frame { border: 14px solid #d8c391; outline: 2px solid #7a5b36; box-shadow: inset 0 0 0 2px #7a5b36, 0 10px 40px rgba(0, 0, 0, 0.8); transform: none; background: #e9dcb8; }
+body[data-theme='lincoln'] .case figure img { filter: sepia(0.5) contrast(1.05); }
+body[data-theme='lincoln'] .prose p { text-align: justify; }
+
+/* Watergate: 1973 television. Avocado and mustard, scan lines, CLASSIFIED. */
+[data-theme='watergate'] { --bg: #16190f; --bg-2: #1f2415; --bg-3: #2b311b; --bone: #efe6c4; --bone-2: #b3ab82; --line: #4a5230; --blood: #d98a14; --blood-2: #f0a830; --tape: #7f9a35; --head: 'Bebas Neue', Impact, sans-serif; }
+body[data-theme='watergate'] { background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.28) 0 2px, transparent 2px 4px), radial-gradient(ellipse at 20% -10%, rgba(240, 168, 48, 0.22), transparent 55%), var(--bg); }
+body[data-theme='watergate'] .tape { background: repeating-linear-gradient(90deg, #d98a14 0 40px, #7f9a35 40px 80px, #8c4a16 80px 120px); height: 12px; }
+body[data-theme='watergate'] .case h1 { color: var(--blood-2); text-shadow: 3px 3px 0 #5c3a0a; }
+body[data-theme='watergate'] .stamp { border-radius: 40px; border-width: 3px; transform: rotate(0); }
+body[data-theme='watergate'] .case figure .frame { border: 14px solid #2b311b; outline: 3px solid var(--blood); border-radius: 22px; box-shadow: 0 0 0 6px #0c0e07, 0 10px 40px rgba(0, 0, 0, 0.8); transform: none; background: #f4efe0; }
+body[data-theme='watergate'] .case figure img { filter: contrast(1.05) saturate(1.2); }
+body[data-theme='watergate'] .case figure::after { content: 'CLASSIFIED'; display: inline-block; margin-top: 0.6rem; padding: 0 0.6rem; border: 2px solid var(--blood-2); color: var(--blood-2); font-family: var(--type); letter-spacing: 0.3em; transform: rotate(-2deg); }
+
+/* Harrelson: Texas noir on purple-gray pastel paper, redaction bars. */
+[data-theme='harrelson'] { --bg: #1a1822; --bg-2: #24212f; --bg-3: #2f2b3d; --bone: #e8e2ee; --bone-2: #a59db5; --line: #453f58; --blood: #c8412d; --blood-2: #ee6a4f; --tape: #f0b256; --head: 'Bebas Neue', Impact, sans-serif; }
+body[data-theme='harrelson'] { background: radial-gradient(ellipse at 100% 0%, rgba(238, 106, 79, 0.22), transparent 50%), radial-gradient(ellipse at 0% 100%, rgba(120, 100, 170, 0.25), transparent 50%), var(--bg); }
+body[data-theme='harrelson'] .tape { background: repeating-linear-gradient(-45deg, #ee6a4f 0 10px, #1a1822 10px 20px); }
+body[data-theme='harrelson'] .case h1 { font-size: clamp(3rem, 10vw, 6rem); color: var(--bone); text-shadow: 4px 4px 0 var(--blood); }
+body[data-theme='harrelson'] .stamp { background: var(--blood); color: #fff; border-color: var(--blood); }
+body[data-theme='harrelson'] .case figure .frame { border: 6px solid #8e8aa0; box-shadow: 14px 14px 0 var(--blood), 0 10px 40px rgba(0, 0, 0, 0.8); transform: rotate(0.6deg); background: #8e8aa0; }
+body[data-theme='harrelson'] .facts dd:nth-of-type(3)::after { content: ''; }
+body[data-theme='harrelson'] .prose p:nth-child(2) strong, body[data-theme='harrelson'] .facts dt { letter-spacing: 0.2em; }
+
+/* Shahzad: federal docket. Cold white-blue, monospace, flat, no ornament. */
+[data-theme='shahzad'] { --bg: #0b1017; --bg-2: #111a24; --bg-3: #172331; --bone: #e4edf6; --bone-2: #8ea3b8; --line: #263647; --blood: #2f7de1; --blood-2: #5aa2ff; --tape: #e4edf6; --head: 'Special Elite', 'Courier New', monospace; }
+body[data-theme='shahzad'] { background: linear-gradient(180deg, #0b1017, #0f1722); }
+body[data-theme='shahzad']::before { opacity: 0.03; }
+body[data-theme='shahzad'] .tape { background: var(--blood); height: 4px; }
+body[data-theme='shahzad'] .case h1 { font-family: 'Special Elite', monospace; font-size: clamp(1.7rem, 5.5vw, 2.8rem); letter-spacing: 0; line-height: 1.2; text-shadow: none; text-transform: uppercase; border-left: 6px solid var(--blood); padding-left: 0.9rem; }
+body[data-theme='shahzad'] .stamp { border-radius: 0; border: 1px solid var(--blood-2); transform: none; letter-spacing: 0.2em; }
+body[data-theme='shahzad'] .stamp::before { content: 'DOCKET · '; }
+body[data-theme='shahzad'] .case figure .frame { border: 1px solid var(--blood-2); box-shadow: none; transform: none; background: #fff; }
+body[data-theme='shahzad'] .case figure img { filter: grayscale(0.4); }
+body[data-theme='shahzad'] .facts { border-top-color: var(--blood-2); font-family: 'Special Elite', monospace; }
+body[data-theme='shahzad'] .prose { font-family: 'Special Elite', monospace; }
+body[data-theme='shahzad'] .prose p:first-child::first-letter { float: none; font-family: inherit; font-size: inherit; padding: 0; color: inherit; }
+
+/* Card tweaks so each case already looks different on the map page */
+.card[data-theme='zola'] { background: #ece4d0; color: #17130e; border: 1px solid #17130e; border-top: 4px solid #17130e; }
+.card[data-theme='zola'] h3, .card[data-theme='zola'] .summary { color: #17130e; }
+.card[data-theme='lincoln'] { border-top-color: #e2b45a; border-style: double; border-width: 3px; }
+.card[data-theme='watergate'] { border-radius: 18px; }
+.card[data-theme='harrelson'] { box-shadow: 6px 6px 0 #c8412d; }
+.card[data-theme='shahzad'] { border-radius: 0; border-top-color: #2f7de1; font-family: 'Special Elite', monospace; }
+.card[data-theme='dreyfus'] .thumb img { mix-blend-mode: normal; }

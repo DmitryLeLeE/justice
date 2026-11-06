@@ -13,12 +13,12 @@ import Base from '../layouts/Base.astro';
 
     <h2>The drawings</h2>
     <p>
-      A drawing appears here only when its rights status can be confirmed at the source. Two kinds qualify:
-      works the Wikimedia Commons marks as public domain, and items the Library of Congress lists with the rights
-      advisory "No known restrictions on publication". The second is the Library's own statement, not a legal
-      guarantee, so every drawing is shown with its artist, rights note and a link back to the archive record.
-      Where no drawing has been cleared, the case page shows an empty frame instead. Much modern courtroom art is
-      still under copyright, which is why many cases are missing a picture.
+      Only cases that have a courtroom drawing are on the map. The drawings are not copied to this site: each one is
+      loaded directly from the archive that hosts it (Wikimedia Commons, the Library of Congress, a university
+      collection) and is shown with its artist, a credit line and a link back to the original record. Rights differ
+      between archives and between works: nineteenth-century engravings are in the public domain, while some
+      twentieth-century drawings are still protected, and the credit line says what the host archive states. If you
+      hold rights to a drawing and want it removed, open an issue in the repository.
     </p>
 
     <h2>The map</h2>
@@ -28,9 +28,8 @@ import Base from '../layouts/Base.astro';
 
     <h2>Adding a case</h2>
     <p>
-      Each case is one Markdown file in <code>src/content/cases/</code>: data at the top, the write-up below. To add a
-      drawing, list it in <code>data/sketches.json</code>; the script <code>scripts/fetch-sketches.mjs</code> checks the
-      rights statement and downloads it during the build.
+      Each case is one Markdown file in <code>src/content/cases/</code>: data at the top, the write-up below. A case is
+      shown only if it has an <code>image</code> block with the URL of the drawing; set <code>theme</code> to give it its own look.
     </p>
     <pre><code>---
 title: Name of the proceeding
@@ -38,13 +37,20 @@ country: Country
 city: City
 court: Name of the court
 region: europe        # europe, north-america, south-america, africa, asia, oceania
-category: political   # international, transitional, political, miscarriage, society, hearing
+category: political   # international, transitional, political, miscarriage, society, hearing, crime
 lat: 48.85
 lng: 2.35
 yearStart: 1899
 yearEnd: 1906         # optional
 summary: One or two sentences for the card.
 outcome: How it ended.
+theme: my-case       # optional, matches a [data-theme] block in global.css
+image:
+  src: https://example.org/drawing.jpg
+  alt: What the drawing shows
+  artist: Artist name
+  license: Credit / rights note
+  sourceUrl: https://example.org/record
 sources:
   - title: Source title
     url: https://example.org/source

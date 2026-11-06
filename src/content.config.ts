@@ -23,7 +23,7 @@ const cases = defineCollection({
     summary: z.string().max(240),
     // How it ended
     outcome: z.string(),
-    // Courtroom drawing. Normally filled in by scripts/fetch-sketches.mjs (see data/sketches.json); can also be set by hand, file goes in public/sketches/
+    // Courtroom drawing, hot-linked from the archive that hosts it (absolute URL). Every case published on the site has one
     image: z
       .object({
         src: z.string(),
@@ -36,6 +36,8 @@ const cases = defineCollection({
       })
       .optional(),
     sources: z.array(z.object({ title: z.string(), url: z.string().url() })).min(1),
+    // Visual theme slug; each case with a drawing gets its own look (see [data-theme] blocks in global.css)
+    theme: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });

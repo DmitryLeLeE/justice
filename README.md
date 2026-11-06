@@ -12,17 +12,11 @@ npm run build
 
 One Markdown file per case in `src/content/cases/`. The frontmatter is validated (see `src/content.config.ts`); a bad field fails the build with a clear message. See the example on the About page.
 
-## Drawings and rights
+## Drawings
 
-Drawings are listed in `data/sketches.json` and fetched by `scripts/fetch-sketches.mjs` (it runs in the GitHub Actions workflow before the build, or locally with `node scripts/fetch-sketches.mjs`). The script **fails closed**:
+Drawings are hot-linked from the archives that host them, not copied into the repo. A case appears on the site only if its frontmatter has an `image` block (absolute `src` URL, `artist`, `license` credit line, `sourceUrl`). Cases without one, or with `draft: true`, are hidden. Commons files use `https://commons.wikimedia.org/wiki/Special:FilePath/<File name>?width=1400`; Library of Congress items use the `tile.loc.gov` derivative (`...v.jpg`).
 
-- Wikimedia Commons files are accepted only if the licence is Public domain / PD / CC0.
-- Library of Congress items are accepted only if the record says "No known restrictions on publication". That is the Library's rights advisory, not a legal guarantee.
-- Anything else is skipped and the case shows an empty frame.
-
-Each image is shown with artist, rights note and a link to the archive record. Output: `public/sketches/<id>.jpg` and `src/data/sketches.generated.json`.
-
-The script needs access to commons.wikimedia.org and loc.gov. It was written without being able to reach those sites, so check the Actions log of the first run for `ok` / `skip` lines.
+Each case can set `theme:`; the matching `[data-theme="..."]` block in `src/styles/global.css` gives it its own palette, type and frame.
 
 ## Deploy
 

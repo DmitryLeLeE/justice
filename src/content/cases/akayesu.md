@@ -12,6 +12,7 @@ yearStart: 1997
 yearEnd: 1998
 summary: The first genocide conviction ever handed down by an international court. A former mayor was found guilty of genocide and crimes against humanity, and rape was recognised as a means of committing genocide.
 outcome: On 2 September 1998 he was convicted on nine of fifteen counts; on 2 October he was sentenced to life imprisonment. The Appeals Chamber upheld the judgment in 2001.
+draft: true
 sources:
   - title: United Nations, Press release AFR/94, 2 September 1998
     url: https://press.un.org/en/1998/19980902.afr94.html

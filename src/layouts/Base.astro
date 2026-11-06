@@ -10,11 +10,13 @@ import { url } from '../lib/cases';
 interface Props {
   title?: string;
   description?: string;
+  theme?: string;
 }
 
 const siteName = 'Atlas of Justice';
 const {
   title,
+  theme,
   description = 'A map of famous trials around the world: courtroom drawings, short case files and sources.',
 } = Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
@@ -33,7 +35,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
     <meta property="og:type" content="website" />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
   </head>
-  <body>
+  <body data-theme={theme}>
     <div class="tape" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href={url()}>

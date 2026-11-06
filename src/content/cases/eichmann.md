@@ -12,6 +12,7 @@ yearStart: 1961
 yearEnd: 1962
 summary: A former SS officer who organised the deportation of Europe's Jews faced an Israeli court. Holocaust survivors testified and journalists from around the world covered the proceedings.
 outcome: In December 1961 he was found guilty on the main counts and sentenced to death. His appeal was rejected in May 1962 and he was executed in the night of 1 June 1962.
+draft: true
 sources:
   - title: US Holocaust Memorial Museum, Adolf Eichmann Sentenced to Death
     url: https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/after-1945/adolf-eichmann-found-guilty

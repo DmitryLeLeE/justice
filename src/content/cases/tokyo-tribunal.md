@@ -12,6 +12,7 @@ yearStart: 1946
 yearEnd: 1948
 summary: The Allies tried 28 leaders of prewar and wartime Japan. The Indian judge Radhabinod Pal dissented and called for the acquittal of every defendant.
 outcome: In November 1948 all 25 defendants who survived and were fit for trial were found guilty. Seven were sentenced to hang, sixteen to life imprisonment, and two to 20 and 7 years.
+draft: true
 sources:
   - title: National WWII Museum, Justice Radhabinod Pal and the Tokyo Tribunal
     url: https://www.nationalww2museum.org/war/articles/justice-radhabinod-pal-tokyo-war-crimes-trial

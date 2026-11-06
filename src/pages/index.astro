@@ -41,14 +41,14 @@ const points = cases.map((c) => ({
       Region
       <select id="f-region">
         <option value="">All regions</option>
-        {Object.entries(REGIONS).map(([k, v]) => <option value={k}>{v}</option>)}
+        {Object.entries(REGIONS).filter(([k]) => cases.some((c) => c.data.region === k)).map(([k, v]) => <option value={k}>{v}</option>)}
       </select>
     </label>
     <label>
       Type
       <select id="f-category">
         <option value="">All types</option>
-        {Object.entries(CATEGORIES).map(([k, v]) => <option value={k}>{v}</option>)}
+        {Object.entries(CATEGORIES).filter(([k]) => cases.some((c) => c.data.category === k)).map(([k, v]) => <option value={k}>{v}</option>)}
       </select>
     </label>
     <button type="button" id="f-reset">Reset</button>

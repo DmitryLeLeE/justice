@@ -12,6 +12,7 @@ yearStart: 1982
 yearEnd: 1988
 summary: A mother was convicted of murdering her baby daughter, who vanished near Uluru. She said a dingo took the child. The convictions were quashed, and in 2012 a coroner confirmed her account.
 outcome: On 29 October 1982 Lindy Chamberlain was sentenced to life imprisonment. On 15 September 1988 all convictions were quashed. On 12 June 2012 a coroner ruled that a dingo had taken the baby.
+draft: true
 sources:
   - title: Famous Trials, The Dingo Trial, Chronology
     url: https://famous-trials.com/dingo/456-chronology

@@ -12,6 +12,7 @@ yearStart: 1945
 yearEnd: 1946
 summary: The first international trial of a state's leadership. Twenty-two men from Hitler's circle faced the tribunal, accused of crimes against peace, war crimes and crimes against humanity.
 outcome: On 1 October 1946 twelve were sentenced to hang, three to life imprisonment and four to terms of 10 to 20 years; three were acquitted.
+draft: true
 sources:
   - title: Britannica, Verdicts of the Nürnberg trials
     url: https://www.britannica.com/question/What-were-the-verdicts-of-Nurnberg-trials

@@ -12,6 +12,7 @@ yearStart: 1980
 yearEnd: 1981
 summary: Ten former leaders, including Mao Zedong's widow Jiang Qing, were tried for crimes of the Cultural Revolution. Excerpts of the hearings were shown on television, but no full transcript has been published.
 outcome: On 25 January 1981 Jiang Qing and Zhang Chunqiao were sentenced to death with a two-year reprieve (commuted to life in 1983), Wang Hongwen to life, and Yao Wenyuan to 20 years.
+draft: true
 sources:
   - title: Britannica, Gang of Four
     url: https://britannica.com/topic/Gang-of-Four

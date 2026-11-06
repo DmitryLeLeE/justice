@@ -12,6 +12,7 @@ yearStart: 1963
 yearEnd: 1964
 summary: Leaders of the ANC's underground armed wing were arrested at a farm in Rivonia. In a statement from the dock, Nelson Mandela called a free and equal society an ideal for which he was prepared to die.
 outcome: On 12 June 1964 eight defendants were sentenced to life imprisonment. Lionel Bernstein was acquitted and James Kantor was discharged for lack of evidence.
+draft: true
 sources:
   - title: Nelson Mandela Foundation, 50th anniversary of the sentencing of the Rivonia trialists
     url: https://nelsonmandela.org/news/entry/12-june-1964-50th-anniversary-of-the-sentencing-of-the-rivonia-trialists

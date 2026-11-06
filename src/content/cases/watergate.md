@@ -12,6 +12,14 @@ yearStart: 1973
 yearEnd: 1974
 summary: A Senate committee investigated the Watergate break-in and the cover-up that reached the Nixon White House. Cameras were allowed in the hearing room, while artists drew the committee and witnesses.
 outcome: The committee was created on 7 February 1973 and opened public hearings on 17 May 1973. Its final report was issued on 27 June 1974.
+theme: watergate
+image:
+  src: https://tile.loc.gov/storage-services/service/pnp/ppmsca/53300/53334v.jpg
+  alt: Pen drawing of members of the Senate Watergate Committee
+  caption: Members of the Senate Watergate Committee, 1973
+  artist: Joseph Papin
+  license: Library of Congress, Prints & Photographs Division
+  sourceUrl: https://www.loc.gov/item/2017659344/
 sources:
   - title: Library of Congress, drawing of the Senate Watergate Committee by Joseph Papin
     url: https://www.loc.gov/item/2017659344/

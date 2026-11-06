@@ -1,7 +1,7 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { getCases, url, yearsLabel } from '../../lib/cases';
+import { getCases, imgSrc, url, yearsLabel } from '../../lib/cases';
 import { REGIONS, CATEGORIES } from '../../lib/taxonomy';
 
 export async function getStaticPaths() {
@@ -17,7 +17,7 @@ const d = entry.data;
 const { Content } = await render(entry);
 ---
 
-<Base title={d.title} description={d.summary}>
+<Base title={d.title} description={d.summary} theme={d.theme}>
   <article class="case">
     <p class="crumbs">
       <a href={url(`#${entry.id}`)}>← Back to the map</a>
@@ -30,7 +30,7 @@ const { Content } = await render(entry);
       <div class={d.image ? 'frame' : 'frame is-empty'}>
         {
           d.image ? (
-            <img src={url(d.image.src)} alt={d.image.alt} />
+            <img src={imgSrc(d.image.src)} alt={d.image.alt} referrerpolicy="no-referrer" />
           ) : (
             <div class="hero-ph">No courtroom drawing on file yet</div>
           )
@@ -41,7 +41,7 @@ const { Content } = await render(entry);
           <figcaption>
             {d.image.caption && <>{d.image.caption}. </>}
             {d.image.artist && <>Artist: {d.image.artist}. </>}
-            Rights: {d.image.license}. <a href={d.image.sourceUrl} rel="noopener">Source</a>
+            Credit: {d.image.license}. <a href={d.image.sourceUrl} rel="noopener">Source</a>
           </figcaption>
         )
       }
