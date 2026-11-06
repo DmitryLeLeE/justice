@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+import { url } from '../lib/cases';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const siteName = 'Атлас справедливости';
+const {
+  title,
+  description = 'Зарисовки судебных процессов из разных частей света: карта, краткие описания и рисунки из залов суда.',
+} = Astro.props;
+const pageTitle = title ? `${title} · ${siteName}` : siteName;
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={url()}>
+        <span class="brand-mark" aria-hidden="true">⚖</span>
+        <span>Атлас справедливости</span>
+      </a>
+      <nav aria-label="Основная навигация">
+        <a href={url()}>Карта</a>
+        <a href={url('about/')}>О проекте</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>Атлас справедливости. Описания составлены по открытым источникам, ссылки приведены на странице каждого дела.</p>
+    </footer>
+  </body>
+</html>

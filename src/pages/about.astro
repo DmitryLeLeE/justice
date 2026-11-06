@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="О проекте" description="Как устроен Атлас справедливости, откуда берутся рисунки и как добавить новое дело.">
+  <section class="about">
+    <h1>О проекте</h1>
+    <p>
+      Атлас собирает судебные процессы из разных стран: у каждого дела есть место на карте, краткое описание,
+      итог и список источников. Для каждого дела предусмотрен рисунок из зала суда, потому что во многих
+      судах съёмка запрещена, и публика знала процесс по рисункам художников.
+    </p>
+
+    <h2>Рисунки</h2>
+    <p>
+      Рисунок публикуется только если у него свободная лицензия (общественное достояние, Creative Commons) или
+      есть разрешение правообладателя. Для каждого рисунка указываются художник, лицензия и ссылка на источник.
+      Пока рисунок не добавлен, на странице дела стоит заглушка.
+    </p>
+
+    <h2>Карта</h2>
+    <p>
+      Точка обозначает город или район суда. Адрес здания она не показывает. Подложка карты — OpenStreetMap.
+    </p>
+
+    <h2>Как добавить дело</h2>
+    <p>
+      Каждое дело — один Markdown-файл в <code>src/content/cases/</code>. В начале файла — данные, ниже — текст описания.
+      Рисунок кладут в <code>public/sketches/</code> и указывают в поле <code>image</code>.
+    </p>
+    <pre><code>---
+title: Название процесса
+country: Страна
+city: Город
+court: Название суда
+region: europe          # europe, north-america, south-america, africa, asia, oceania
+category: political     # international, transitional, political, miscarriage, society
+lat: 48.85
+lng: 2.35
+yearStart: 1899
+yearEnd: 1906           # необязательно
+summary: Одно-два предложения для карточки.
+outcome: Чем закончилось.
+image:                  # необязательно
+  src: sketches/example.jpg
+  alt: Что изображено
+  artist: Имя художника
+  license: Public domain
+  sourceUrl: https://example.org/page
+sources:
+  - title: Название источника
+    url: https://example.org/source
+---
+
+Текст описания в два-три абзаца.</code></pre>
+  </section>
+</Base>

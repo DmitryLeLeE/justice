@@ -1,0 +1,173 @@
+---
+import Base from '../layouts/Base.astro';
+import CaseCard from '../components/CaseCard.astro';
+import { getCases, url, yearsLabel } from '../lib/cases';
+import { REGIONS, CATEGORIES } from '../lib/taxonomy';
+
+const cases = await getCases();
+
+// Только то, что нужно карте. Текст попадёт в DOM через textContent, не через innerHTML.
+const points = cases.map((c) => ({
+  id: c.id,
+  title: c.data.title,
+  place: `${c.data.city}, ${c.data.country}`,
+  years: yearsLabel(c.data),
+  summary: c.data.summary,
+  lat: c.data.lat,
+  lng: c.data.lng,
+  region: c.data.region,
+  category: c.data.category,
+  href: url(`cases/${c.id}/`),
+}));
+---
+
+<Base>
+  <section class="hero">
+    <h1>Атлас справедливости</h1>
+    <p>
+      Зарисовки судебных процессов из разных частей света. Выберите точку на карте, чтобы увидеть дело:
+      где его рассматривали, кого судили и чем всё закончилось.
+    </p>
+  </section>
+
+  <div class="map-wrap">
+    <div id="map" role="region" aria-label="Карта судебных процессов"></div>
+  </div>
+  <p class="map-note">Точки на карте показывают город, а не точный адрес суда.</p>
+
+  <form class="filters" aria-label="Фильтры" onsubmit="return false">
+    <label>
+      Регион
+      <select id="f-region">
+        <option value="">Все регионы</option>
+        {Object.entries(REGIONS).map(([k, v]) => <option value={k}>{v}</option>)}
+      </select>
+    </label>
+    <label>
+      Тип дела
+      <select id="f-category">
+        <option value="">Все типы</option>
+        {Object.entries(CATEGORIES).map(([k, v]) => <option value={k}>{v}</option>)}
+      </select>
+    </label>
+    <button type="button" id="f-reset">Сбросить</button>
+    <p class="count" id="count" aria-live="polite">Дел: {cases.length}</p>
+  </form>
+
+  <ul class="grid" id="grid" style="list-style:none">
+    {cases.map((entry) => <li><CaseCard entry={entry} /></li>)}
+  </ul>
+  <p class="empty" id="empty" hidden>По этим фильтрам дел нет.</p>
+
+  <script type="application/json" id="cases-data" set:html={JSON.stringify(points)} />
+
+  <script>
+    import L from 'leaflet';
+    import 'leaflet/dist/leaflet.css';
+
+    type Point = {
+      id: string; title: string; place: string; years: string; summary: string;
+      lat: number; lng: number; region: string; category: string; href: string;
+    };
+
+    const data: Point[] = JSON.parse(document.getElementById('cases-data')!.textContent || '[]');
+
+    const map = L.map('map', { worldCopyJump: true, minZoom: 2, maxZoom: 10, scrollWheelZoom: false })
+      .setView([25, 15], 2);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 10,
+      attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+
+    // Колесо мыши зумит карту только после клика по ней, чтобы не мешать прокрутке страницы
+    map.on('focus', () => map.scrollWheelZoom.enable());
+    map.on('blur', () => map.scrollWheelZoom.disable());
+
+    function popupFor(p: Point): HTMLElement {
+      const el = document.createElement('div');
+      el.className = 'popup';
+      const h = document.createElement('h3');
+      h.textContent = p.title;
+      const m = document.createElement('p');
+      m.className = 'pm';
+      m.textContent = `${p.place} · ${p.years}`;
+      const s = document.createElement('p');
+      s.textContent = p.summary;
+      const a = document.createElement('a');
+      a.href = p.href;
+      a.textContent = 'Открыть дело';
+      el.append(h, m, s, a);
+      return el;
+    }
+
+    const markers = new Map<string, L.Marker>();
+    for (const p of data) {
+      const marker = L.marker([p.lat, p.lng], {
+        icon: L.divIcon({ className: '', html: '<div class="pin"></div>', iconSize: [16, 16], iconAnchor: [8, 8] }),
+        title: p.title,
+        keyboard: true,
+      }).bindPopup(popupFor(p), { maxWidth: 280 });
+      marker.on('click', () => marker.openPopup());
+      markers.set(p.id, marker);
+    }
+
+    const regionSel = document.getElementById('f-region') as HTMLSelectElement;
+    const categorySel = document.getElementById('f-category') as HTMLSelectElement;
+    const resetBtn = document.getElementById('f-reset') as HTMLButtonElement;
+    const countEl = document.getElementById('count')!;
+    const emptyEl = document.getElementById('empty')!;
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('.card'));
+
+    function apply(fit = true) {
+      const region = regionSel.value;
+      const category = categorySel.value;
+      const visible: Point[] = [];
+      for (const p of data) {
+        const ok = (!region || p.region === region) && (!category || p.category === category);
+        const marker = markers.get(p.id)!;
+        if (ok) { marker.addTo(map); visible.push(p); } else { marker.remove(); }
+      }
+      const ids = new Set(visible.map((p) => p.id));
+      for (const c of cards) {
+        const show = ids.has(c.dataset.id || '');
+        c.hidden = !show;
+        (c.parentElement as HTMLElement).hidden = !show;
+      }
+      countEl.textContent = `Дел: ${visible.length}`;
+      emptyEl.hidden = visible.length > 0;
+      if (fit && visible.length) {
+        map.fitBounds(L.latLngBounds(visible.map((p) => [p.lat, p.lng] as [number, number])), {
+          padding: [50, 50], maxZoom: 5,
+        });
+      }
+    }
+
+    regionSel.addEventListener('change', () => apply());
+    categorySel.addEventListener('change', () => apply());
+    resetBtn.addEventListener('click', () => {
+      regionSel.value = '';
+      categorySel.value = '';
+      apply();
+      map.setView([25, 15], 2);
+    });
+
+    function focusCase(id: string) {
+      const p = data.find((x) => x.id === id);
+      const marker = markers.get(id);
+      if (!p || !marker) return;
+      if (!map.hasLayer(marker)) { regionSel.value = ''; categorySel.value = ''; apply(false); }
+      document.getElementById('map')!.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      map.flyTo([p.lat, p.lng], 5, { duration: 0.8 });
+      marker.openPopup();
+    }
+
+    document.querySelectorAll<HTMLButtonElement>('.show-on-map').forEach((btn) => {
+      btn.addEventListener('click', () => focusCase(btn.dataset.focus || ''));
+    });
+
+    apply(false);
+    const hash = decodeURIComponent(location.hash.replace(/^#/, ''));
+    if (hash) focusCase(hash);
+  </script>
+</Base>
