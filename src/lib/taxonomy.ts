@@ -1,18 +1,19 @@
 export const REGIONS = {
-  europe: 'Европа',
-  'north-america': 'Северная Америка',
-  'south-america': 'Южная Америка',
-  africa: 'Африка',
-  asia: 'Азия и Ближний Восток',
-  oceania: 'Океания',
+  europe: 'Europe',
+  'north-america': 'North America',
+  'south-america': 'South America',
+  africa: 'Africa',
+  asia: 'Asia & Middle East',
+  oceania: 'Oceania',
 } as const;
 
 export const CATEGORIES = {
-  international: 'Международные трибуналы',
-  transitional: 'Суд над прошлым',
-  political: 'Политические процессы',
-  miscarriage: 'Судебные ошибки',
-  society: 'Наука и общество',
+  international: 'International tribunals',
+  transitional: 'Reckoning with the past',
+  political: 'Political trials',
+  miscarriage: 'Miscarriages of justice',
+  society: 'Science & society',
+  hearing: 'Public inquiries',
 } as const;
 
 export type RegionKey = keyof typeof REGIONS;

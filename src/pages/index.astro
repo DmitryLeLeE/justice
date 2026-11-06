@@ -6,7 +6,7 @@ import { REGIONS, CATEGORIES } from '../lib/taxonomy';
 
 const cases = await getCases();
 
-// Только то, что нужно карте. Текст попадёт в DOM через textContent, не через innerHTML.
+// Only what the map needs. Text reaches the DOM via textContent, never innerHTML.
 const points = cases.map((c) => ({
   id: c.id,
   title: c.data.title,
@@ -23,41 +23,42 @@ const points = cases.map((c) => ({
 
 <Base>
   <section class="hero">
-    <h1>Атлас справедливости</h1>
+    <p class="kicker">Case files from the world's courtrooms</p>
+    <h1>Atlas of Justice</h1>
     <p>
-      Зарисовки судебных процессов из разных частей света. Выберите точку на карте, чтобы увидеть дело:
-      где его рассматривали, кого судили и чем всё закончилось.
+      Courtroom drawings and short case files from trials around the world. Pick a pin to open a file:
+      where it was heard, who stood accused, and how it ended.
     </p>
   </section>
 
   <div class="map-wrap">
-    <div id="map" role="region" aria-label="Карта судебных процессов"></div>
+    <div id="map" role="region" aria-label="Map of trials"></div>
   </div>
-  <p class="map-note">Точки на карте показывают город, а не точный адрес суда.</p>
+  <p class="map-note">Pins mark a city, not a courthouse address.</p>
 
-  <form class="filters" aria-label="Фильтры" onsubmit="return false">
+  <form class="filters" aria-label="Filters" onsubmit="return false">
     <label>
-      Регион
+      Region
       <select id="f-region">
-        <option value="">Все регионы</option>
+        <option value="">All regions</option>
         {Object.entries(REGIONS).map(([k, v]) => <option value={k}>{v}</option>)}
       </select>
     </label>
     <label>
-      Тип дела
+      Type
       <select id="f-category">
-        <option value="">Все типы</option>
+        <option value="">All types</option>
         {Object.entries(CATEGORIES).map(([k, v]) => <option value={k}>{v}</option>)}
       </select>
     </label>
-    <button type="button" id="f-reset">Сбросить</button>
-    <p class="count" id="count" aria-live="polite">Дел: {cases.length}</p>
+    <button type="button" id="f-reset">Reset</button>
+    <p class="count" id="count" aria-live="polite">Cases: {cases.length}</p>
   </form>
 
   <ul class="grid" id="grid" style="list-style:none">
-    {cases.map((entry) => <li><CaseCard entry={entry} /></li>)}
+    {cases.map((entry, i) => <li><CaseCard entry={entry} number={i + 1} /></li>)}
   </ul>
-  <p class="empty" id="empty" hidden>По этим фильтрам дел нет.</p>
+  <p class="empty" id="empty" hidden>No cases match these filters.</p>
 
   <script type="application/json" id="cases-data" set:html={JSON.stringify(points)} />
 
@@ -80,7 +81,7 @@ const points = cases.map((c) => ({
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
-    // Колесо мыши зумит карту только после клика по ней, чтобы не мешать прокрутке страницы
+    // The wheel zooms the map only after it has focus, so it does not hijack page scrolling
     map.on('focus', () => map.scrollWheelZoom.enable());
     map.on('blur', () => map.scrollWheelZoom.disable());
 
@@ -96,7 +97,7 @@ const points = cases.map((c) => ({
       s.textContent = p.summary;
       const a = document.createElement('a');
       a.href = p.href;
-      a.textContent = 'Открыть дело';
+      a.textContent = 'Open the file';
       el.append(h, m, s, a);
       return el;
     }
@@ -134,7 +135,7 @@ const points = cases.map((c) => ({
         c.hidden = !show;
         (c.parentElement as HTMLElement).hidden = !show;
       }
-      countEl.textContent = `Дел: ${visible.length}`;
+      countEl.textContent = `Cases: ${visible.length}`;
       emptyEl.hidden = visible.length > 0;
       if (fit && visible.length) {
         map.fitBounds(L.latLngBounds(visible.map((p) => [p.lat, p.lng] as [number, number])), {

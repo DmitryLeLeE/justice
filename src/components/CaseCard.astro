@@ -1,14 +1,16 @@
 ---
 import type { CaseEntry } from '../lib/cases';
 import { url, yearsLabel } from '../lib/cases';
-import { REGIONS, CATEGORIES } from '../lib/taxonomy';
+import { CATEGORIES } from '../lib/taxonomy';
 
 interface Props {
   entry: CaseEntry;
+  number: number;
 }
 
-const { entry } = Astro.props;
+const { entry, number } = Astro.props;
 const d = entry.data;
+const fileNo = String(number).padStart(3, '0');
 ---
 
 <article
@@ -19,12 +21,13 @@ const d = entry.data;
 >
   <a class="card-link" href={url(`cases/${entry.id}/`)}>
     <div class="thumb">
+      <span class="file-no">FILE {fileNo}</span>
       {
         d.image ? (
           <img src={url(d.image.src)} alt={d.image.alt} loading="lazy" />
         ) : (
-          <div class="placeholder" role="img" aria-label="Рисунок из зала суда пока не добавлен">
-            <span>рисунок готовится</span>
+          <div class="placeholder" role="img" aria-label="No courtroom drawing has been added yet">
+            <span>drawing not yet on file</span>
           </div>
         )
       }
@@ -36,7 +39,7 @@ const d = entry.data;
   <div class="card-foot">
     <span class="tag">{CATEGORIES[d.category]}</span>
     <button type="button" class="show-on-map" data-focus={entry.id}>
-      На карте
+      Locate
     </button>
   </div>
 </article>

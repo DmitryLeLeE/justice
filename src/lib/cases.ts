@@ -1,8 +1,9 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import sketches from '../data/sketches.generated.json';
 
 export type CaseEntry = CollectionEntry<'cases'>;
 
-/** Префикс GitHub Pages ('/justice') + путь, всегда со слэшем в конце для страниц. */
+/** GitHub Pages prefix ('/justice') plus the path. */
 export function url(path = ''): string {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const clean = path.replace(/^\//, '');
@@ -11,6 +12,9 @@ export function url(path = ''): string {
 
 export async function getCases(): Promise<CaseEntry[]> {
   const all = await getCollection('cases', ({ data }) => !data.draft);
+  // Drawings verified and downloaded by scripts/fetch-sketches.mjs fill in `image` when the case has none.
+  const generated = sketches as Record<string, NonNullable<CaseEntry['data']['image']>>;
+  for (const e of all) e.data.image ??= generated[e.id];
   return all.sort((a, b) => a.data.yearStart - b.data.yearStart || a.id.localeCompare(b.id));
 }
 

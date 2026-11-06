@@ -1,4 +1,9 @@
 ---
+import '@fontsource/bebas-neue/400.css';
+import '@fontsource/special-elite/400.css';
+import '@fontsource/libre-baskerville/400.css';
+import '@fontsource/libre-baskerville/400-italic.css';
+import '@fontsource/libre-baskerville/700.css';
 import '../styles/global.css';
 import { url } from '../lib/cases';
 
@@ -7,42 +12,44 @@ interface Props {
   description?: string;
 }
 
-const siteName = 'Атлас справедливости';
+const siteName = 'Atlas of Justice';
 const {
   title,
-  description = 'Зарисовки судебных процессов из разных частей света: карта, краткие описания и рисунки из залов суда.',
+  description = 'A map of famous trials around the world: courtroom drawings, short case files and sources.',
 } = Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
 ---
 
 <!doctype html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#0a0908" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
   </head>
   <body>
+    <div class="tape" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href={url()}>
         <span class="brand-mark" aria-hidden="true">⚖</span>
-        <span>Атлас справедливости</span>
+        <span>Atlas of Justice</span>
       </a>
-      <nav aria-label="Основная навигация">
-        <a href={url()}>Карта</a>
-        <a href={url('about/')}>О проекте</a>
+      <nav aria-label="Main navigation">
+        <a href={url()}>The Map</a>
+        <a href={url('about/')}>About</a>
       </nav>
     </header>
     <main>
       <slot />
     </main>
     <footer class="site-footer">
-      <p>Атлас справедливости. Описания составлены по открытым источникам, ссылки приведены на странице каждого дела.</p>
+      <p>Atlas of Justice. Case files are compiled from public sources, linked on each case page. Every drawing is credited to its artist and archive.</p>
     </footer>
   </body>
 </html>

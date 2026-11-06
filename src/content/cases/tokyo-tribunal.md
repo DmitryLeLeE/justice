@@ -1,28 +1,28 @@
 ---
-title: Токийский трибунал
+title: The Tokyo Tribunal
 titleOriginal: 極東国際軍事裁判
-country: Япония
-city: Токио
-court: Международный военный трибунал для Дальнего Востока
+country: Japan
+city: Tokyo
+court: International Military Tribunal for the Far East
 region: asia
 category: international
 lat: 35.6934
 lng: 139.7287
 yearStart: 1946
 yearEnd: 1948
-summary: Союзники судили 28 руководителей довоенной и военной Японии. Индийский судья Радхабинод Пал остался при особом мнении и потребовал оправдать всех подсудимых.
-outcome: В ноябре 1948 года виновными признаны все 25 дожившие и годные к суду подсудимые. Семеро приговорены к повешению, 16 к пожизненному заключению, двое к срокам в 20 и 7 лет.
+summary: The Allies tried 28 leaders of prewar and wartime Japan. The Indian judge Radhabinod Pal dissented and called for the acquittal of every defendant.
+outcome: In November 1948 all 25 defendants who survived and were fit for trial were found guilty. Seven were sentenced to hang, sixteen to life imprisonment, and two to 20 and 7 years.
 sources:
-  - title: National WWII Museum. Justice Radhabinod Pal and the Tokyo Tribunal
+  - title: National WWII Museum, Justice Radhabinod Pal and the Tokyo Tribunal
     url: https://www.nationalww2museum.org/war/articles/justice-radhabinod-pal-tokyo-war-crimes-trial
-  - title: Famous Trials. Tokyo War Crimes Trial, Chronology
+  - title: Famous Trials, Tokyo War Crimes Trial, Chronology
     url: https://famous-trials.com/tokyo-war-crimes-trial/2732-tokyo-war-crimes-trial-chronology
-  - title: Keio University. The Tokyo Trial (PDF)
+  - title: Keio University, The Tokyo Trial (PDF)
     url: https://aslp.law.keio.ac.jp/pdf/AN00224504-20150528-0138.pdf
 ---
 
-Обвинения 28 подсудимым предъявили 29 апреля 1946 года, заседания начались 3 мая в бывшем здании военного министерства в токийском районе Итигая. В составе трибунала были 11 судей от стран-союзниц.
+The 28 defendants were indicted on 29 April 1946 and hearings began on 3 May in the former War Ministry building in Tokyo's Ichigaya district. The tribunal had 11 judges from the Allied nations.
 
-Во время процесса двое подсудимых умерли, ещё один был признан неспособным участвовать в заседаниях из-за психического расстройства. Приговоры зачитывали в ноябре 1948 года, казни состоялись в декабре в тюрьме Сугамо.
+During the trial two defendants died and another was found unfit to take part because of mental illness. Sentences were read in November 1948 and the executions took place in December at Sugamo Prison.
 
-Решение принимали не единогласно. Радхабинод Пал считал, что обвинения в развязывании агрессивной войны не имели достаточной основы в международном праве тех лет, и голосовал за оправдание всех подсудимых по всем пунктам. Споры о том, насколько трибунал был справедливым судом, а не расправой победителей, не закончились до сих пор.
+The decision was not unanimous. Radhabinod Pal held that the charges of waging aggressive war lacked a sufficient basis in the international law of the time, and he voted to acquit every defendant on every count. Whether the tribunal delivered justice or victors' vengeance is still argued.

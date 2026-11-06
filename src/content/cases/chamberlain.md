@@ -1,28 +1,28 @@
 ---
-title: Дело Линди Чемберлен
+title: The Lindy Chamberlain Trial
 titleOriginal: R v Chamberlain
-country: Австралия
-city: Дарвин
-court: Верховный суд Северной территории
+country: Australia
+city: Darwin
+court: Supreme Court of the Northern Territory
 region: oceania
 category: miscarriage
 lat: -12.4634
 lng: 130.8456
 yearStart: 1982
 yearEnd: 1988
-summary: Женщину осудили за убийство дочери, пропавшей у горы Улуру. Она говорила, что ребёнка унёс динго. Приговор отменили, а в 2012 году коронер подтвердил её версию.
-outcome: 29 октября 1982 года Линди Чемберлен приговорили к пожизненному заключению. 15 сентября 1988 года все обвинительные приговоры отменили. 12 июня 2012 года коронер постановил, что девочку унёс динго.
+summary: A mother was convicted of murdering her baby daughter, who vanished near Uluru. She said a dingo took the child. The convictions were quashed, and in 2012 a coroner confirmed her account.
+outcome: On 29 October 1982 Lindy Chamberlain was sentenced to life imprisonment. On 15 September 1988 all convictions were quashed. On 12 June 2012 a coroner ruled that a dingo had taken the baby.
 sources:
-  - title: Famous Trials. The Dingo Trial, Chronology
+  - title: Famous Trials, The Dingo Trial, Chronology
     url: https://famous-trials.com/dingo/456-chronology
-  - title: Australian Geographic. Azaria Chamberlain final inquest
+  - title: Australian Geographic, Azaria Chamberlain final inquest
     url: https://www.australiangeographic.com.au/events/2025/06/defining-moments-in-australian-history-azaria-chamberlain-final-inquest/
-  - title: Forejustice. Lindy Chamberlain
+  - title: Forejustice, Lindy Chamberlain
     url: https://forejustice.org/db/Chamberlain--Lindy-.html
 ---
 
-Азария Чемберлен пропала в августе 1980 года во время семейной поездки к Улуру. Родители говорили, что её унёс динго. Второе коронерское расследование решило, что Линди нужно судить за убийство, а её мужа Майкла за соучастие после факта.
+Azaria Chamberlain disappeared in August 1980 during a family trip to Uluru. Her parents said a dingo had taken her. A second coroner's inquiry decided that Lindy should be tried for murder and her husband Michael as an accessory after the fact.
 
-Процесс в Дарвине шёл с 13 сентября по 29 октября 1982 года под председательством судьи Джеймса Мюрхеда. Перед зданием суда продавали сувениры и футболки. Обвинение опиралось на заключения экспертов. Линди приговорили к пожизненному заключению, Майкл получил 18 месяцев условно. В ноябре 1982 года, находясь под стражей, она родила дочь.
+The trial in Darwin ran from 13 September to 29 October 1982 before Justice James Muirhead. Souvenirs and T-shirts were sold outside the courthouse. The prosecution relied on expert forensic evidence. Lindy was sentenced to life imprisonment; Michael received an eighteen-month suspended sentence. In November 1982, while in custody, she gave birth to a daughter.
 
-Королевская комиссия в 1986–1987 годах отвергла значительную часть судебно-медицинских доказательств, на которых строился приговор. Линди вышла на свободу в 1986 году, после того как нашли куртку Азарии рядом с логовом динго. Дело вызвало споры о том, насколько можно полагаться на экспертные заключения в уголовных процессах.
+A Royal Commission in 1986–87 rejected much of the forensic evidence on which the verdict rested. Lindy was released in 1986 after Azaria's jacket was found near a dingo lair. The case set off a debate about how far courts can rely on expert testimony in criminal trials.

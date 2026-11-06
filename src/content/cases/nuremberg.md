@@ -1,28 +1,28 @@
 ---
-title: Нюрнбергский процесс
+title: The Nuremberg Trial
 titleOriginal: Nürnberger Prozess
-country: Германия
-city: Нюрнберг
-court: Международный военный трибунал, Дворец юстиции
+country: Germany
+city: Nuremberg
+court: International Military Tribunal, Palace of Justice
 region: europe
 category: international
 lat: 49.4528
 lng: 11.0503
 yearStart: 1945
 yearEnd: 1946
-summary: Первый международный суд над руководителями государства. Перед трибуналом предстали 22 человека из окружения Гитлера, их обвиняли в преступлениях против мира, военных преступлениях и преступлениях против человечности.
-outcome: 1 октября 1946 года 12 человек приговорены к повешению, трое к пожизненному заключению, четверо к срокам от 10 до 20 лет, трое оправданы.
+summary: The first international trial of a state's leadership. Twenty-two men from Hitler's circle faced the tribunal, accused of crimes against peace, war crimes and crimes against humanity.
+outcome: On 1 October 1946 twelve were sentenced to hang, three to life imprisonment and four to terms of 10 to 20 years; three were acquitted.
 sources:
-  - title: Britannica. Verdicts of the Nürnberg trials
+  - title: Britannica, Verdicts of the Nürnberg trials
     url: https://www.britannica.com/question/What-were-the-verdicts-of-Nurnberg-trials
-  - title: US Holocaust Memorial Museum. Nuremberg Trial Verdicts
+  - title: US Holocaust Memorial Museum, Nuremberg Trial Verdicts
     url: https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/after-1945/verdicts-international-military-tribunal
-  - title: Deutschlandmuseum. Justice in Nuremberg
+  - title: Deutschlandmuseum, Justice in Nuremberg
     url: https://www.deutschlandmuseum.de/en/history/calendar/1946-10-01-justice-in-nuremberg/
 ---
 
-Заседания шли с 20 ноября 1945 года по 1 октября 1946 года в нюрнбергском Дворце юстиции. Здание почти не пострадало от бомбардировок, а к нему примыкала тюрьма, поэтому выбор пал на него. Судьи и обвинители представляли СССР, США, Великобританию и Францию.
+The hearings ran from 20 November 1945 to 1 October 1946 in the Nuremberg Palace of Justice. The building had survived the bombing largely intact and had a prison attached, which is why it was chosen. Judges and prosecutors came from the USSR, the United States, Britain and France.
 
-Из 24 обвинённых судили 22. Роберт Лей покончил с собой до начала процесса, Густав Крупп был признан неспособным участвовать по состоянию здоровья. Мартина Бормана судили заочно.
+Of 24 men indicted, 22 were tried. Robert Ley killed himself before the trial began, and Gustav Krupp was found medically unfit to stand trial. Martin Bormann was tried in absentia.
 
-Десять смертных приговоров исполнили 16 октября 1946 года. Герман Геринг накануне казни покончил с собой. Процесс закрепил правило, по которому за преступления по международному праву отвечают конкретные люди, в том числе государственные руководители.
+Ten death sentences were carried out on 16 October 1946; Hermann Göring killed himself the day before his execution. The trial established the principle that individuals, including heads of state, are answerable for crimes under international law.

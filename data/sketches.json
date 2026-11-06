@@ -1,0 +1,24 @@
+{
+  "_comment": "Courtroom drawings to download. Keys are case ids (file names in src/content/cases). scripts/fetch-sketches.mjs checks the rights statement at the source and skips anything it cannot confirm.",
+  "dreyfus-rennes": {
+    "source": "commons",
+    "file": "Alfred Dreyfus Rennes Trial opening session 1899-08-07.jpg",
+    "alt": "Illustration of the opening session of Alfred Dreyfus's second court martial at Rennes, August 1899",
+    "caption": "Opening session of the second Dreyfus court martial, Rennes, 7 August 1899",
+    "artistFallback": "Valerian Gribayedoff"
+  },
+  "zola": {
+    "source": "commons",
+    "file": "Procès Zola, réquisitoire (Petit Journal illustré, 1898-03-06).jpeg",
+    "alt": "Illustration of the prosecutor's closing address at Émile Zola's trial, Le Petit Journal, March 1898",
+    "caption": "The prosecutor's closing address at the Zola trial, Le Petit Journal illustré, 6 March 1898",
+    "artistFallback": "Henri Meyer"
+  },
+  "watergate": {
+    "source": "loc",
+    "item": "2017659344",
+    "alt": "Pen drawing of members of the Senate Watergate Committee at the 1973 hearings",
+    "caption": "Members of the Senate Watergate Committee, 1973",
+    "artistFallback": "Joseph Papin"
+  }
+}

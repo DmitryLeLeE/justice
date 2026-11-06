@@ -1,27 +1,27 @@
 ---
-title: Суд над хунтами
+title: The Trial of the Juntas
 titleOriginal: Juicio a las Juntas
-country: Аргентина
-city: Буэнос-Айрес
-court: Федеральная палата по уголовным делам (Cámara Federal)
+country: Argentina
+city: Buenos Aires
+court: Federal Criminal Court of Appeals (Cámara Federal)
 region: south-america
 category: transitional
 lat: -34.6017
 lng: -58.3855
 yearStart: 1985
-summary: Через два года после падения диктатуры гражданский суд судил девять бывших членов трёх военных хунт, правивших Аргентиной в 1976–1983 годах. Свидетелями выступили более 800 человек, среди них бывшие задержанные и родственники пропавших.
-outcome: 9 декабря 1985 года Видела и Массера приговорены к пожизненному заключению, Виола к 17 годам, Ламбрускини к 8, Агости к 4 годам и 6 месяцам. Остальных четверых оправдали.
+summary: Two years after the dictatorship fell, a civilian court tried nine former junta members who ruled Argentina from 1976 to 1983. More than 800 witnesses testified, including former detainees and relatives of the disappeared.
+outcome: On 9 December 1985 Videla and Massera were sentenced to life, Viola to 17 years, Lambruschini to 8 and Agosti to 4 years and 6 months. The other four were acquitted.
 sources:
-  - title: Memoria Abierta. The Trial of the Military Juntas
+  - title: Memoria Abierta, The Trial of the Military Juntas
     url: https://hacerjusticia.memoriaabierta.org.ar/ar/hito/trial-of-the-military-juntas
-  - title: International Crimes Database. Juicio a las Juntas Militares
+  - title: International Crimes Database, Juicio a las Juntas Militares
     url: https://www.internationalcrimesdatabase.org/Case/1118
-  - title: Chequeado. Qué fue el juicio a las juntas
+  - title: Chequeado, Qué fue el juicio a las juntas
     url: https://chequeado.com/hilando-fino/que-fue-el-juicio-a-las-juntas/
 ---
 
-Военная диктатура пришла к власти в марте 1976 года. После возвращения демократии президент Рауль Альфонсин потребовал суда над руководителями хунт. Слушания по делу № 13/84 начались 22 апреля 1985 года и закончились приговором 9 декабря.
+The military dictatorship took power in March 1976. After democracy returned, President Raúl Alfonsín demanded that the junta leaders be tried. Hearings in case no. 13/84 opened on 22 April 1985 and ended with the verdict on 9 December.
 
-В зале выступили более 800 свидетелей. Заключительная речь обвинителя Хулио Сесара Страссеры с призывом «Nunca más» («Никогда больше») вошла в историю процесса. Суд установил, что хунты разработали и осуществляли преступный план борьбы с «подрывными элементами», оставив офицерам широкую свободу действий при арестах и расправах.
+More than 800 witnesses appeared in the courtroom. Prosecutor Julio César Strassera's closing speech, with its appeal "Nunca más" ("Never again"), entered the history of the trial. The court found that the juntas devised and carried out a criminal plan to fight "subversion", leaving officers wide latitude in arrests and killings.
 
-Осуждённых позднее помиловали, в 2007 году федеральный суд признал помилование Виделы недействительным. История процесса легла в основу фильма «Аргентина, 1985», который номинировали на «Оскар» как лучший иностранный фильм.
+The convicted men were later pardoned, and in 2007 a federal court declared Videla's pardon invalid. The story of the trial inspired the film "Argentina, 1985", nominated for the Academy Award for Best International Feature.

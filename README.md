@@ -1,61 +1,29 @@
-# Атлас справедливости
+# Atlas of Justice
 
-Сайт с зарисовками судебных процессов из разных частей света: карта, страница у каждого дела, краткое описание, итог, источники и место для рисунка из зала суда.
-
-Стек: [Astro](https://astro.build) (статическая сборка), [Leaflet](https://leafletjs.com) для карты, подложка OpenStreetMap.
-
-## Запуск
+A map of famous trials with courtroom drawings, short case files and sources. Astro, static export, GitHub Pages.
 
 ```bash
 npm install
 npm run dev      # http://localhost:4321/justice/
-npm run build    # сборка в dist/
-npm run preview  # проверить собранный сайт
+npm run build
 ```
 
-## Как добавить дело
+## Cases
 
-Каждое дело — один файл в `src/content/cases/`. Имя файла становится адресом страницы: `rivonia.md` открывается как `/cases/rivonia/`. В начале файла идут данные, ниже — текст в два-три абзаца.
+One Markdown file per case in `src/content/cases/`. The frontmatter is validated (see `src/content.config.ts`); a bad field fails the build with a clear message. See the example on the About page.
 
-```md
----
-title: Название процесса
-titleOriginal: Название на языке страны   # необязательно
-country: Страна
-city: Город
-court: Название суда
-region: europe          # europe, north-america, south-america, africa, asia, oceania
-category: political     # international, transitional, political, miscarriage, society
-lat: 48.85
-lng: 2.35
-yearStart: 1899
-yearEnd: 1906           # необязательно
-summary: Одно-два предложения для карточки и окна на карте (до 240 знаков).
-outcome: Чем закончилось.
-image:                  # необязательно
-  src: sketches/example.jpg
-  alt: Что изображено
-  artist: Имя художника
-  caption: Что на рисунке и когда сделан
-  license: Public domain
-  sourceUrl: https://example.org/page
-sources:
-  - title: Название источника
-    url: https://example.org/source
-draft: false            # true — дело не попадёт на сайт
----
+## Drawings and rights
 
-Текст описания.
-```
+Drawings are listed in `data/sketches.json` and fetched by `scripts/fetch-sketches.mjs` (it runs in the GitHub Actions workflow before the build, or locally with `node scripts/fetch-sketches.mjs`). The script **fails closed**:
 
-Если поля заполнены неверно (опечатка в `region`, нет `sources`, слишком длинное `summary`), сборка остановится и покажет, в каком файле ошибка.
+- Wikimedia Commons files are accepted only if the licence is Public domain / PD / CC0.
+- Library of Congress items are accepted only if the record says "No known restrictions on publication". That is the Library's rights advisory, not a legal guarantee.
+- Anything else is skipped and the case shows an empty frame.
 
-## Рисунки
+Each image is shown with artist, rights note and a link to the archive record. Output: `public/sketches/<id>.jpg` and `src/data/sketches.generated.json`.
 
-Файлы кладут в `public/sketches/`, в данных пишут путь `sketches/имя-файла.jpg`. Рисунок добавляют, только если у него свободная лицензия или есть разрешение правообладателя. Поля `artist`, `license` и `sourceUrl` выводятся под рисунком на странице дела. Пока рисунка нет, показывается заглушка.
+The script needs access to commons.wikimedia.org and loc.gov. It was written without being able to reach those sites, so check the Actions log of the first run for `ok` / `skip` lines.
 
-## Публикация
+## Deploy
 
-Сайт выкладывается на GitHub Pages через `.github/workflows/deploy.yml` при каждом пуше в `main`. Один раз нужно включить: *Settings → Pages → Build and deployment → Source: GitHub Actions*. Адрес: <https://dmitrylelee.github.io/justice/>.
-
-Если сайт переедет на свой домен, в `astro.config.mjs` меняют `site` и убирают `base`.
+Repository Settings → Pages → Source: GitHub Actions. Pushing to `main` builds and publishes. Site URL: `https://dmitrylelee.github.io/justice/`.

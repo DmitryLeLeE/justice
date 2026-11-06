@@ -2,56 +2,54 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="О проекте" description="Как устроен Атлас справедливости, откуда берутся рисунки и как добавить новое дело.">
+<Base title="About" description="How the Atlas of Justice works, where the drawings come from and how to add a case.">
   <section class="about">
-    <h1>О проекте</h1>
+    <h1>About the Atlas</h1>
     <p>
-      Атлас собирает судебные процессы из разных стран: у каждого дела есть место на карте, краткое описание,
-      итог и список источников. Для каждого дела предусмотрен рисунок из зала суда, потому что во многих
-      судах съёмка запрещена, и публика знала процесс по рисункам художников.
+      The Atlas collects trials and hearings from many countries. Each case has a place on the map, a short
+      description, the outcome and a list of sources. Cameras are often barred from courtrooms, so for many
+      famous cases the public knew the proceedings through the drawings of court artists.
     </p>
 
-    <h2>Рисунки</h2>
+    <h2>The drawings</h2>
     <p>
-      Рисунок публикуется только если у него свободная лицензия (общественное достояние, Creative Commons) или
-      есть разрешение правообладателя. Для каждого рисунка указываются художник, лицензия и ссылка на источник.
-      Пока рисунок не добавлен, на странице дела стоит заглушка.
+      A drawing appears here only when its rights status can be confirmed at the source. Two kinds qualify:
+      works the Wikimedia Commons marks as public domain, and items the Library of Congress lists with the rights
+      advisory "No known restrictions on publication". The second is the Library's own statement, not a legal
+      guarantee, so every drawing is shown with its artist, rights note and a link back to the archive record.
+      Where no drawing has been cleared, the case page shows an empty frame instead. Much modern courtroom art is
+      still under copyright, which is why many cases are missing a picture.
     </p>
 
-    <h2>Карта</h2>
+    <h2>The map</h2>
     <p>
-      Точка обозначает город или район суда. Адрес здания она не показывает. Подложка карты — OpenStreetMap.
+      A pin marks the city or district of the court, not a street address. Base map: OpenStreetMap contributors.
     </p>
 
-    <h2>Как добавить дело</h2>
+    <h2>Adding a case</h2>
     <p>
-      Каждое дело — один Markdown-файл в <code>src/content/cases/</code>. В начале файла — данные, ниже — текст описания.
-      Рисунок кладут в <code>public/sketches/</code> и указывают в поле <code>image</code>.
+      Each case is one Markdown file in <code>src/content/cases/</code>: data at the top, the write-up below. To add a
+      drawing, list it in <code>data/sketches.json</code>; the script <code>scripts/fetch-sketches.mjs</code> checks the
+      rights statement and downloads it during the build.
     </p>
     <pre><code>---
-title: Название процесса
-country: Страна
-city: Город
-court: Название суда
-region: europe          # europe, north-america, south-america, africa, asia, oceania
-category: political     # international, transitional, political, miscarriage, society
+title: Name of the proceeding
+country: Country
+city: City
+court: Name of the court
+region: europe        # europe, north-america, south-america, africa, asia, oceania
+category: political   # international, transitional, political, miscarriage, society, hearing
 lat: 48.85
 lng: 2.35
 yearStart: 1899
-yearEnd: 1906           # необязательно
-summary: Одно-два предложения для карточки.
-outcome: Чем закончилось.
-image:                  # необязательно
-  src: sketches/example.jpg
-  alt: Что изображено
-  artist: Имя художника
-  license: Public domain
-  sourceUrl: https://example.org/page
+yearEnd: 1906         # optional
+summary: One or two sentences for the card.
+outcome: How it ended.
 sources:
-  - title: Название источника
+  - title: Source title
     url: https://example.org/source
 ---
 
-Текст описания в два-три абзаца.</code></pre>
+Two or three paragraphs of description.</code></pre>
   </section>
 </Base>

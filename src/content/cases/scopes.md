@@ -1,27 +1,27 @@
 ---
-title: Процесс Скопса
+title: The Scopes "Monkey" Trial
 titleOriginal: Scopes Monkey Trial
-country: США
-city: Дейтон, Теннесси
-court: Уголовный суд Теннесси, здание суда округа Ри
+country: United States
+city: Dayton, Tennessee
+court: Tennessee criminal court, Rhea County Courthouse
 region: north-america
 category: society
 lat: 35.4946
 lng: -85.01
 yearStart: 1925
-summary: Школьного учителя судили за преподавание теории эволюции. Заранее задуманный процесс превратился в публичный спор Уильяма Дженнингса Брайана и Клэренса Дарроу о Библии и науке.
-outcome: 21 июля 1925 года присяжные признали Скопса виновным, суд назначил штраф 100 долларов. В 1927 году Верховный суд штата отменил штраф из-за процедурной ошибки. Закон Батлера отменили только в 1967 году.
+summary: A schoolteacher was tried for teaching evolution. A trial planned in advance became a public duel between William Jennings Bryan and Clarence Darrow over the Bible and science.
+outcome: On 21 July 1925 the jury found Scopes guilty and the judge fined him $100. In 1927 the state Supreme Court overturned the fine on a technicality. The Butler Act was repealed only in 1967.
 sources:
-  - title: Britannica. Scopes Trial
+  - title: Britannica, Scopes Trial
     url: https://www.britannica.com/event/Scopes-Trial
-  - title: Free Speech Center. Scopes Monkey Trial
+  - title: Free Speech Center, Scopes Monkey Trial
     url: https://firstamendment.mtsu.edu/article/scopes-monkey-trial/
-  - title: Linda Hall Library. The Scopes trial ends
+  - title: Linda Hall Library, The Scopes trial ends
     url: https://www.lindahall.org/about/news/scientist-of-the-day/the-scopes-trial-ends/
 ---
 
-В марте 1925 года Теннесси принял закон Батлера, запретивший преподавать в государственных школах учение, отвергающее библейское сотворение человека. Американский союз гражданских свобод предложил оплатить защиту любого, кого обвинят по этому закону. Жители Дейтона согласились, и 25 мая 1925 года школьному учителю Джону Скопсу предъявили обвинение. Процесс должен был привлечь внимание к небольшому городу.
+In March 1925 Tennessee passed the Butler Act, banning the teaching in public schools of any doctrine that denied the biblical account of human creation. The American Civil Liberties Union offered to pay for the defence of anyone charged under it. Townspeople in Dayton agreed, and on 25 May 1925 the schoolteacher John Scopes was charged. The trial was meant to put the small town on the map.
 
-Заседания шли с 10 по 21 июля. Обвинение поддерживал бывший кандидат в президенты Брайан, защиту вёл адвокат Дарроу. Судья Раулстон не допустил показаний учёных-экспертов. Тогда 20 июля Дарроу вызвал в свидетели самого Брайана и допрашивал его как знатока Библии. На следующий день судья вычеркнул этот допрос из протокола.
+Hearings ran from 10 to 21 July. The prosecution was backed by Bryan, a former presidential candidate; the defence was led by the lawyer Darrow. Judge Raulston refused to hear scientific experts. So on 20 July Darrow called Bryan himself to the stand and questioned him as an authority on the Bible. The next day the judge struck that examination from the record.
 
-Присяжные совещались около десяти минут. Верховный суд штата в 1927 году подтвердил конституционность закона, но отменил приговор: штраф по закону должны были назначать присяжные, а не судья.
+The jury deliberated for about ten minutes. In 1927 the state Supreme Court upheld the law's constitutionality but set aside the verdict: under state law the jury, not the judge, should have set the fine.

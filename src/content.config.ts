@@ -7,29 +7,29 @@ const cases = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/cases' }),
   schema: z.object({
     title: z.string(),
-    // Название процесса на языке страны, если есть
+    // Name of the proceeding in the local language, if any
     titleOriginal: z.string().optional(),
     country: z.string(),
     city: z.string(),
     court: z.string(),
     region: z.enum(regionKeys),
     category: z.enum(categoryKeys),
-    // Ориентир на карте: центр города или здание суда, не точный адрес
+    // Map marker: city centre or courthouse area, never a precise address
     lat: z.number().min(-90).max(90),
     lng: z.number().min(-180).max(180),
     yearStart: z.number().int(),
     yearEnd: z.number().int().optional(),
-    // 1-2 предложения для карточки и всплывающего окна на карте
+    // One or two sentences for the card and the map popup
     summary: z.string().max(240),
-    // Чем закончилось
+    // How it ended
     outcome: z.string(),
-    // Рисунок из зала суда. Файл кладётся в public/sketches/
+    // Courtroom drawing. Normally filled in by scripts/fetch-sketches.mjs (see data/sketches.json); can also be set by hand, file goes in public/sketches/
     image: z
       .object({
         src: z.string(),
         alt: z.string(),
         artist: z.string().optional(),
-        // Что именно на рисунке и когда сделан
+        // What the drawing shows and when it was made
         caption: z.string().optional(),
         license: z.string(),
         sourceUrl: z.string().url(),

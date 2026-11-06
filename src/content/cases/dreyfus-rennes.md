@@ -1,28 +1,28 @@
 ---
-title: Повторный процесс Дрейфуса
+title: The Dreyfus Retrial at Rennes
 titleOriginal: Procès de Rennes
-country: Франция
-city: Ренн
-court: Военный суд (conseil de guerre)
+country: France
+city: Rennes
+court: Court martial (conseil de guerre)
 region: europe
 category: miscarriage
 lat: 48.1147
 lng: -1.6794
 yearStart: 1899
 yearEnd: 1906
-summary: Капитана Альфреда Дрейфуса, осуждённого в 1894 году за шпионаж, судили второй раз. К тому времени выяснилось, что улики сфабрикованы, а автором документа был другой офицер. Военный суд всё равно вынес обвинительный приговор.
-outcome: 9 сентября 1899 года суд голосами 5 против 2 признал Дрейфуса виновным «при смягчающих обстоятельствах» и назначил 10 лет. Через десять дней президент Лубе его помиловал. 12 июля 1906 года Кассационный суд отменил приговор без нового разбирательства.
+summary: Captain Alfred Dreyfus, convicted of espionage in 1894, was tried a second time. By then the evidence was known to be forged and another officer had written the key document. A military court convicted him anyway.
+outcome: On 9 September 1899 the court voted 5 to 2 to find Dreyfus guilty "with extenuating circumstances" and sentenced him to ten years. Ten days later President Loubet pardoned him. On 12 July 1906 the Court of Cassation annulled the verdict without sending the case back for retrial.
 sources:
-  - title: Famous Trials. The Dreyfus Affair, a Chronology
+  - title: Famous Trials, The Dreyfus Affair, a Chronology
     url: https://famous-trials.com/dreyfus/2619-the-dreyfus-affair-a-chronology
-  - title: Encyclopedia.com. Alfred Dreyfus
+  - title: Encyclopedia.com, Alfred Dreyfus
     url: https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/alfred-dreyfus
-  - title: Touro Law Review. The Military Trial at Rennes (PDF)
+  - title: Touro Law Review, The Military Trial at Rennes (PDF)
     url: https://www.tourolaw.edu/academics/uploads/PDF_WP/29-Touro-Law-Review-5.pdf
 ---
 
-В декабре 1894 года Дрейфуса закрытым заседанием приговорили к пожизненной ссылке за передачу секретных сведений Германии. Подполковник Пикар позднее пришёл к выводу, что документ, по которому осудили капитана, написал майор Эстерхази. Эстерхази оправдали, а Эмиль Золя в январе 1898 года напечатал открытое письмо «Я обвиняю». Кассационный суд в июне 1899 года отправил дело на новое рассмотрение.
+In December 1894 Dreyfus was convicted behind closed doors and sentenced to life in exile for passing secrets to Germany. Lieutenant-Colonel Picquart later concluded that the document on which the captain was convicted had been written by Major Esterhazy. Esterhazy was acquitted, and in January 1898 Émile Zola published the open letter "J'accuse". In June 1899 the Court of Cassation ordered a new trial.
 
-Дрейфуса привезли с острова Дьявола во Францию. Второй военный суд собрался в Рене с 7 августа по 9 сентября 1899 года, подальше от парижских волнений. Вердикт «при смягчающих обстоятельствах» по делу о государственной измене называли странным уже современники.
+Dreyfus was brought back from Devil's Island to France. The second court martial sat in Rennes from 7 August to 9 September 1899, far from the unrest in Paris. Even contemporaries found the verdict of treason "with extenuating circumstances" strange.
 
-Дрейфус отказался от апелляции, чтобы получить помилование быстрее. Полностью дело закрыл Кассационный суд в 1906 году: он признал, что важный документ из материалов обвинения был подделкой, и решил, что нового процесса не нужно. После этого Дрейфуса восстановили в армии.
+Dreyfus dropped his appeal to obtain a pardon faster. The Court of Cassation closed the case in 1906, ruling that a key document in the prosecution file had been forged and that no new trial was needed. Dreyfus was then reinstated in the army.
