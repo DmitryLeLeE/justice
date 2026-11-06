@@ -12,7 +12,13 @@ yearStart: 1945
 yearEnd: 1946
 summary: The first international trial of a state's leadership. Twenty-two men from Hitler's circle faced the tribunal, accused of crimes against peace, war crimes and crimes against humanity.
 outcome: On 1 October 1946 twelve were sentenced to hang, three to life imprisonment and four to terms of 10 to 20 years; three were acquitted.
-draft: true
+image:
+  src: https://commons.wikimedia.org/wiki/Special:FilePath/Drawing%20of%20a%20group%20of%20German%20defendants%20in%20their%20seats%20created%20during%20the%20Trial%20of%20German%20Major%20War%20Criminals%20at%20Nuremberg%20-%20Ed%20Vebell.jpg?width=1400
+  alt: Drawing of the German defendants in their seats at the Nuremberg trial
+  caption: A group of German defendants in their seats, including Goering, Hess, von Ribbentrop and Keitel, Nuremberg, 1945
+  artist: Ed Vebell
+  license: Public domain (Wikimedia Commons)
+  sourceUrl: https://commons.wikimedia.org/wiki/Category:Nuremberg_War_Crimes_Trial_sketches_by_Edward_T._Vebell
 sources:
   - title: Britannica, Verdicts of the Nürnberg trials
     url: https://www.britannica.com/question/What-were-the-verdicts-of-Nurnberg-trials
