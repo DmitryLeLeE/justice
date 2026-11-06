@@ -9,7 +9,7 @@ lat: 41.3083
 lng: -72.9279
 yearStart: 1971
 summary: Black Panther leader Bobby Seale and Ericka Huggins were tried for the 1969 murder of Alex Rackley, a member suspected of being a police informant. The trial drew national attention and student protests.
-outcome: The jury could not reach a verdict, and the charges against Seale and Huggins were dropped in 1971.
+outcome: The jury deadlocked in May 1971, and on 25 May Judge Harold Mulvey dismissed all charges against Seale and Huggins.
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Drawing%20of%20an%20overview%20of%20the%20courtroom%20that%20includes%20the%20judges%20bench%20and%20defense%20table.jpg?width=1400
   alt: Pastel drawing of the New Haven courtroom with the judge's bench and the defence table
@@ -26,6 +26,6 @@ sources:
 
 The Connecticut artist Robert Templeton drew the participants in the 1971 New Haven trial of Black Panther Party chairman Bobby Seale and organiser Ericka Huggins. They were charged with kidnapping, conspiracy and murder in connection with the killing of Alex Rackley, who had been suspected of being a police informant.
 
-According to the Beinecke Library finding aid, the trial ran in Connecticut Superior Court from 18 March to 19 May 1971. Templeton's pastel and ink sketches are held at Yale.
+The trial in Connecticut Superior Court began with jury selection in autumn 1970. The jury deadlocked in May 1971, and Judge Harold Mulvey dismissed the charges, saying an impartial jury could not be found again. Templeton's pastel and ink sketches are held at Yale.
 
 The drawing shown here is an overview of the courtroom, with the judge's bench and the defence table.

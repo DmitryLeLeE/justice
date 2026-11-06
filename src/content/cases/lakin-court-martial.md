@@ -19,7 +19,7 @@ image:
   sourceUrl: https://commons.wikimedia.org/wiki/File:Lakin_court-martial_sketch.jpg
 sources:
   - title: Terrence Lakin, Wikipedia
-    url: https://en.wikipedia.org/wiki/Terrence_Lakin
+    url: https://en.wikipedia.org/wiki/Barack_Obama_presidential_eligibility_litigation
   - title: Lakin court-martial sketch, Wikimedia Commons
     url: https://commons.wikimedia.org/wiki/File:Lakin_court-martial_sketch.jpg
 ---

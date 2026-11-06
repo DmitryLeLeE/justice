@@ -11,7 +11,7 @@ lng: 2.3372
 yearStart: 1899
 yearEnd: 1900
 summary: At the height of the Dreyfus Affair the French Senate sat as a court to try nationalist and royalist agitators accused of plotting against the Republic.
-outcome: In January 1900 the High Court banished Paul Déroulède and André Buffet and sentenced Jules Guérin to ten years' detention.
+outcome: In January 1900 the High Court sentenced Déroulède and Buffet to ten years' banishment and Guérin to ten years' detention. Marcel Habert received five years' banishment.
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Brunet%20et%20Ma%C3%AEtre%20Jacquemont%20%28Monde%20illustr%C3%A9%2C%201899-12-02%29.jpg?width=1400
   alt: Courtroom sketch of the defendant Brunet and his lawyer Jacquemont
@@ -20,6 +20,8 @@ image:
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Brunet_et_Ma%C3%AEtre_Jacquemont_(Monde_illustr%C3%A9,_1899-12-02).jpg
 sources:
+  - title: The trial before the High Court, The Spectator, 6 January 1900
+    url: https://archive.spectator.co.uk/article/6th-january-1900/10/the-trial-of-the-prisoners-accused-of-conspiracy-b
   - title: Paul Déroulède, Wikipedia
     url: https://en.wikipedia.org/wiki/Paul_D%C3%A9roul%C3%A8de
   - title: Brunet et Maître Jacquemont, Wikimedia Commons

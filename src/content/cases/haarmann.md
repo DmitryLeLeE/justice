@@ -10,7 +10,7 @@ lat: 52.3759
 lng: 9.732
 yearStart: 1924
 summary: A serial killer who preyed on young men in the Hanover railway-station milieu was tried in a case that shocked Weimar Germany and drew international press.
-outcome: In December 1924 Haarmann was convicted of multiple murders and sentenced to death. He was executed in April 1925.
+outcome: Haarmann was convicted of 24 of the 27 murders charged and sentenced to death on 19 December 1924. He was executed on 15 April 1925.
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Moorden%2C%20SFA022819448.jpg?width=1400
   alt: Drawing made during the trial of Fritz Haarmann in Hanover
@@ -27,4 +27,4 @@ sources:
 
 Fritz Haarmann was arrested in Hanover in June 1924 after human remains were found in the river Leine. He was accused of killing a large number of young men and boys in the years after the First World War.
 
-The trial took place in Hanover in December 1924. The archive record of the drawing shown here, from Amsterdam's city archive, describes it as made during the trial of the "mass murderer Haarmann", who was suspected of killing 27 young people. The court sentenced him to death.
+The trial opened in Hanover on 4 December 1924. The archive record of the drawing shown here, from Amsterdam's city archive, describes it as made during the trial of the "mass murderer Haarmann", who was suspected of killing 27 young people. The court sentenced him to death.

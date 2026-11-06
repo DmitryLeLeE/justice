@@ -9,7 +9,7 @@ lat: 41.8809
 lng: -87.6315
 yearStart: 2007
 summary: A federal racketeering trial that reached back decades and linked the Chicago Outfit to a series of unsolved murders, partly through the testimony of a defendant's own relatives.
-outcome: Joseph Lombardo and Frank Calabrese Sr. were among the defendants convicted in 2007. Both received life sentences.
+outcome: In September 2007 Lombardo, Calabrese Sr. and James Marcello were convicted of racketeering and murder. All three were sentenced to life in 2009.
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/T%20Markus%20Funk%20Sketch%20with%20Frank%20Calabrese.jpg?width=1400
   alt: Courtroom sketch of T. Markus Funk, Joseph Lombardo and Frank Calabrese Sr.

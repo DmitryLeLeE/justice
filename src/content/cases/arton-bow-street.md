@@ -9,7 +9,7 @@ lat: 51.5138
 lng: -0.1228
 yearStart: 1895
 summary: Émile Arton, a go-between in the Panama Canal bribery scandal who had fled France, was arrested in London and brought before a magistrate on an extradition request.
-outcome: Arton was returned to France to face trial in connection with the Panama scandal.
+outcome: Arton was extradited to France. In June 1896 he was sentenced to six years' hard labour for defrauding a dynamite company, and he was pardoned in 1899.
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Tribunal%20de%20Bow%20Street%2C%20comparution%20d%27Arton.jpg?width=1400
   alt: Sketch of Arton appearing before the Bow Street court
@@ -18,6 +18,8 @@ image:
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Tribunal_de_Bow_Street,_comparution_d%27Arton.jpg
 sources:
+  - title: Arton, Léopold Émile, Jewish Encyclopedia
+    url: https://www.jewishencyclopedia.com/articles/1837
   - title: Panama scandals, Wikipedia
     url: https://en.wikipedia.org/wiki/Panama_scandals
   - title: Tribunal de Bow Street, comparution d'Arton, Wikimedia Commons
