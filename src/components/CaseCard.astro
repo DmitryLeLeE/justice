@@ -1,7 +1,7 @@
 ---
 import type { CaseEntry } from '../lib/cases';
-import { imgSrc, yearsLabel } from '../lib/cases';
-import { CATEGORIES } from '../lib/taxonomy';
+import { imgSrc, url, yearsLabel, decadeOf } from '../lib/cases';
+import { CATEGORIES, VERDICTS } from '../lib/taxonomy';
 
 interface Props {
   entry: CaseEntry;
@@ -11,6 +11,8 @@ interface Props {
 const { entry, number } = Astro.props;
 const d = entry.data;
 const fileNo = String(number).padStart(3, '0');
+const verdict = d.verdict ? VERDICTS[d.verdict] : null;
+const search = `${d.title} ${d.titleOriginal ?? ''} ${d.country} ${d.city} ${d.court} ${d.summary}`.toLowerCase();
 ---
 
 <article
@@ -18,28 +20,21 @@ const fileNo = String(number).padStart(3, '0');
   data-id={entry.id}
   data-region={d.region}
   data-category={d.category}
+  data-decade={decadeOf(d.yearStart)}
+  data-search={search}
 >
-  <a class="card-link" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/cases/${entry.id}/`}>
+  <a class="card-link" href={url(`cases/${entry.id}/`)}>
     <div class="thumb">
       <span class="file-no">AJ-{fileNo}</span>
-      {
-        d.image ? (
-          <img src={imgSrc(d.image.src)} alt={d.image.alt} loading="lazy" referrerpolicy="no-referrer" />
-        ) : (
-          <div class="placeholder" role="img" aria-label="No courtroom drawing has been added yet">
-            <span>drawing not yet on file</span>
-          </div>
-        )
-      }
+      <img src={imgSrc(d.image!.src)} alt={d.image!.alt} loading="lazy" referrerpolicy="no-referrer" />
+      {verdict && <span class={`verdict-stamp tone-${verdict.tone}`}>{verdict.label}</span>}
     </div>
-    <p class="meta">{d.country} · {yearsLabel(d)}</p>
+    <p class="meta">{d.city}, {d.country} · {yearsLabel(d)}</p>
     <h3>{d.title}</h3>
     <p class="summary">{d.summary}</p>
   </a>
   <div class="card-foot">
-    <span class="tag">{CATEGORIES[d.category]}</span>
-    <button type="button" class="show-on-map" data-focus={entry.id}>
-      Locate
-    </button>
+    <a class="tag" href={url(`category/${d.category}/`)}>{CATEGORIES[d.category].label}</a>
+    <button type="button" class="show-on-map" data-focus={entry.id}>Locate</button>
   </div>
 </article>

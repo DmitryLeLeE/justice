@@ -5,20 +5,23 @@ country: Israel
 city: Jerusalem
 court: Jerusalem District Court, Beit Ha'am hall
 region: asia
-category: transitional
+category: war
 lat: 31.7812
 lng: 35.2194
 yearStart: 1961
 yearEnd: 1962
 summary: A former SS officer who organised the deportation of Europe's Jews faced an Israeli court. Holocaust survivors testified and journalists from around the world covered the proceedings.
 outcome: In December 1961 he was found guilty on the main counts and sentenced to death. His appeal was rejected in May 1962 and he was executed in the night of 1 June 1962.
-draft: true
+verdict: guilty
 sources:
-  - title: US Holocaust Memorial Museum, Adolf Eichmann Sentenced to Death
-    url: https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/after-1945/adolf-eichmann-found-guilty
-  - title: Yad Vashem, The Eichmann Trial
-    url: https://www.yadvashem.org/holocaust/eichmann-trial/about.html
+- title: US Holocaust Memorial Museum, Adolf Eichmann Sentenced to Death
+  url: https://encyclopedia.ushmm.org/content/en/timeline-event/holocaust/after-1945/adolf-eichmann-found-guilty
+- title: Yad Vashem, The Eichmann Trial
+  url: https://www.yadvashem.org/holocaust/eichmann-trial/about.html
+draft: true
 ---
+
+## The case
 
 After the war Eichmann hid in Argentina. In May 1960 Israeli intelligence agents seized him and took him to Israel. All counts rested on the 1950 law on the punishment of Nazis and their collaborators.
 

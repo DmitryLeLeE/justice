@@ -37,13 +37,24 @@ country: Country
 city: City
 court: Name of the court
 region: europe        # europe, north-america, south-america, africa, asia, oceania
-category: political   # international, transitional, political, miscarriage, society, hearing, crime
+category: political   # murder, serial, mob, assassination, terror, spies, political, war,
+                      # fraud, celebrity, wrongful, landmark, inquiry
 lat: 48.85
 lng: 2.35
 yearStart: 1899
 yearEnd: 1906         # optional
-summary: One or two sentences for the card.
+summary: One or two sentences for the card (240 characters at most).
 outcome: How it ended.
+verdict: guilty       # optional stamp: guilty, acquitted, overturned, mixed, hung,
+                      # dismissed, settled, ruling, inquiry
+glance:               # optional "at a glance" box
+  defendants: Who stood trial
+  charges: What they were charged with
+  judge: Who presided
+timeline:             # optional
+  - date: 1 Jan 1900
+    event: What happened
+related: [other-case-slug]   # optional
 image:
   src: https://example.org/drawing.jpg
   alt: What the drawing shows
@@ -55,6 +66,6 @@ sources:
     url: https://example.org/source
 ---
 
-Two or three paragraphs of description.</code></pre>
+The write-up: ## The case, ## In the courtroom, ## Aftermath.</code></pre>
   </section>
 </Base>

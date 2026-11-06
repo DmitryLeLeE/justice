@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import CaseCard from '../../components/CaseCard.astro';
+import { getCases, url } from '../../lib/cases';
+import { CATEGORIES, categoryKeys } from '../../lib/taxonomy';
+
+export async function getStaticPaths() {
+  const cases = await getCases();
+  return categoryKeys
+    .filter((k) => cases.some((c) => c.data.category === k))
+    .map((slug) => ({ params: { slug }, props: { slug } }));
+}
+
+const { slug } = Astro.props;
+const cat = CATEGORIES[slug];
+const all = await getCases();
+const inDrawer = all.map((entry, i) => ({ entry, number: i + 1 })).filter(({ entry }) => entry.data.category === slug);
+const countries = new Set(inDrawer.map(({ entry }) => entry.data.country)).size;
+const first = Math.min(...inDrawer.map(({ entry }) => entry.data.yearStart));
+const last = Math.max(...inDrawer.map(({ entry }) => entry.data.yearStart));
+const others = categoryKeys.filter((k) => k !== slug && all.some((c) => c.data.category === k));
+---
+
+<Base title={cat.label} description={cat.blurb}>
+  <section class="drawer-head">
+    <p class="kicker">Filing drawer {cat.numeral}</p>
+    <h1>{cat.label}</h1>
+    <p class="drawer-blurb">{cat.blurb}</p>
+    <p class="drawer-stats">
+      <span>{inDrawer.length} files</span><span>{countries} {countries === 1 ? 'country' : 'countries'}</span><span>{first}–{last}</span>
+    </p>
+    <p class="crumbs"><a href={url()}>← Back to the map</a></p>
+  </section>
+
+  <ul class="grid" style="list-style:none">
+    {inDrawer.map(({ entry, number }) => <li><CaseCard entry={entry} number={number} /></li>)}
+  </ul>
+
+  <nav class="other-drawers" aria-label="Other drawers">
+    <h2>Other drawers</h2>
+    <ul>
+      {others.map((k) => <li><a href={url(`category/${k}/`)}><span>{CATEGORIES[k].numeral}</span> {CATEGORIES[k].label}</a></li>)}
+    </ul>
+  </nav>
+
+  <script>
+    // On a drawer page "Locate" sends the reader to the map with the pin open
+    document.querySelectorAll<HTMLButtonElement>('.show-on-map').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const base = document.querySelector('.brand')!.getAttribute('href') || '/';
+        location.href = `${base}#${encodeURIComponent(btn.dataset.focus || '')}`;
+      });
+    });
+  </script>
+</Base>

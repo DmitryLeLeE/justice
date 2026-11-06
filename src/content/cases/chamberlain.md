@@ -5,22 +5,25 @@ country: Australia
 city: Darwin
 court: Supreme Court of the Northern Territory
 region: oceania
-category: miscarriage
+category: wrongful
 lat: -12.4634
 lng: 130.8456
 yearStart: 1982
 yearEnd: 1988
 summary: A mother was convicted of murdering her baby daughter, who vanished near Uluru. She said a dingo took the child. The convictions were quashed, and in 2012 a coroner confirmed her account.
 outcome: On 29 October 1982 Lindy Chamberlain was sentenced to life imprisonment. On 15 September 1988 all convictions were quashed. On 12 June 2012 a coroner ruled that a dingo had taken the baby.
-draft: true
+verdict: overturned
 sources:
-  - title: Famous Trials, The Dingo Trial, Chronology
-    url: https://famous-trials.com/dingo/456-chronology
-  - title: Australian Geographic, Azaria Chamberlain final inquest
-    url: https://www.australiangeographic.com.au/events/2025/06/defining-moments-in-australian-history-azaria-chamberlain-final-inquest/
-  - title: Forejustice, Lindy Chamberlain
-    url: https://forejustice.org/db/Chamberlain--Lindy-.html
+- title: Famous Trials, The Dingo Trial, Chronology
+  url: https://famous-trials.com/dingo/456-chronology
+- title: Australian Geographic, Azaria Chamberlain final inquest
+  url: https://www.australiangeographic.com.au/events/2025/06/defining-moments-in-australian-history-azaria-chamberlain-final-inquest/
+- title: Forejustice, Lindy Chamberlain
+  url: https://forejustice.org/db/Chamberlain--Lindy-.html
+draft: true
 ---
+
+## The case
 
 Azaria Chamberlain disappeared in August 1980 during a family trip to Uluru. Her parents said a dingo had taken her. A second coroner's inquiry decided that Lindy should be tried for murder and her husband Michael as an accessory after the fact.
 

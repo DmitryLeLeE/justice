@@ -1,21 +1,37 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { getCases, imgSrc, url, yearsLabel } from '../../lib/cases';
-import { REGIONS, CATEGORIES } from '../../lib/taxonomy';
+import CaseCard from '../../components/CaseCard.astro';
+import { getCases, imgSrc, url, yearsLabel, relatedFor } from '../../lib/cases';
+import { REGIONS, CATEGORIES, VERDICTS } from '../../lib/taxonomy';
 
 export async function getStaticPaths() {
   const cases = await getCases();
   return cases.map((entry, i) => ({
     params: { id: entry.id },
-    props: { entry, number: i + 1, prev: cases[i - 1] ?? null, next: cases[i + 1] ?? null },
+    props: {
+      entry,
+      number: i + 1,
+      prev: cases[i - 1] ?? null,
+      next: cases[i + 1] ?? null,
+      related: relatedFor(entry, cases).map((c) => ({ entry: c, number: cases.indexOf(c) + 1 })),
+    },
   }));
 }
 
-const { entry, number, prev, next } = Astro.props;
+const { entry, number, prev, next, related } = Astro.props;
 const fileNo = `AJ-${String(number).padStart(3, '0')}`;
 const d = entry.data;
 const { Content } = await render(entry);
+const verdict = d.verdict ? VERDICTS[d.verdict] : null;
+const g = d.glance ?? {};
+const glanceRows = [
+  ['Defendants', g.defendants],
+  ['Charges', g.charges],
+  ['Presiding', g.judge],
+  ['Prosecution', g.prosecution],
+  ['Defence', g.defence],
+].filter(([, v]) => v) as [string, string][];
 ---
 
 <Base title={d.title} description={d.summary}>
@@ -23,39 +39,34 @@ const { Content } = await render(entry);
     <div class="form-head"><span>Official case file</span><span>No. {fileNo}</span></div>
     <p class="crumbs">
       <a href={url(`#${entry.id}`)}>← Back to the map</a>
+      <span aria-hidden="true"> · </span>
+      <a href={url(`category/${d.category}/`)}>Drawer {CATEGORIES[d.category].numeral}: {CATEGORIES[d.category].label}</a>
     </p>
-    <p class="stamp">{CATEGORIES[d.category]}</p>
+    {verdict && <p class={`big-stamp tone-${verdict.tone}`} aria-label={`Outcome: ${verdict.label}`}>{verdict.label}</p>}
+    <p class="stamp">{CATEGORIES[d.category].label}</p>
     <h1>{d.title}</h1>
     {d.titleOriginal && <p class="orig">{d.titleOriginal}</p>}
+    <p class="lede">{d.summary}</p>
 
     <figure>
-      <div class={d.image ? 'frame' : 'frame is-empty'}>
-        {
-          d.image ? (
-            <img src={imgSrc(d.image.src)} alt={d.image.alt} referrerpolicy="no-referrer" />
-          ) : (
-            <div class="hero-ph">No courtroom drawing on file yet</div>
-          )
-        }
+      <div class="frame">
+        <img src={imgSrc(d.image!.src)} alt={d.image!.alt} referrerpolicy="no-referrer" />
+        <span class="hand-note" aria-hidden="true">drawn in court, not a photograph</span>
       </div>
-      {
-        d.image && (
-          <figcaption>
-            <strong>Exhibit A.</strong> {d.image.caption && <>{d.image.caption}. </>}
-            {d.image.artist && <>Artist: {d.image.artist}. </>}
-            Credit: {d.image.license}. <a href={d.image.sourceUrl} rel="noopener">Source</a>
-          </figcaption>
-        )
-      }
+      <figcaption>
+        <strong>Exhibit A.</strong> {d.image!.caption && <>{d.image!.caption}. </>}
+        {d.image!.artist && <>Artist: {d.image!.artist}. </>}
+        Credit: {d.image!.license}. <a href={d.image!.sourceUrl} rel="noopener">Source</a>
+      </figcaption>
     </figure>
 
+    <h2 class="sect">At a glance</h2>
     <dl class="facts">
-      <dt>Country</dt><dd>{d.country}</dd>
-      <dt>City</dt><dd>{d.city}</dd>
+      <dt>Where</dt><dd>{d.city}, {d.country}</dd>
       <dt>Court</dt><dd>{d.court}</dd>
       <dt>Years</dt><dd>{yearsLabel(d)}</dd>
-      <dt>Region</dt><dd>{REGIONS[d.region]}</dd>
-      <dt>Type</dt><dd>{CATEGORIES[d.category]}</dd>
+      {glanceRows.map(([k, v]) => <><dt>{k}</dt><dd>{v}</dd></>)}
+      <dt>Drawer</dt><dd>{CATEGORIES[d.category].label} · {REGIONS[d.region]}</dd>
       <dt>Outcome</dt><dd>{d.outcome}</dd>
     </dl>
 
@@ -63,16 +74,47 @@ const { Content } = await render(entry);
       <Content />
     </div>
 
+    {
+      d.timeline && d.timeline.length > 0 && (
+        <section class="timeline-wrap">
+          <h2 class="sect">Timeline</h2>
+          <ol class="timeline">
+            {d.timeline.map((t) => <li><time>{t.date}</time><span>{t.event}</span></li>)}
+          </ol>
+        </section>
+      )
+    }
+
     <section class="sources">
-      <h2>Sources</h2>
+      <h2 class="sect">Sources</h2>
       <ul>
         {d.sources.map((s) => <li><a href={s.url} rel="noopener">{s.title}</a></li>)}
       </ul>
     </section>
+
+    {
+      related.length > 0 && (
+        <section class="related">
+          <h2 class="sect">Related files</h2>
+          <ul class="grid grid-small" style="list-style:none">
+            {related.map((r) => <li><CaseCard entry={r.entry} number={r.number} /></li>)}
+          </ul>
+        </section>
+      )
+    }
 
     <nav class="pager" aria-label="Neighbouring cases">
       {prev && <a class="prev" href={url(`cases/${prev.id}/`)}>← {prev.data.title}</a>}
       {next && <a class="next" href={url(`cases/${next.id}/`)}>{next.data.title} →</a>}
     </nav>
   </article>
+
+  <script>
+    document.querySelectorAll<HTMLButtonElement>('.show-on-map').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const base = document.querySelector('.brand')!.getAttribute('href') || '/';
+        location.href = `${base}#${encodeURIComponent(btn.dataset.focus || '')}`;
+      });
+    });
+  </script>
 </Base>

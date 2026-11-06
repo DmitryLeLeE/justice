@@ -1,7 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
-import { regionKeys, categoryKeys } from './lib/taxonomy';
+import { regionKeys, categoryKeys, verdictKeys } from './lib/taxonomy';
 
 const cases = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/cases' }),
@@ -21,8 +21,24 @@ const cases = defineCollection({
     yearEnd: z.number().int().optional(),
     // One or two sentences for the card and the map popup
     summary: z.string().max(240),
-    // How it ended
+    // How it ended, in a sentence or two
     outcome: z.string(),
+    // Drives the coloured stamp on the card and the dossier
+    verdict: z.enum(verdictKeys).optional(),
+    // "At a glance" block on the dossier page. Every field is optional
+    glance: z
+      .object({
+        defendants: z.string().optional(),
+        charges: z.string().optional(),
+        judge: z.string().optional(),
+        prosecution: z.string().optional(),
+        defence: z.string().optional(),
+      })
+      .optional(),
+    // Key dates, oldest first
+    timeline: z.array(z.object({ date: z.string(), event: z.string() })).optional(),
+    // Slugs of related files; when absent the page picks neighbours from the same drawer
+    related: z.array(z.string()).optional(),
     // Courtroom drawing, hot-linked from the archive that hosts it (absolute URL). Every case published on the site has one
     image: z
       .object({

@@ -12,15 +12,18 @@ yearStart: 1963
 yearEnd: 1964
 summary: Leaders of the ANC's underground armed wing were arrested at a farm in Rivonia. In a statement from the dock, Nelson Mandela called a free and equal society an ideal for which he was prepared to die.
 outcome: On 12 June 1964 eight defendants were sentenced to life imprisonment. Lionel Bernstein was acquitted and James Kantor was discharged for lack of evidence.
-draft: true
+verdict: guilty
 sources:
-  - title: Nelson Mandela Foundation, 50th anniversary of the sentencing of the Rivonia trialists
-    url: https://nelsonmandela.org/news/entry/12-june-1964-50th-anniversary-of-the-sentencing-of-the-rivonia-trialists
-  - title: US Department of State, Foreign Relations of the United States 1964–68, vol. XXIV
-    url: https://history.state.gov/historicaldocuments/frus1964-68v24/d590
-  - title: Ahmed Kathrada Foundation, The Rivonia Trial (1963–1964)
-    url: https://www.kathradafoundation.org/download/the-rivonia-trial-1963-1964/
+- title: Nelson Mandela Foundation, 50th anniversary of the sentencing of the Rivonia trialists
+  url: https://nelsonmandela.org/news/entry/12-june-1964-50th-anniversary-of-the-sentencing-of-the-rivonia-trialists
+- title: US Department of State, Foreign Relations of the United States 1964–68, vol. XXIV
+  url: https://history.state.gov/historicaldocuments/frus1964-68v24/d590
+- title: Ahmed Kathrada Foundation, The Rivonia Trial (1963–1964)
+  url: https://www.kathradafoundation.org/download/the-rivonia-trial-1963-1964/
+draft: true
 ---
+
+## The case
 
 On 11 July 1963 police raided Liliesleaf Farm outside Johannesburg, where leaders of Umkhonto we Sizwe, the armed wing of the African National Congress, were meeting. The court found the first indictment unsatisfactory; the second named ten accused. Mandela was already serving another sentence in a Pretoria prison and was added to the case.
 

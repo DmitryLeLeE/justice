@@ -4,6 +4,8 @@ import '@fontsource/special-elite/400.css';
 import '@fontsource/libre-baskerville/400.css';
 import '@fontsource/libre-baskerville/400-italic.css';
 import '@fontsource/libre-baskerville/700.css';
+import '@fontsource/caveat/500.css';
+import '@fontsource/caveat/700.css';
 import '../styles/global.css';
 import { url } from '../lib/cases';
 
@@ -35,7 +37,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
   </head>
   <body>
     <div class="tape" aria-hidden="true"></div>
-    <div class="classif" aria-hidden="true">Official record · Atlas of Justice · Courtroom proceedings archive</div>
+    <div class="classif" aria-hidden="true">Official record · Atlas of Justice · <span class="redact">courtroom drawings only</span> · No cameras admitted</div>
     <header class="site-header">
       <a class="brand" href={url()}>
         <span class="brand-mark" aria-hidden="true">⚖</span>
@@ -43,6 +45,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
       </a>
       <nav aria-label="Main navigation">
         <a href={url()}>The Map</a>
+        <a href={url('#drawers')}>Drawers</a>
         <a href={url('about/')}>About</a>
       </nav>
     </header>
@@ -50,7 +53,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
       <slot />
     </main>
     <footer class="site-footer">
-      <p>Atlas of Justice. Case files are compiled from public sources, linked on each case page. Every drawing is credited to its artist and archive.</p>
+      <p>Atlas of Justice. Case files are compiled from public sources, linked on each page. Every drawing is credited to its artist and archive. Verdict stamps show the final legal outcome described in each file.</p>
     </footer>
   </body>
 </html>

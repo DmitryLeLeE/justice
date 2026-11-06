@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import CaseCard from '../components/CaseCard.astro';
-import { getCases, url, yearsLabel } from '../lib/cases';
-import { REGIONS, CATEGORIES } from '../lib/taxonomy';
+import { getCases, url, yearsLabel, decadeOf } from '../lib/cases';
+import { REGIONS, CATEGORIES, categoryKeys } from '../lib/taxonomy';
 
 const cases = await getCases();
 
@@ -17,18 +17,38 @@ const points = cases.map((c) => ({
   lng: c.data.lng,
   region: c.data.region,
   category: c.data.category,
+  decade: decadeOf(c.data.yearStart),
+  search: `${c.data.title} ${c.data.titleOriginal ?? ''} ${c.data.country} ${c.data.city} ${c.data.court} ${c.data.summary}`.toLowerCase(),
   href: url(`cases/${c.id}/`),
 }));
+
+const countries = new Set(cases.map((c) => c.data.country)).size;
+const years = cases.map((c) => c.data.yearStart);
+const firstYear = Math.min(...years);
+const lastYear = Math.max(...years);
+const decades = [...new Set(years.map(decadeOf))].sort((a, b) => a - b);
+const drawers = categoryKeys
+  .map((k) => ({ key: k, n: cases.filter((c) => c.data.category === k).length }))
+  .filter((d) => d.n > 0);
 ---
 
 <Base>
   <section class="hero">
-    <p class="kicker">Case files from the world's courtrooms</p>
-    <h1>Atlas of Justice</h1>
-    <p>
-      Courtroom drawings and short case files from trials around the world. Pick a pin to open a file:
-      where it was heard, who stood accused, and how it ended.
-    </p>
+    <div class="hero-text">
+      <p class="kicker">Case files from the world's courtrooms</p>
+      <h1>Atlas of <span class="strike">Justice</span></h1>
+      <p class="hero-lede">
+        Trials, tribunals and hearings, each with a drawing made in the room. Pick a pin, open a file:
+        who stood accused, what was said, how it ended.
+      </p>
+      <p class="hand-note hero-note" aria-hidden="true">no cameras allowed. only pencils.</p>
+    </div>
+    <dl class="stats" aria-label="The archive in numbers">
+      <div><dt>Files</dt><dd>{cases.length}</dd></div>
+      <div><dt>Countries</dt><dd>{countries}</dd></div>
+      <div><dt>Drawers</dt><dd>{drawers.length}</dd></div>
+      <div><dt>Span</dt><dd>{firstYear}–{lastYear}</dd></div>
+    </dl>
   </section>
 
   <div class="map-wrap">
@@ -36,7 +56,35 @@ const points = cases.map((c) => ({
   </div>
   <p class="map-note">Pins mark a city, not a courthouse address.</p>
 
+  <section id="drawers" class="drawers" aria-labelledby="drawers-h">
+    <h2 id="drawers-h" class="sect-light">The filing drawers</h2>
+    <ul>
+      {
+        drawers.map((d) => (
+          <li>
+            <a href={url(`category/${d.key}/`)}>
+              <span class="drawer-no">{CATEGORIES[d.key].numeral}</span>
+              <span class="drawer-name">{CATEGORIES[d.key].label}</span>
+              <span class="drawer-count">{d.n}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
   <form class="filters" aria-label="Filters" onsubmit="return false">
+    <label class="f-search">
+      Search the archive
+      <input type="search" id="f-q" placeholder="name, city, charge…" autocomplete="off" />
+    </label>
+    <label>
+      Drawer
+      <select id="f-category">
+        <option value="">All drawers</option>
+        {drawers.map((d) => <option value={d.key}>{CATEGORIES[d.key].label}</option>)}
+      </select>
+    </label>
     <label>
       Region
       <select id="f-region">
@@ -45,22 +93,23 @@ const points = cases.map((c) => ({
       </select>
     </label>
     <label>
-      Type
-      <select id="f-category">
-        <option value="">All types</option>
-        {Object.entries(CATEGORIES).filter(([k]) => cases.some((c) => c.data.category === k)).map(([k, v]) => <option value={k}>{v}</option>)}
+      Decade
+      <select id="f-decade">
+        <option value="">Any decade</option>
+        {decades.map((dc) => <option value={dc}>{dc}s</option>)}
       </select>
     </label>
     <button type="button" id="f-reset">Reset</button>
-    <p class="count" id="count" aria-live="polite">Cases: {cases.length}</p>
+    <button type="button" id="f-random" class="accent">Pull a random file</button>
+    <p class="count" id="count" aria-live="polite">Files: {cases.length}</p>
   </form>
 
   <ul class="grid" id="grid" style="list-style:none">
     {cases.map((entry, i) => <li><CaseCard entry={entry} number={i + 1} /></li>)}
   </ul>
-  <p class="empty" id="empty" hidden>No cases match these filters.</p>
+  <p class="empty" id="empty" hidden>No files match these filters.</p>
 
-  <script type="application/json" id="cases-data" set:html={JSON.stringify(points)} />
+<script type="application/json" id="cases-data" set:html={JSON.stringify(points)} />
 
   <script>
     import L from 'leaflet';
@@ -68,7 +117,7 @@ const points = cases.map((c) => ({
 
     type Point = {
       id: string; title: string; place: string; years: string; summary: string;
-      lat: number; lng: number; region: string; category: string; href: string;
+      lat: number; lng: number; region: string; category: string; decade: number; search: string; href: string;
     };
 
     const data: Point[] = JSON.parse(document.getElementById('cases-data')!.textContent || '[]');
@@ -115,6 +164,9 @@ const points = cases.map((c) => ({
 
     const regionSel = document.getElementById('f-region') as HTMLSelectElement;
     const categorySel = document.getElementById('f-category') as HTMLSelectElement;
+    const decadeSel = document.getElementById('f-decade') as HTMLSelectElement;
+    const qInput = document.getElementById('f-q') as HTMLInputElement;
+    const randomBtn = document.getElementById('f-random') as HTMLButtonElement;
     const resetBtn = document.getElementById('f-reset') as HTMLButtonElement;
     const countEl = document.getElementById('count')!;
     const emptyEl = document.getElementById('empty')!;
@@ -123,9 +175,15 @@ const points = cases.map((c) => ({
     function apply(fit = true) {
       const region = regionSel.value;
       const category = categorySel.value;
+      const decade = decadeSel.value;
+      const terms = qInput.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
       const visible: Point[] = [];
       for (const p of data) {
-        const ok = (!region || p.region === region) && (!category || p.category === category);
+        const ok =
+          (!region || p.region === region) &&
+          (!category || p.category === category) &&
+          (!decade || String(p.decade) === decade) &&
+          terms.every((t) => p.search.includes(t));
         const marker = markers.get(p.id)!;
         if (ok) { marker.addTo(map); visible.push(p); } else { marker.remove(); }
       }
@@ -135,7 +193,7 @@ const points = cases.map((c) => ({
         c.hidden = !show;
         (c.parentElement as HTMLElement).hidden = !show;
       }
-      countEl.textContent = `Cases: ${visible.length}`;
+      countEl.textContent = `Files: ${visible.length}`;
       emptyEl.hidden = visible.length > 0;
       if (fit && visible.length) {
         map.fitBounds(L.latLngBounds(visible.map((p) => [p.lat, p.lng] as [number, number])), {
@@ -146,9 +204,17 @@ const points = cases.map((c) => ({
 
     regionSel.addEventListener('change', () => apply());
     categorySel.addEventListener('change', () => apply());
+    decadeSel.addEventListener('change', () => apply());
+    qInput.addEventListener('input', () => apply(false));
+    randomBtn.addEventListener('click', () => {
+      const pick = data[Math.floor(Math.random() * data.length)];
+      location.href = pick.href;
+    });
     resetBtn.addEventListener('click', () => {
       regionSel.value = '';
       categorySel.value = '';
+      decadeSel.value = '';
+      qInput.value = '';
       apply();
       map.setView([25, 15], 2);
     });
@@ -157,7 +223,7 @@ const points = cases.map((c) => ({
       const p = data.find((x) => x.id === id);
       const marker = markers.get(id);
       if (!p || !marker) return;
-      if (!map.hasLayer(marker)) { regionSel.value = ''; categorySel.value = ''; apply(false); }
+      if (!map.hasLayer(marker)) { regionSel.value = ''; categorySel.value = ''; decadeSel.value = ''; qInput.value = ''; apply(false); }
       document.getElementById('map')!.scrollIntoView({ behavior: 'smooth', block: 'center' });
       map.flyTo([p.lat, p.lng], 5, { duration: 0.8 });
       marker.openPopup();
