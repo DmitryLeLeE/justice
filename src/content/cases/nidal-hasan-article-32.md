@@ -50,3 +50,11 @@ The Article 32 hearing in October 2010 decides whether charges go forward to a c
 ## The court-martial
 
 The case came to trial in August 2013. Hasan, who by then had dismissed his lawyers, represented himself and called no witnesses. A panel of military officers found him guilty on every count and sentenced him to death. The Army never called the attack an act of terrorism, a point that the victims' families criticised, and the soldiers who were wounded or killed were later made eligible for the Purple Heart.
+
+<section class="adult-only">
+
+## 18+ · The shooting
+
+On 5 November 2009 Hasan, an Army psychiatrist, walked into the Soldier Readiness Processing Center at Fort Hood, Texas, and opened fire with a pistol. He killed 13 people, one of them a pregnant soldier, Private Francheska Velez, and wounded more than 30. He was shot and paralysed from the waist down by a civilian police officer, Kimberly Munley, and later represented himself at his trial from a wheelchair.
+
+</section>

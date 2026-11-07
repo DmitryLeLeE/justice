@@ -20,15 +20,18 @@ const points = cases.map((c) => ({
   decade: decadeOf(c.data.yearStart),
   search: `${c.data.title} ${c.data.titleOriginal ?? ''} ${c.data.country} ${c.data.city} ${c.data.court} ${c.data.summary}`.toLowerCase(),
   href: url(`cases/${c.id}/`),
+  mature: !!c.data.mature,
 }));
+const safe = cases.filter((c) => !c.data.mature);
 
 const countries = new Set(cases.map((c) => c.data.country)).size;
+const countriesSafe = new Set(safe.map((c) => c.data.country)).size;
 const years = cases.map((c) => c.data.yearStart);
 const firstYear = Math.min(...years);
 const lastYear = Math.max(...years);
 const decades = [...new Set(years.map(decadeOf))].sort((a, b) => a - b);
 const drawers = categoryKeys
-  .map((k) => ({ key: k, n: cases.filter((c) => c.data.category === k).length }))
+  .map((k) => ({ key: k, n: cases.filter((c) => c.data.category === k).length, ns: safe.filter((c) => c.data.category === k).length }))
   .filter((d) => d.n > 0);
 ---
 
@@ -44,8 +47,8 @@ const drawers = categoryKeys
       <p class="hand-note hero-note" aria-hidden="true">no cameras allowed. only pencils.</p>
     </div>
     <dl class="stats" aria-label="The archive in numbers">
-      <div><dt>Files</dt><dd>{cases.length}</dd></div>
-      <div><dt>Countries</dt><dd>{countries}</dd></div>
+      <div><dt>Files</dt><dd><span class="only-safe">{safe.length}</span><span class="only-adult">{cases.length}</span></dd></div>
+      <div><dt>Countries</dt><dd><span class="only-safe">{countriesSafe}</span><span class="only-adult">{countries}</span></dd></div>
       <div><dt>Drawers</dt><dd>{drawers.length}</dd></div>
       <div><dt>Span</dt><dd>{firstYear}–{lastYear}</dd></div>
     </dl>
@@ -65,7 +68,7 @@ const drawers = categoryKeys
             <a href={url(`category/${d.key}/`)}>
               <span class="drawer-no">{CATEGORIES[d.key].numeral}</span>
               <span class="drawer-name">{CATEGORIES[d.key].label}</span>
-              <span class="drawer-count">{d.n}</span>
+              <span class="drawer-count"><span class="only-safe">{d.ns}</span><span class="only-adult">{d.n}</span></span>
             </a>
           </li>
         ))
@@ -101,7 +104,7 @@ const drawers = categoryKeys
     </label>
     <button type="button" id="f-reset">Reset</button>
     <button type="button" id="f-random" class="accent">Pull a random file</button>
-    <p class="count" id="count" aria-live="polite">Files: {cases.length}</p>
+    <p class="count" id="count" aria-live="polite">Files: {safe.length}</p>
   </form>
 
   <ul class="grid" id="grid" style="list-style:none">
@@ -117,7 +120,7 @@ const drawers = categoryKeys
 
     type Point = {
       id: string; title: string; place: string; years: string; summary: string;
-      lat: number; lng: number; region: string; category: string; decade: number; search: string; href: string;
+      lat: number; lng: number; region: string; category: string; decade: number; search: string; href: string; mature: boolean;
     };
 
     const data: Point[] = JSON.parse(document.getElementById('cases-data')!.textContent || '[]');
@@ -178,8 +181,10 @@ const drawers = categoryKeys
       const decade = decadeSel.value;
       const terms = qInput.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
       const visible: Point[] = [];
+      const adult = document.documentElement.dataset.adult === '1';
       for (const p of data) {
         const ok =
+          (adult || !p.mature) &&
           (!region || p.region === region) &&
           (!category || p.category === category) &&
           (!decade || String(p.decade) === decade) &&
@@ -207,7 +212,9 @@ const drawers = categoryKeys
     decadeSel.addEventListener('change', () => apply());
     qInput.addEventListener('input', () => apply(false));
     randomBtn.addEventListener('click', () => {
-      const pick = data[Math.floor(Math.random() * data.length)];
+      const adult = document.documentElement.dataset.adult === '1';
+      const pool = data.filter((p) => adult || !p.mature);
+      const pick = pool[Math.floor(Math.random() * pool.length)];
       location.href = pick.href;
     });
     resetBtn.addEventListener('click', () => {
@@ -224,6 +231,7 @@ const drawers = categoryKeys
       const marker = markers.get(id);
       if (!p || !marker) return;
       if (!map.hasLayer(marker)) { regionSel.value = ''; categorySel.value = ''; decadeSel.value = ''; qInput.value = ''; apply(false); }
+      if (!map.hasLayer(marker)) return;
       document.getElementById('map')!.scrollIntoView({ behavior: 'smooth', block: 'center' });
       map.flyTo([p.lat, p.lng], 5, { duration: 0.8 });
       marker.openPopup();
@@ -233,6 +241,7 @@ const drawers = categoryKeys
       btn.addEventListener('click', () => focusCase(btn.dataset.focus || ''));
     });
 
+    document.addEventListener('adultchange', () => apply(false));
     apply(false);
     const hash = decodeURIComponent(location.hash.replace(/^#/, ''));
     if (hash) focusCase(hash);

@@ -49,3 +49,11 @@ The trial ran for two weeks before three judges in New Bedford, with reporters f
 ## Aftermath
 
 The jury acquitted her after deliberating for under two hours. She remained in Fall River, in a large house she called Maplecroft, where she was shunned by many neighbours, and she died in 1927. The case lives on in a children's rhyme and in countless retellings.
+
+<section class="adult-only">
+
+## 18+ · The killings
+
+Abby Borden was struck about eighteen or nineteen times with a hatchet in an upstairs bedroom, and Andrew Borden about ten or eleven times as he lay on a sofa downstairs, an hour or so later. Photographs of the bodies and the victims' skulls were shown in court.
+
+</section>

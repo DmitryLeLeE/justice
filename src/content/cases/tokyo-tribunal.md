@@ -36,6 +36,7 @@ image:
   caption: 'A photograph, not a drawing: the defendants in the prisoners'' box at Ichigaya, May–June 1946. Hideki Tojo is fifth from the left in the front row, according to the Commons caption.'
   artist: Unknown photographer
   license: Public domain in Japan (published before 1958)
+  kind: photo
   sourceUrl: https://commons.wikimedia.org/wiki/File:IMTFE_defendants.jpg
 sources:
 - title: National WWII Museum, Justice Radhabinod Pal and the Tokyo Tribunal

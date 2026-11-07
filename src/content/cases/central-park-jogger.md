@@ -53,3 +53,11 @@ Marilyn Church drew the prosecutor, Elizabeth Lederer, questioning an arresting 
 ## Aftermath
 
 In 2001 a convicted rapist named Matias Reyes, already in prison, wrote to the authorities and said he had acted alone. His DNA matched, and the Manhattan District Attorney's office, after its own investigation, asked the court to vacate the convictions. The men, by then grown, had served between six and thirteen years. The case is now a standard example of false confessions and of media-driven prosecution. The five, once labelled the "Central Park Five", are now usually called the Exonerated Five.
+
+<section class="adult-only">
+
+## 18+ · The attack
+
+On the night of 19 April 1989 a 28-year-old investment banker, Trisha Meili, was beaten, raped and left for dead in Central Park. She was found hours later, with severe brain injuries and a heavy loss of blood, and lay in a coma for twelve days. She has no memory of the attack. The teenagers were questioned for long hours, and their videotaped statements were the core of the prosecution because no physical evidence tied them to the scene; in 2014 New York City agreed to pay the five men $41 million.
+
+</section>

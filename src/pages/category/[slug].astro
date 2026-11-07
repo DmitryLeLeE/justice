@@ -15,7 +15,9 @@ const { slug } = Astro.props;
 const cat = CATEGORIES[slug];
 const all = await getCases();
 const inDrawer = all.map((entry, i) => ({ entry, number: i + 1 })).filter(({ entry }) => entry.data.category === slug);
+const safeInDrawer = inDrawer.filter(({ entry }) => !entry.data.mature);
 const countries = new Set(inDrawer.map(({ entry }) => entry.data.country)).size;
+const countriesSafe = new Set(safeInDrawer.map(({ entry }) => entry.data.country)).size;
 const first = Math.min(...inDrawer.map(({ entry }) => entry.data.yearStart));
 const last = Math.max(...inDrawer.map(({ entry }) => entry.data.yearStart));
 const others = categoryKeys.filter((k) => k !== slug && all.some((c) => c.data.category === k));
@@ -27,7 +29,7 @@ const others = categoryKeys.filter((k) => k !== slug && all.some((c) => c.data.c
     <h1>{cat.label}</h1>
     <p class="drawer-blurb">{cat.blurb}</p>
     <p class="drawer-stats">
-      <span>{inDrawer.length} files</span><span>{countries} {countries === 1 ? 'country' : 'countries'}</span><span>{first}–{last}</span>
+      <span><span class="only-safe">{safeInDrawer.length}</span><span class="only-adult">{inDrawer.length}</span> files</span><span><span class="only-safe">{countriesSafe}</span><span class="only-adult">{countries}</span> countries</span><span>{first}–{last}</span>
     </p>
     <p class="crumbs"><a href={url()}>← Back to the map</a></p>
   </section>

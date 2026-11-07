@@ -41,6 +41,7 @@ image:
   caption: 'A photograph, not a drawing: Darrow questions Bryan on 20 July 1925 on a platform outside the courthouse, where the court had moved because of the heat.'
   artist: William Silverman, Smithsonian Institution Archives
   license: No known copyright restrictions (Smithsonian Institution Archives)
+  kind: photo
   sourceUrl: https://commons.wikimedia.org/wiki/File:Clarence_S._Darrow_interrogating_William_Jennings_Bryan,_Scopes_trial,_Dayton,_Tennessee,_July_20,_1925._(4324506037).jpg
 sources:
 - title: Britannica, Scopes Trial

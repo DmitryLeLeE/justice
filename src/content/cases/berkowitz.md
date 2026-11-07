@@ -53,3 +53,11 @@ By the time the case reached court the killer had already been caught, and the a
 ## Aftermath
 
 The "Son of Sam" letters to the press and the fear of the summer of 1977 changed how New York talked about itself. The state passed a "Son of Sam" law to keep criminals from selling their stories, and the Supreme Court struck down the original version in 1991. Berkowitz later said that his claim of demonic orders was invented, and he has long been refused parole.
+
+<section class="adult-only">
+
+## 18+ · The shootings
+
+Between July 1976 and July 1977 Berkowitz shot thirteen people with a .44-calibre revolver, usually young women or couples sitting in parked cars, and six of them died. He left letters for the police and the columnist Jimmy Breslin signed "Son of Sam". He first said that a demon spoke through a neighbour's dog; years later he said that this was invented and that he had killed out of anger and loneliness. He pleaded guilty and received consecutive terms of 25 years to life on each count.
+
+</section>

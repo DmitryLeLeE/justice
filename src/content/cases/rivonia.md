@@ -37,6 +37,7 @@ image:
   alt: The Palace of Justice on Church Square, Pretoria
   caption: 'Neither a drawing nor a photograph of the trial: the Palace of Justice in Pretoria, where the Rivonia trial was heard in 1963–64.'
   license: Wikimedia Commons
+  kind: other
   sourceUrl: https://commons.wikimedia.org/wiki/File:Palace_of_Justice,_Church_Square,_pretoria.JPG
 sources:
 - title: Nelson Mandela Foundation, 50th anniversary of the sentencing of the Rivonia trialists

@@ -40,6 +40,7 @@ image:
   caption: 'A press photograph, not a drawing: the sentence of death, 15 December 1961. Eichmann stands in the glass booth; the judges Raveh, Landau and Halevi sit on the bench.'
   artist: Government Press Office (Israel)
   license: Israel National Photo Collection / USHMM (Wikimedia Commons)
+  kind: photo
   sourceUrl: https://commons.wikimedia.org/wiki/File:Adolf_Eichmann_is_sentenced_to_death_at_the_conclusion_of_the_Eichmann_Trial_USHMM_65289.jpg
 sources:
 - title: US Holocaust Memorial Museum, Adolf Eichmann Sentenced to Death

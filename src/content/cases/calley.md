@@ -59,3 +59,11 @@ The prosecutor, Aubrey Daniel, believed the case was about murder and not about 
 ## Aftermath
 
 The Army reduced his life term to twenty years and then ten. A federal judge freed him in 1974 on grounds of pretrial publicity. The Army fought the order, and he was released on parole that November. My Lai is still the best-known American war-crime prosecution of the Vietnam era, and for many people the sentence was too small for the crime.
+
+<section class="adult-only">
+
+## 18+ · What happened in My Lai
+
+On the morning of 16 March 1968 soldiers of Charlie Company entered the hamlet of My Lai and killed unarmed villagers, most of them women, children and old men. Estimates of the dead run from 347 (the Army) to 504 (Vietnamese authorities). People were shot in groups in a ditch and in their homes, and the Army's own Peers inquiry found that some women were raped. Calley was found to have ordered and taken part in the shooting of at least 22 people. The helicopter pilot Hugh Thompson landed between soldiers and villagers and flew some of the wounded out; the Army's first reports described the day as a battle against the Viet Cong, and the photographs taken by the Army photographer Ron Haeberle, published in 1969, made it impossible to maintain that story.
+
+</section>

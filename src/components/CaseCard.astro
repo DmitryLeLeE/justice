@@ -21,11 +21,13 @@ const search = `${d.title} ${d.titleOriginal ?? ''} ${d.country} ${d.city} ${d.c
   data-region={d.region}
   data-category={d.category}
   data-decade={decadeOf(d.yearStart)}
+  data-mature={d.mature ? '1' : '0'}
   data-search={search}
 >
   <a class="card-link" href={url(`cases/${entry.id}/`)}>
     <div class="thumb">
       <span class="file-no">AJ-{fileNo}</span>
+      {d.mature && <span class="adult-chip">18+</span>}
       <img src={imgSrc(d.image!.src)} alt={d.image!.alt} loading="lazy" referrerpolicy="no-referrer" />
       {verdict && <span class={`verdict-stamp tone-${verdict.tone}`}>{verdict.label}</span>}
     </div>

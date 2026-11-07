@@ -36,6 +36,7 @@ image:
   alt: The defendants in the dock at the Special Court in Beijing, 1980
   caption: 'A press image, not a drawing: the defendants at the Special Court, Beijing, 1980. The photographer is not recorded on Commons.'
   license: Wikimedia Commons (provenance not recorded)
+  kind: photo
   sourceUrl: https://commons.wikimedia.org/wiki/File:%22Gang_of_Four%22_on_trial_in_1980.jpg
 sources:
 - title: Britannica, Gang of Four

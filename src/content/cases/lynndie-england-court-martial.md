@@ -52,3 +52,11 @@ Pat Lopez drew her on the first day, seated between her civilian lawyer, Rick He
 ## Aftermath
 
 She was sentenced to three years and a dishonourable discharge.
+
+<section class="adult-only">
+
+## 18+ · The photographs
+
+The pictures taken at Abu Ghraib in late 2003 showed naked prisoners piled into a pyramid, a hooded man standing on a box with wires attached to his hands, and detainees forced into sexual poses. In one, England held a leash that was tied around the neck of a naked man lying on the floor. Her conviction rested on those photographs; the case also showed that the abuse had gone on across several cell blocks and that higher officers were never prosecuted.
+
+</section>

@@ -38,6 +38,7 @@ image:
   caption: 'A press photograph, not a drawing: former junta members enter the courtroom in 1985. Only brief silent footage was allowed.'
   artist: Télam
   license: Télam press photograph (Wikimedia Commons)
+  kind: photo
   sourceUrl: https://commons.wikimedia.org/wiki/File:Juicio_a_las_Juntas.jpg
 sources:
 - title: Memoria Abierta, The Trial of the Military Juntas

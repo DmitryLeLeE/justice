@@ -58,3 +58,11 @@ The prosecution's case was that Manson had directed the killings, in order to st
 ## Aftermath
 
 The jury sat for almost two days before convicting all four. Manson died in prison in 2017.
+
+<section class="adult-only">
+
+## 18+ · The nights of 8 and 9 August 1969
+
+Seven people died in two nights. At the Cielo Drive house the followers of Manson killed Sharon Tate, who was eight and a half months pregnant, with the coffee heiress Abigail Folger, the writer Wojciech Frykowski, the hairdresser Jay Sebring and a visitor, 18-year-old Steven Parent, who had been shot in his car. The word "PIGS" was written on the front door in Tate's blood. The next night Leno and Rosemary LaBianca were stabbed to death in their own home. Bugliosi told the jury that Manson wanted to start a race war that he called "Helter Skelter", and that he had sent his followers to do the killing.
+
+</section>

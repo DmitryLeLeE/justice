@@ -34,10 +34,15 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
+    <script is:inline>
+      // Decide the edition before first paint so restricted content never flashes
+      try { document.documentElement.dataset.adult = localStorage.getItem('aj-adult') === '1' ? '1' : '0'; }
+      catch (e) { document.documentElement.dataset.adult = '0'; }
+    </script>
   </head>
   <body>
     <div class="tape" aria-hidden="true"></div>
-    <div class="classif" aria-hidden="true">Official record · Atlas of Justice · <span class="redact">courtroom drawings only</span> · No cameras admitted</div>
+    <div class="classif" aria-hidden="true">Official record · Atlas of Justice · <span class="redact only-safe">courtroom drawings only</span><span class="redact only-adult">18+ edition · unredacted</span> · <span class="only-safe">No cameras admitted</span><span class="only-adult">Restricted file</span></div>
     <header class="site-header">
       <a class="brand" href={url()}>
         <span class="brand-mark" aria-hidden="true">⚖</span>
@@ -47,13 +52,58 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
         <a href={url()}>The Map</a>
         <a href={url('#drawers')}>Drawers</a>
         <a href={url('about/')}>About</a>
+        <button type="button" id="adult-toggle" class="adult-toggle" aria-pressed="false" title="Switch the 18+ edition on or off">
+          <span class="at-badge">18+</span><span class="at-state">off</span>
+        </button>
       </nav>
     </header>
     <main>
       <slot />
     </main>
+    <dialog id="age-gate" class="age-gate" aria-labelledby="age-gate-h">
+      <form method="dialog">
+        <p class="ag-badge">18+</p>
+        <h2 id="age-gate-h">Restricted edition</h2>
+        <p>
+          The 18+ edition adds cases and sections that describe killings, torture, sexual violence and other
+          crimes in plain, factual language, taken from court records and reliable reporting. There are no
+          crime-scene or victim photographs, but the text is not softened.
+        </p>
+        <p>Continue only if you are 18 or older.</p>
+        <div class="ag-actions">
+          <button value="yes" class="ag-yes" id="age-yes">I am 18 or older</button>
+          <button value="no" class="ag-no">Stay in the standard edition</button>
+        </div>
+      </form>
+    </dialog>
     <footer class="site-footer">
-      <p>Atlas of Justice. Case files are compiled from public sources, linked on each page. Every drawing is credited to its artist and archive. Verdict stamps show the final legal outcome described in each file.</p>
+      <p>Atlas of Justice. Case files are compiled from public sources, linked on each page. Every picture is credited to its artist or archive. Verdict stamps show the final legal outcome described in each file.</p>
     </footer>
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        var btn = document.getElementById('adult-toggle');
+        var gate = document.getElementById('age-gate');
+        function render() {
+          var on = root.dataset.adult === '1';
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+          btn.querySelector('.at-state').textContent = on ? 'on' : 'off';
+        }
+        function set(on) {
+          try { localStorage.setItem('aj-adult', on ? '1' : '0'); } catch (e) {}
+          root.dataset.adult = on ? '1' : '0';
+          render();
+          document.dispatchEvent(new CustomEvent('adultchange', { detail: on }));
+        }
+        function ask() {
+          if (gate && gate.showModal) { gate.showModal(); }
+          else if (window.confirm('The 18+ edition contains frank descriptions of violence. Are you 18 or older?')) { set(true); }
+        }
+        window.ajAskAdult = ask;
+        btn.addEventListener('click', function () { if (root.dataset.adult === '1') set(false); else ask(); });
+        if (gate) gate.addEventListener('close', function () { if (gate.returnValue === 'yes') set(true); gate.returnValue = ''; });
+        render();
+      })();
+    </script>
   </body>
 </html>

@@ -49,7 +49,23 @@ const cases = defineCollection({
         caption: z.string().optional(),
         license: z.string(),
         sourceUrl: z.string().url(),
+        // What kind of picture it is; drives the note on the frame. Defaults to a courtroom drawing
+        kind: z.enum(['drawing', 'photo', 'other']).default('drawing'),
       })
+      .optional(),
+    // Only shown in the 18+ edition (graphic subject matter)
+    mature: z.boolean().default(false),
+    // Extra documentary pictures from case materials, shown in the 18+ edition only
+    gallery: z
+      .array(
+        z.object({
+          src: z.string(),
+          alt: z.string(),
+          caption: z.string(),
+          credit: z.string(),
+          sourceUrl: z.string().url(),
+        }),
+      )
       .optional(),
     sources: z.array(z.object({ title: z.string(), url: z.string().url() })).min(1),
     draft: z.boolean().default(false),

@@ -13,12 +13,24 @@ import Base from '../layouts/Base.astro';
 
     <h2>The drawings</h2>
     <p>
-      Only cases that have a courtroom drawing are on the map. The drawings are not copied to this site: each one is
+      Every case on the map has a picture, and wherever one exists it is a courtroom drawing. A few cases come
+      from places that barred artists as well as cameras, or whose drawings no archive hosts; for those the file
+      shows a press photograph or a picture of the building, and the caption and the note on the frame say so.
+      Pictures are not copied to this site: each one is
       loaded directly from the archive that hosts it (Wikimedia Commons, the Library of Congress, a university
       collection) and is shown with its artist, a credit line and a link back to the original record. Rights differ
       between archives and between works: nineteenth-century engravings are in the public domain, while some
       twentieth-century drawings are still protected, and the credit line says what the host archive states. If you
       hold rights to a drawing and want it removed, open an issue in the repository.
+    </p>
+
+    <h2>The 18+ edition</h2>
+    <p>
+      The switch in the header turns on the 18+ edition after an age check. It adds more cases, plus extra
+      sections marked <strong>18+</strong> inside files that are open to everyone. These describe killings,
+      torture and sexual violence in plain language drawn from court records and reliable reporting, and some files
+      add photographs from the case materials (mugshots, exhibits, courtroom pictures). There are no crime-scene or
+      victim photographs. The switch is a reader's choice stored in the browser, not a security barrier.
     </p>
 
     <h2>The map</h2>
@@ -29,7 +41,9 @@ import Base from '../layouts/Base.astro';
     <h2>Adding a case</h2>
     <p>
       Each case is one Markdown file in <code>src/content/cases/</code>: data at the top, the write-up below. A case is
-      shown only if it has an <code>image</code> block with the URL of the drawing.
+      shown only if it has an <code>image</code> block with the URL of the picture. Add <code>mature: true</code>
+      to show a case only in the 18+ edition, and wrap a section in <code>&lt;section class="adult-only"&gt;</code> (blank lines
+      around the Markdown inside) to hide it outside it.
     </p>
     <pre><code>---
 title: Name of the proceeding
@@ -57,6 +71,7 @@ timeline:             # optional
 related: [other-case-slug]   # optional
 image:
   src: https://example.org/drawing.jpg
+  kind: drawing         # optional: drawing (default), photo, other
   alt: What the drawing shows
   artist: Artist name
   license: Credit / rights note

@@ -54,3 +54,11 @@ The drawing reproduced here comes from the Amsterdam city archive and was made d
 ## Aftermath
 
 Haarmann was beheaded in April 1925. His accomplice Hans Grans was also sentenced to death, and the sentence was later reduced. The case drew attention to the disorder of the Weimar years, and to a police force that had let a killer work for six years.
+
+<section class="adult-only">
+
+## 18+ · The victims
+
+Haarmann was convicted of 24 murders of boys and young men, between about 1918 and 1924, though he was charged with 27 and the true number is unknown. Many were runaways or homeless, picked up at Hanover railway station. By his own confession he killed them by biting through the throat, then took the bodies apart in his flat and threw the remains into the river Leine. Human skulls found on its banks in 1924 started the investigation, and rumours that he had sold the flesh as meat were widespread at the time, though the court never settled them.
+
+</section>

@@ -25,6 +25,8 @@ const d = entry.data;
 const { Content } = await render(entry);
 const verdict = d.verdict ? VERDICTS[d.verdict] : null;
 const g = d.glance ?? {};
+const kindNote = { drawing: 'drawn in court, not a photograph', photo: 'a photograph, not a drawing', other: 'not a drawing of the trial' }[d.image!.kind];
+const exhibitLabel = d.image!.kind === 'drawing' ? 'Exhibit A.' : 'Exhibit A (not a drawing).';
 const glanceRows = [
   ['Defendants', g.defendants],
   ['Charges', g.charges],
@@ -35,7 +37,17 @@ const glanceRows = [
 ---
 
 <Base title={d.title} description={d.summary}>
-  <article class="case dossier">
+  <article class={`case dossier${d.mature ? ' mature-case' : ''}`}>
+    {d.mature && (
+      <div class="gate-note">
+        <p class="ag-badge">18+</p>
+        <h2>This file is in the 18+ edition</h2>
+        <p>It describes violent crime in plain language. Switch the edition on to read it.</p>
+        <button type="button" id="gate-open" class="ag-yes">Open the 18+ edition</button>
+        <p><a href={url()}>← Back to the map</a></p>
+      </div>
+    )}
+    <div class="case-body">
     <div class="form-head"><span>Official case file</span><span>No. {fileNo}</span></div>
     <p class="crumbs">
       <a href={url(`#${entry.id}`)}>← Back to the map</a>
@@ -51,10 +63,10 @@ const glanceRows = [
     <figure>
       <div class="frame">
         <img src={imgSrc(d.image!.src)} alt={d.image!.alt} referrerpolicy="no-referrer" />
-        <span class="hand-note" aria-hidden="true">drawn in court, not a photograph</span>
+        <span class="hand-note" aria-hidden="true">{kindNote}</span>
       </div>
       <figcaption>
-        <strong>Exhibit A.</strong> {d.image!.caption && <>{d.image!.caption}. </>}
+        <strong>{exhibitLabel}</strong> {d.image!.caption && <>{d.image!.caption}. </>}
         {d.image!.artist && <>Artist: {d.image!.artist}. </>}
         Credit: {d.image!.license}. <a href={d.image!.sourceUrl} rel="noopener">Source</a>
       </figcaption>
@@ -85,6 +97,22 @@ const glanceRows = [
       )
     }
 
+    {
+      d.gallery && d.gallery.length > 0 && (
+        <section class="gallery adult-only">
+          <h2 class="sect">18+ · From the case materials</h2>
+          <div class="gallery-grid">
+            {d.gallery.map((gi) => (
+              <figure>
+                <div class="frame"><img src={imgSrc(gi.src)} alt={gi.alt} loading="lazy" referrerpolicy="no-referrer" /></div>
+                <figcaption>{gi.caption} Credit: {gi.credit}. <a href={gi.sourceUrl} rel="noopener">Source</a></figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
     <section class="sources">
       <h2 class="sect">Sources</h2>
       <ul>
@@ -104,12 +132,14 @@ const glanceRows = [
     }
 
     <nav class="pager" aria-label="Neighbouring cases">
-      {prev && <a class="prev" href={url(`cases/${prev.id}/`)}>← {prev.data.title}</a>}
-      {next && <a class="next" href={url(`cases/${next.id}/`)}>{next.data.title} →</a>}
+      {prev && <a class={`prev${prev.data.mature ? ' adult-only' : ''}`} href={url(`cases/${prev.id}/`)}>← {prev.data.title}</a>}
+      {next && <a class={`next${next.data.mature ? ' adult-only' : ''}`} href={url(`cases/${next.id}/`)}>{next.data.title} →</a>}
     </nav>
+    </div>
   </article>
 
   <script>
+    document.getElementById('gate-open')?.addEventListener('click', () => (window as any).ajAskAdult?.());
     document.querySelectorAll<HTMLButtonElement>('.show-on-map').forEach((btn) => {
       btn.addEventListener('click', () => {
         const base = document.querySelector('.brand')!.getAttribute('href') || '/';
