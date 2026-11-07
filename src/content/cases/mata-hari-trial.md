@@ -31,7 +31,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Mata%20Hari%2013.jpg?width=1400
   alt: Mata Hari in 1906
-  caption: 'A portrait, not a drawing and not from the trial: Mata Hari in 1906, soon after she began her career as an exotic dancer.'
+  caption: 'A portrait (not from the trial): Mata Hari in 1906, soon after she began her career as an exotic dancer.'
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Mata_Hari_13.jpg
   kind: other

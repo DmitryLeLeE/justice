@@ -2,26 +2,26 @@
 import Base from '../layouts/Base.astro';
 ---
 
-<Base title="About" description="How the Atlas of Justice works, where the drawings come from and how to add a case.">
+<Base title="About" description="How the Atlas of Justice works, where the pictures come from and how to add a case.">
   <section class="about">
     <h1>About the Atlas</h1>
     <p>
       The Atlas collects trials and hearings from many countries. Each case has a place on the map, a short
       description, the outcome and a list of sources. Cameras are often barred from courtrooms, so for many
-      famous cases the public knew the proceedings through the drawings of court artists.
+      famous cases the public knew the proceedings through the drawings of court artists. Where cameras were
+      admitted, or where the case left its own photographs, the file uses those instead.
     </p>
 
-    <h2>The drawings</h2>
+    <h2>The pictures</h2>
     <p>
-      Every case on the map has a picture, and wherever one exists it is a courtroom drawing. A few cases come
-      from places that barred artists as well as cameras, or whose drawings no archive hosts; for those the file
-      shows a press photograph or a picture of the building, and the caption and the note on the frame say so.
-      Pictures are not copied to this site: each one is
-      loaded directly from the archive that hosts it (Wikimedia Commons, the Library of Congress, a university
-      collection) and is shown with its artist, a credit line and a link back to the original record. Rights differ
-      between archives and between works: nineteenth-century engravings are in the public domain, while some
-      twentieth-century drawings are still protected, and the credit line says what the host archive states. If you
-      hold rights to a drawing and want it removed, open an issue in the repository.
+      Every case on the map has one main picture. It is a courtroom drawing where court artists were the public's
+      eyes, and a photograph from the courtroom or the case materials (a press photograph, a booking photograph, an
+      exhibit) where one exists. For the best-documented cases a photograph is the better record, and the
+      caption and the note on the frame always say which kind of picture it is. Pictures are not copied to this
+      site: each one is loaded directly from the archive that hosts it (Wikimedia Commons, the Library of Congress,
+      a university collection) and is shown with its author, a credit line and a link back to the original record.
+      Rights differ between archives and between works, and the credit line says what the host archive states. If
+      you hold rights to a picture and want it removed, open an issue in the repository.
     </p>
 
     <h2>The 18+ edition</h2>
@@ -70,10 +70,10 @@ timeline:             # optional
     event: What happened
 related: [other-case-slug]   # optional
 image:
-  src: https://example.org/drawing.jpg
+  src: https://example.org/picture.jpg
   kind: drawing         # optional: drawing (default), photo, other
-  alt: What the drawing shows
-  artist: Artist name
+  alt: What the picture shows
+  artist: Artist or photographer
   license: Credit / rights note
   sourceUrl: https://example.org/record
 sources:

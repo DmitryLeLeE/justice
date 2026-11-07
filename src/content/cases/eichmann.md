@@ -37,7 +37,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Adolf%20Eichmann%20is%20sentenced%20to%20death%20at%20the%20conclusion%20of%20the%20Eichmann%20Trial%20USHMM%2065289.jpg?width=1400
   alt: Adolf Eichmann in a glass booth in the Jerusalem courtroom as the three judges pass sentence
-  caption: 'A press photograph, not a drawing: the sentence of death, 15 December 1961. Eichmann stands in the glass booth; the judges Raveh, Landau and Halevi sit on the bench.'
+  caption: 'A press photograph: the sentence of death, 15 December 1961. Eichmann stands in the glass booth; the judges Raveh, Landau and Halevi sit on the bench.'
   artist: Government Press Office (Israel)
   license: Israel National Photo Collection / USHMM (Wikimedia Commons)
   kind: photo

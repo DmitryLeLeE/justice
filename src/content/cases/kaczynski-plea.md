@@ -31,7 +31,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Theodore%20Kaczynski%202.jpg?width=1400
   alt: Booking photograph of Ted Kaczynski, 1996
-  caption: 'A booking photograph, not a drawing: Ted Kaczynski after his arrest in April 1996.'
+  caption: 'A booking photograph: Ted Kaczynski after his arrest in April 1996.'
   artist: Federal Bureau of Investigation
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Theodore_Kaczynski_2.jpg

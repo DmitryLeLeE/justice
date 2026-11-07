@@ -38,7 +38,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Clarence%20S.%20Darrow%20interrogating%20William%20Jennings%20Bryan%2C%20Scopes%20trial%2C%20Dayton%2C%20Tennessee%2C%20July%2020%2C%201925.%20%284324506037%29.jpg?width=1400
   alt: Clarence Darrow questioning William Jennings Bryan on a platform outside the Rhea County Courthouse
-  caption: 'A photograph, not a drawing: Darrow questions Bryan on 20 July 1925 on a platform outside the courthouse, where the court had moved because of the heat.'
+  caption: 'A photograph: Darrow questions Bryan on 20 July 1925 on a platform outside the courthouse, where the court had moved because of the heat.'
   artist: William Silverman, Smithsonian Institution Archives
   license: No known copyright restrictions (Smithsonian Institution Archives)
   kind: photo

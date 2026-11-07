@@ -33,7 +33,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/IMTFE%20defendants.jpg?width=1400
   alt: The Japanese defendants seated in the prisoners' box at the Ichigaya courtroom, Tokyo
-  caption: 'A photograph, not a drawing: the defendants in the prisoners'' box at Ichigaya, May–June 1946. Hideki Tojo is fifth from the left in the front row, according to the Commons caption.'
+  caption: 'A photograph: the defendants in the prisoners'' box at Ichigaya, May–June 1946. Hideki Tojo is fifth from the left in the front row, according to the Commons caption.'
   artist: Unknown photographer
   license: Public domain in Japan (published before 1958)
   kind: photo

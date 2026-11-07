@@ -37,7 +37,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Leopold%20and%20Loeb%20trial%20photo%201924.jpg?width=1400
   alt: Nathan Leopold and Richard Loeb in the Chicago courtroom, 1924
-  caption: 'A photograph, not a drawing: Leopold and Loeb in court during the sentencing hearing, 1924. Photographer unknown.'
+  caption: 'A photograph: Leopold and Loeb in court during the sentencing hearing, 1924. Photographer unknown.'
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Leopold_and_Loeb_trial_photo_1924.jpg
   kind: photo

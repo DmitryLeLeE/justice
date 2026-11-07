@@ -35,7 +35,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Julius%20and%20Ethel%20Rosenberg%20NYWTS.jpg?width=1400
   alt: Julius and Ethel Rosenberg separated by a wire screen outside the courthouse
-  caption: 'A press photograph, not a drawing: Julius and Ethel Rosenberg, separated by a heavy wire screen, leaving the court after the guilty verdict, March 1951.'
+  caption: 'A press photograph: Julius and Ethel Rosenberg, separated by a heavy wire screen, leaving the court after the guilty verdict, March 1951.'
   artist: Roger Higgins, New York World-Telegram and Sun
   license: Library of Congress, Prints and Photographs Division
   sourceUrl: https://commons.wikimedia.org/wiki/File:Julius_and_Ethel_Rosenberg_NYWTS.jpg

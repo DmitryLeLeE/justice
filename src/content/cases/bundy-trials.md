@@ -40,7 +40,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Ted%20Bundy%20mug%20shot.jpg?width=1400
   alt: Booking photograph of Ted Bundy, February 1980
-  caption: 'A booking photograph, not a drawing: Ted Bundy, 13 February 1980. Florida State Archives.'
+  caption: 'A booking photograph: Ted Bundy, 13 February 1980. Florida State Archives.'
   artist: Florida Department of Corrections
   license: Florida Memory, State Library and Archives of Florida
   sourceUrl: https://commons.wikimedia.org/wiki/File:Ted_Bundy_mug_shot.jpg

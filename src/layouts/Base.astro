@@ -17,7 +17,7 @@ interface Props {
 const siteName = 'Atlas of Justice';
 const {
   title,
-  description = 'A map of famous trials around the world: courtroom drawings, short case files and sources.',
+  description = 'A map of famous trials around the world: courtroom drawings and case photographs, short case files and sources.',
 } = Astro.props;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
 ---
@@ -42,7 +42,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
   </head>
   <body>
     <div class="tape" aria-hidden="true"></div>
-    <div class="classif" aria-hidden="true">Official record · Atlas of Justice · <span class="redact only-safe">courtroom drawings only</span><span class="redact only-adult">18+ edition · unredacted</span> · <span class="only-safe">No cameras admitted</span><span class="only-adult">Restricted file</span></div>
+    <div class="classif" aria-hidden="true">Official record · Atlas of Justice · <span class="redact only-safe">drawings and case photographs</span><span class="redact only-adult">18+ edition · unredacted</span> · <span class="only-safe">Public record</span><span class="only-adult">Restricted file</span></div>
     <header class="site-header">
       <a class="brand" href={url()}>
         <span class="brand-mark" aria-hidden="true">⚖</span>
@@ -77,7 +77,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
       </form>
     </dialog>
     <footer class="site-footer">
-      <p>Atlas of Justice. Case files are compiled from public sources, linked on each page. Every picture is credited to its artist or archive. Verdict stamps show the final legal outcome described in each file.</p>
+      <p>Atlas of Justice. Case files are compiled from public sources, linked on each page. Every picture is credited to its author or archive. Verdict stamps show the final legal outcome described in each file.</p>
     </footer>
     <script is:inline>
       (function () {

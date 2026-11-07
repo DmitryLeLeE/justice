@@ -35,7 +35,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Juicio%20a%20las%20Juntas.jpg?width=1400
   alt: Members of the junta entering the courtroom in Buenos Aires
-  caption: 'A press photograph, not a drawing: former junta members enter the courtroom in 1985. Only brief silent footage was allowed.'
+  caption: 'A press photograph: former junta members enter the courtroom in 1985. Only brief silent footage was allowed.'
   artist: Télam
   license: Télam press photograph (Wikimedia Commons)
   kind: photo

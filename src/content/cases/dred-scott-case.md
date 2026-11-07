@@ -33,7 +33,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Dred%20Scott%20photograph%20%28circa%201857%29.jpg?width=1400
   alt: Photograph of Dred Scott, circa 1857
-  caption: A photograph of Dred Scott taken around the time of the case, circa 1857, not a drawing and not made in the courtroom.
+  caption: A photograph of Dred Scott taken around the time of the case, circa 1857, not made in the courtroom.
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Dred_Scott_photograph_(circa_1857).jpg
   kind: other

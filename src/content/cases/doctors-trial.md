@@ -29,7 +29,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Doctors%27%20trial%2C%20Nuremberg%2C%201946%E2%80%931947.jpg?width=1400
   alt: Defendants seated under guard in the dock during the Doctors' Trial, Nuremberg
-  caption: 'A photograph, not a drawing: defendants in the dock during the Doctors'' Trial, Nuremberg, 1946–1947. US Army photographers, via the US Holocaust Memorial Museum.'
+  caption: 'A photograph: defendants in the dock during the Doctors'' Trial, Nuremberg, 1946–1947. US Army photographers, via the US Holocaust Memorial Museum.'
   artist: US Army photographers
   license: Public domain (Wikimedia Commons; US Holocaust Memorial Museum)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Doctors%27_trial,_Nuremberg,_1946%E2%80%931947.jpg

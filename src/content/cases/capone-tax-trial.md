@@ -37,7 +37,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Al%20Capone%20in%201930.jpg?width=1400
   alt: Al Capone at the Chicago detective bureau, 1930
-  caption: 'A press photograph, not a drawing and not from the trial: Capone at the Chicago detective bureau after a vagrancy arrest, 1930.'
+  caption: 'A press photograph (not from the trial): Capone at the Chicago detective bureau after a vagrancy arrest, 1930.'
   artist: Chicago Bureau (FBI) / Wide World Photos
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Al_Capone_in_1930.jpg

@@ -34,7 +34,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Dr.%20Crippen%20%26%20Ethel%20Leneve%20on%20trial%2C%20London%20LCCN2014688603.jpg?width=1400
   alt: Dr Crippen and Ethel Le Neve during the trial, London, 1910
-  caption: 'A photograph, not a drawing: Dr Crippen and Ethel Le Neve, London, 1910. Bain News Service glass negative.'
+  caption: 'A photograph: Dr Crippen and Ethel Le Neve, London, 1910. Bain News Service glass negative.'
   artist: Bain News Service
   license: Library of Congress, Prints and Photographs Division
   sourceUrl: https://commons.wikimedia.org/wiki/File:Dr._Crippen_%26_Ethel_Leneve_on_trial,_London_LCCN2014688603.jpg

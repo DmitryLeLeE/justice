@@ -34,7 +34,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/%22Gang%20of%20Four%22%20on%20trial%20in%201980.jpg?width=1400
   alt: The defendants in the dock at the Special Court in Beijing, 1980
-  caption: 'A press image, not a drawing: the defendants at the Special Court, Beijing, 1980. The photographer is not recorded on Commons.'
+  caption: 'A press image: the defendants at the Special Court, Beijing, 1980. The photographer is not recorded on Commons.'
   license: Wikimedia Commons (provenance not recorded)
   kind: photo
   sourceUrl: https://commons.wikimedia.org/wiki/File:%22Gang_of_Four%22_on_trial_in_1980.jpg

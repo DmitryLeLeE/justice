@@ -39,17 +39,17 @@ const cases = defineCollection({
     timeline: z.array(z.object({ date: z.string(), event: z.string() })).optional(),
     // Slugs of related files; when absent the page picks neighbours from the same drawer
     related: z.array(z.string()).optional(),
-    // Courtroom drawing, hot-linked from the archive that hosts it (absolute URL). Every case published on the site has one
+    // Main picture (courtroom drawing or documentary photograph), hot-linked from the archive that hosts it (absolute URL). Every case published on the site has one
     image: z
       .object({
         src: z.string(),
         alt: z.string(),
         artist: z.string().optional(),
-        // What the drawing shows and when it was made
+        // What the picture shows and when it was made
         caption: z.string().optional(),
         license: z.string(),
         sourceUrl: z.string().url(),
-        // What kind of picture it is; drives the note on the frame. Defaults to a courtroom drawing
+        // What kind of picture it is; drives the note on the frame. Defaults to a courtroom drawing; use photo for court or case-file photographs
         kind: z.enum(['drawing', 'photo', 'other']).default('drawing'),
       })
       .optional(),

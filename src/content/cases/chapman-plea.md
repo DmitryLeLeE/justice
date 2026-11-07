@@ -31,7 +31,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Mark%20David%20Chapman%2C%20NYPD%20mugshot.jpg?width=1400
   alt: NYPD booking photograph of Mark David Chapman, 9 December 1980
-  caption: 'A booking photograph, not a drawing: Mark David Chapman, 9 December 1980.'
+  caption: 'A booking photograph: Mark David Chapman, 9 December 1980.'
   artist: New York City Police Department
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Mark_David_Chapman,_NYPD_mugshot.jpg

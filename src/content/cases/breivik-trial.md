@@ -37,7 +37,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Oslo%20Tinghus%2C%20overview%20during%20the%20trial%20of%20Anders%20Behring%20Breivik.JPG?width=1400
   alt: Oslo courthouse with the media crowd during the Breivik trial
-  caption: 'A photograph, not a drawing: the entrance of the Oslo courthouse on 16 May 2012, with heavy media attention.'
+  caption: 'A photograph: the entrance of the Oslo courthouse on 16 May 2012, with heavy media attention.'
   artist: Ulflarsen
   license: CC BY-SA 3.0 (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Oslo_Tinghus,_overview_during_the_trial_of_Anders_Behring_Breivik.JPG

@@ -34,7 +34,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Saddam%20Hussein%20at%20trial%2C%20July%202004.JPEG?width=1400
   alt: Saddam Hussein speaking at the court hearing, 1 July 2004
-  caption: 'A photograph, not a drawing: Saddam Hussein at his first court appearance before an Iraqi investigative judge, 1 July 2004. The Dujail trial itself opened in October 2005.'
+  caption: 'A photograph: Saddam Hussein at his first court appearance before an Iraqi investigative judge, 1 July 2004. The Dujail trial itself opened in October 2005.'
   license: US Department of Defense, public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Saddam_Hussein_at_trial,_July_2004.JPEG
   kind: photo

@@ -31,7 +31,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/John%20Wayne%20Gacy-junior.jpg?width=1400
   alt: Booking photograph of John Wayne Gacy, December 1978
-  caption: 'A booking photograph, not a drawing: John Wayne Gacy, Des Plaines police, December 1978.'
+  caption: 'A booking photograph: John Wayne Gacy, Des Plaines police, December 1978.'
   artist: Des Plaines Police Department
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:John_Wayne_Gacy-junior.jpg

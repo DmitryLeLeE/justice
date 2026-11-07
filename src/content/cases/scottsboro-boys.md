@@ -36,7 +36,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Judge%20James%20E.%20Horton%20and%20Dr%20R.%20R.%20Bridges%20during%20Scottsboro%20Boys%20trial.jpg?width=1400
   alt: Judge James Horton and Dr R. R. Bridges in court during the Scottsboro Boys trial
-  caption: 'A press photograph, not a drawing: Judge James Horton and Dr R. R. Bridges at the Decatur retrials, April 1933.'
+  caption: 'A press photograph: Judge James Horton and Dr R. R. Bridges at the Decatur retrials, April 1933.'
   artist: Associated Press
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Judge_James_E._Horton_and_Dr_R._R._Bridges_during_Scottsboro_Boys_trial.jpg

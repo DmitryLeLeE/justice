@@ -1,6 +1,6 @@
 # Atlas of Justice
 
-An interactive map of famous trials: one case file per trial, with a courtroom drawing or documentary photograph, a short account, a timeline and sources. Written in English as "official case files". Built with Astro as a static site.
+An interactive map of famous trials: one case file per trial, with a main picture (a courtroom drawing, or a photograph from the courtroom or the case file), a short account, a timeline and sources. Written in English as "official case files". Built with Astro as a static site.
 
 **Live site:** https://dmitrylelee.github.io/justice/
 
@@ -9,6 +9,7 @@ An interactive map of famous trials: one case file per trial, with a courtroom d
 - **140 case files** from 1633 to 2026, in 13 categories (murder, serial killers, mob, assassination, terrorism, spies, political trials, war crimes, fraud, celebrity, wrongful conviction, landmark rulings, inquiries).
 - A **world map** with a pin per case, filters by category, region, verdict and period, and a random-case button.
 - Each case page has "at a glance" facts (defendants, charges, judge, prosecution, defence), a timeline, related cases and a source list.
+- Each case has one main picture: a courtroom drawing where court artists were the public's eyes, or a photograph from the courtroom or the case file (press photographs, booking photographs, exhibits). For the best-documented cases a photograph is preferred over a drawing.
 - Pictures are **hot-linked** from the archives that hold them (Wikimedia Commons, Library of Congress and others). Each one carries a credit line and says whether it is a courtroom drawing, a photograph or another kind of picture.
 
 ## The 18+ edition

@@ -32,7 +32,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D1%80%D0%B8%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%91%D1%83%D1%85%D0%B0%D1%80%D0%B8%D0%BD%D1%83%201937.JPG?width=1400
   alt: The verdict in the Bukharin–Rykov–Yagoda case, Pravda, 14 March 1938
-  caption: 'A newspaper page, not a drawing or a photograph of the trial: the verdict announced in Pravda of 14 March 1938, second page.'
+  caption: 'A newspaper page (not a picture of the trial): the verdict announced in Pravda of 14 March 1938, second page.'
   artist: Military Collegium of the Supreme Court of the USSR, in Pravda
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:%D0%9F%D1%80%D0%B8%D0%B3%D0%BE%D0%B2%D0%BE%D1%80_%D0%91%D1%83%D1%85%D0%B0%D1%80%D0%B8%D0%BD%D1%83_1937.JPG

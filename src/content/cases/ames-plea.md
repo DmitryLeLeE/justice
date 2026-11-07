@@ -28,7 +28,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Aldrich%20Ames%201994%20FBI%20Mugshot.jpg?width=1400
   alt: FBI booking photograph of Aldrich Ames, 21 February 1994
-  caption: 'A booking photograph, not a drawing: Aldrich Ames after his arrest, 21 February 1994.'
+  caption: 'A booking photograph: Aldrich Ames after his arrest, 21 February 1994.'
   artist: Federal Bureau of Investigation
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Aldrich_Ames_1994_FBI_Mugshot.jpg

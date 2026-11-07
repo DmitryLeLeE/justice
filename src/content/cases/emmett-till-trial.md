@@ -37,7 +37,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Mose%20Wright%20pointing%20to%20defendants%20in%20the%20murder%20trial%20of%20Emmett%20Till%20enhanced.jpg?width=1400
   alt: Mose Wright pointing at the defendants in the Sumner courtroom
-  caption: 'A photograph, not a drawing: Mose Wright identifies the men who took Emmett Till from his home, Sumner, 21 September 1955.'
+  caption: 'A photograph: Mose Wright identifies the men who took Emmett Till from his home, Sumner, 21 September 1955.'
   artist: Ernest Withers
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Mose_Wright_pointing_to_defendants_in_the_murder_trial_of_Emmett_Till_enhanced.jpg

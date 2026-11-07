@@ -35,7 +35,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Sacvan.jpg?width=1400
   alt: Bartolomeo Vanzetti handcuffed to Nicola Sacco, Dedham, 1923
-  caption: 'A photograph, not a drawing: Bartolomeo Vanzetti (left) handcuffed to Nicola Sacco, Dedham court, 1923. Boston Public Library.'
+  caption: 'A photograph: Bartolomeo Vanzetti (left) handcuffed to Nicola Sacco, Dedham court, 1923. Boston Public Library.'
   license: Boston Public Library (via Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Sacvan.jpg
   kind: photo

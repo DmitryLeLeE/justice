@@ -34,7 +34,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Lucky%20Luciano%20mugshot%201931.jpg?width=1400
   alt: Police photograph of Charles "Lucky" Luciano, 1931
-  caption: 'A police photograph, not a drawing and not from the trial: Charles Luciano, 1931.'
+  caption: 'A police photograph (not from the trial): Charles Luciano, 1931.'
   artist: New York Police Department
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Lucky_Luciano_mugshot_1931.jpg

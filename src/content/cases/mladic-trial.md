@@ -36,7 +36,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Ratko%20Mladi%C4%87%20-%20Start%20of%20Trial.jpg?width=1400
   alt: Ratko Mladić in the courtroom at the start of his trial, 16 May 2012
-  caption: 'A photograph, not a drawing: Ratko Mladić at the opening of his trial, 16 May 2012. Photograph by the Tribunal.'
+  caption: 'A photograph: Ratko Mladić at the opening of his trial, 16 May 2012. Photograph by the Tribunal.'
   artist: UN International Criminal Tribunal for the former Yugoslavia
   license: CC BY 2.0 (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Ratko_Mladi%C4%87_-_Start_of_Trial.jpg

@@ -36,7 +36,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Samuel%20Foley%2C%20David%20T.%20Wilentz%20and%20Dr.%20John%20F.%20Condon%20arriving%20at%20the%20Flemington%20Court%20House.jpg?width=1400
   alt: Samuel Foley, David Wilentz and John Condon arriving at the Flemington courthouse
-  caption: 'A press photograph, not a drawing: Samuel Foley, Attorney General David Wilentz and Dr John Condon arrive at the Flemington courthouse, January 1935.'
+  caption: 'A press photograph: Samuel Foley, Attorney General David Wilentz and Dr John Condon arrive at the Flemington courthouse, January 1935.'
   artist: International News Photos
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Samuel_Foley,_David_T._Wilentz_and_Dr._John_F._Condon_arriving_at_the_Flemington_Court_House.jpg

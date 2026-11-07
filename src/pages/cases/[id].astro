@@ -25,8 +25,8 @@ const d = entry.data;
 const { Content } = await render(entry);
 const verdict = d.verdict ? VERDICTS[d.verdict] : null;
 const g = d.glance ?? {};
-const kindNote = { drawing: 'drawn in court, not a photograph', photo: 'a photograph, not a drawing', other: 'not a drawing of the trial' }[d.image!.kind];
-const exhibitLabel = d.image!.kind === 'drawing' ? 'Exhibit A.' : 'Exhibit A (not a drawing).';
+const kindNote = { drawing: 'drawn in court, not a photograph', photo: 'a photograph from the case', other: 'not from the trial itself' }[d.image!.kind];
+const exhibitLabel = d.image!.kind === 'other' ? 'Exhibit A (not from the trial).' : 'Exhibit A.';
 const glanceRows = [
   ['Defendants', g.defendants],
   ['Charges', g.charges],
@@ -67,7 +67,7 @@ const glanceRows = [
       </div>
       <figcaption>
         <strong>{exhibitLabel}</strong> {d.image!.caption && <>{d.image!.caption}. </>}
-        {d.image!.artist && <>Artist: {d.image!.artist}. </>}
+        {d.image!.artist && <>{d.image!.kind === 'drawing' ? 'Artist' : 'Author'}: {d.image!.artist}. </>}
         Credit: {d.image!.license}. <a href={d.image!.sourceUrl} rel="noopener">Source</a>
       </figcaption>
     </figure>

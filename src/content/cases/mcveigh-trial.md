@@ -35,7 +35,7 @@ mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Timothy%20McVeigh%20FBI%20mugshot.jpg?width=1400
   alt: FBI booking photograph of Timothy McVeigh, 1995
-  caption: 'A booking photograph, not a drawing and not from the trial: Timothy McVeigh, 1995.'
+  caption: 'A booking photograph (not from the trial): Timothy McVeigh, 1995.'
   artist: Federal Bureau of Investigation
   license: Public domain (Wikimedia Commons)
   sourceUrl: https://commons.wikimedia.org/wiki/File:Timothy_McVeigh_FBI_mugshot.jpg

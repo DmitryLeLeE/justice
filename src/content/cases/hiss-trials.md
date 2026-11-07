@@ -36,7 +36,7 @@ timeline:
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Alger%20Hiss%20%281950%29.jpg?width=1400
   alt: Alger Hiss in 1950
-  caption: 'A press photograph, not a drawing: Alger Hiss, about the time of his conviction, 1950.'
+  caption: 'A press photograph: Alger Hiss, about the time of his conviction, 1950.'
   artist: New York World-Telegram and Sun
   license: Library of Congress, Prints and Photographs Division
   sourceUrl: https://commons.wikimedia.org/wiki/File:Alger_Hiss_(1950).jpg
