@@ -57,7 +57,7 @@ export const CATEGORIES = {
   celebrity: {
     label: 'Celebrity trials',
     numeral: 'X',
-    blurb: 'Famous faces in plain wooden chairs. Cameras were kept out, so the pencil drew the spectacle.',
+    blurb: 'Famous faces in plain wooden chairs, drawn by the court artists and caught by the press.',
   },
   wrongful: {
     label: 'Wrongful convictions',

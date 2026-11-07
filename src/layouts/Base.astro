@@ -12,13 +12,19 @@ import { url } from '../lib/cases';
 interface Props {
   title?: string;
   description?: string;
+  /** Absolute URL of a picture for link previews; left out for 18+ files. */
+  image?: string;
+  imageAlt?: string;
 }
 
 const siteName = 'Atlas of Justice';
 const {
   title,
   description = 'A map of famous trials around the world: courtroom drawings and case photographs, short case files and sources.',
+  image,
+  imageAlt,
 } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const pageTitle = title ? `${title} · ${siteName}` : siteName;
 ---
 
@@ -33,6 +39,15 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:url" content={canonical} />
+    <link rel="canonical" href={canonical} />
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    {image && <meta property="og:image" content={image} />}
+    {image && <meta property="og:image:alt" content={imageAlt ?? pageTitle} />}
+    {image && <meta name="twitter:image" content={image} />}
     <link rel="icon" href={url('favicon.svg')} type="image/svg+xml" />
     <script is:inline>
       // Decide the edition before first paint so restricted content never flashes
@@ -41,6 +56,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to the content</a>
     <div class="tape" aria-hidden="true"></div>
     <div class="classif" aria-hidden="true">Official record · Atlas of Justice · <span class="redact only-safe">drawings and case photographs</span><span class="redact only-adult">18+ edition · unredacted</span> · <span class="only-safe">Public record</span><span class="only-adult">Restricted file</span></div>
     <header class="site-header">
@@ -57,7 +73,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
         </button>
       </nav>
     </header>
-    <main>
+    <main id="main">
       <slot />
     </main>
     <dialog id="age-gate" class="age-gate" aria-labelledby="age-gate-h">

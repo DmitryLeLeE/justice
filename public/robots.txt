@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dmitrylelee.github.io/justice/sitemap-index.xml

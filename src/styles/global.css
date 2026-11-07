@@ -359,3 +359,16 @@ html:not([data-adult="1"]) .mature-case .case-body { display: none; }
 .gallery-grid .frame { min-height: 0; aspect-ratio: auto; }
 .gallery-grid img { width: 100%; height: auto; max-height: 340px; object-fit: contain; }
 .gallery-grid figcaption { font-size: 0.8rem; }
+
+/* Keyboard users: first Tab reveals a link past the header */
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.5rem 0.9rem;
+  background: #f4ead2;
+  color: #0a0908;
+  font-family: 'Special Elite', monospace;
+}
+.skip-link:focus { top: 0.5rem; }

@@ -1,0 +1,32 @@
+name: Checks
+
+on:
+  pull_request:
+  schedule:
+    - cron: '17 5 * * 1'   # Mondays: are the hot-linked pictures still there?
+  workflow_dispatch:
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:content
+      - run: npm run build
+
+  images:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check:images

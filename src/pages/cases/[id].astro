@@ -36,7 +36,7 @@ const glanceRows = [
 ].filter(([, v]) => v) as [string, string][];
 ---
 
-<Base title={d.title} description={d.summary}>
+<Base title={d.title} description={d.summary} image={d.mature ? undefined : imgSrc(d.image.src)} imageAlt={d.image.alt}>
   <article class={`case dossier${d.mature ? ' mature-case' : ''}`}>
     {d.mature && (
       <div class="gate-note">

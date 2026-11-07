@@ -82,9 +82,18 @@ Text.
 
 A case appears only if its frontmatter has an `image` block, and it is hidden if it has `draft: true`. Pictures are never copied into the repository. Commons files use `https://commons.wikimedia.org/wiki/Special:FilePath/<File name>?width=1400`; Library of Congress items use the `tile.loc.gov` derivative (`...v.jpg`). Always keep the `artist` and `license` credit line, and test that the link loads before committing.
 
+## Checks
+
+```
+npm run lint:content   # summary length, picture credit and licence, caption vs kind, heading and 18+ tag balance, duplicate sources, related slugs
+npm run check:images   # fetches every hot-linked picture and reports the ones that no longer load
+```
+
+`lint:content` runs before every deploy and on pull requests. `check:images` runs every Monday in GitHub Actions (and on demand), because pictures are hot-linked and can disappear from the archive.
+
 ## Deploy
 
-Repository Settings → Pages → Source: GitHub Actions. Pushing to `main` builds and publishes.
+Repository Settings → Pages → Source: GitHub Actions. Pushing to `main` lints, builds and publishes. The build also writes `sitemap-index.xml` and the pages carry Open Graph and Twitter tags with the case picture (18+ files are left without a preview image). `public/robots.txt` points to the sitemap.
 
 ## Layout
 
@@ -93,6 +102,8 @@ src/content/cases/    case files (Markdown)
 src/content.config.ts frontmatter schema
 src/pages/            index (map), cases/[id], category/[slug], about
 src/components/       CaseCard and others
-src/layouts/Base.astro  page shell, 18+ switch and age gate
+src/layouts/Base.astro  page shell, link-preview tags, 18+ switch and age gate
+scripts/              content linter and picture link checker
+.github/workflows/    deploy and weekly checks
 src/styles/global.css all styling
 ```
