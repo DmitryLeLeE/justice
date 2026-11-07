@@ -13,6 +13,14 @@ yearEnd: 1988
 summary: A mother was convicted of murdering her baby daughter, who vanished near Uluru. She said a dingo took the child. The convictions were quashed, and in 2012 a coroner confirmed her account.
 outcome: On 29 October 1982 Lindy Chamberlain was sentenced to life imprisonment. On 15 September 1988 all convictions were quashed. On 12 June 2012 a coroner ruled that a dingo had taken the baby.
 verdict: overturned
+image:
+  src: https://commons.wikimedia.org/wiki/Special:FilePath/Lindy%20Chamberlain%201986%20face%20photo.jpg?width=1400
+  alt: Lindy Chamberlain on the day of her release from prison, February 1986
+  caption: 'A frame from a television news report: Lindy Chamberlain on the day of her release from prison, 7 February 1986.'
+  artist: ABC News
+  license: CC BY-SA 3.0 (Wikimedia Commons)
+  sourceUrl: https://commons.wikimedia.org/wiki/File:Lindy_Chamberlain_1986_face_photo.jpg
+  kind: photo
 sources:
 - title: Famous Trials, The Dingo Trial, Chronology
   url: https://famous-trials.com/dingo/456-chronology
@@ -20,7 +28,7 @@ sources:
   url: https://www.australiangeographic.com.au/events/2025/06/defining-moments-in-australian-history-azaria-chamberlain-final-inquest/
 - title: Forejustice, Lindy Chamberlain
   url: https://forejustice.org/db/Chamberlain--Lindy-.html
-draft: true
+draft: false
 ---
 
 ## The case

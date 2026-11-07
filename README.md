@@ -6,7 +6,7 @@ An interactive map of famous trials: one case file per trial, with a main pictur
 
 ## What is in it
 
-- **140 case files** from 1633 to 2026, in 13 categories (murder, serial killers, mob, assassination, terrorism, spies, political trials, war crimes, fraud, celebrity, wrongful conviction, landmark rulings, inquiries).
+- **149 case files** from 1633 to 2026, in 13 categories (murder, serial killers, mob, assassination, terrorism, spies, political trials, war crimes, fraud, celebrity, wrongful conviction, landmark rulings, inquiries).
 - A **world map** with a pin per case, filters by category, region, verdict and period, and a random-case button.
 - Each case page has "at a glance" facts (defendants, charges, judge, prosecution, defence), a timeline, related cases and a source list.
 - Each case has one main picture: a courtroom drawing where court artists were the public's eyes, or a photograph from the courtroom or the case file (press photographs, booking photographs, exhibits). For the best-documented cases a photograph is preferred over a drawing.
@@ -14,9 +14,9 @@ An interactive map of famous trials: one case file per trial, with a main pictur
 
 ## The 18+ edition
 
-The site has two editions on the same pages. The standard edition shows 130 cases. The **18+ switch** in the navigation bar asks the reader to confirm their age and then adds:
+The site has two editions on the same pages. The standard edition shows 136 cases. The **18+ switch** in the navigation bar asks the reader to confirm their age and then adds:
 
-- 10 further cases marked 18+ (for example Leopold and Loeb, Emmett Till, Bundy, Breivik, McVeigh, Gacy, the Doctors' Trial, Mladić, the 1938 Moscow trial);
+- 13 further cases marked 18+ (for example Leopold and Loeb, Emmett Till, Bundy, Breivik, McVeigh, Gacy, the Doctors' Trial, Mladić, Karadžić, Shipman, Ramirez, the 1938 Moscow trial);
 - frank "18+" sections inside existing case files, set off with a red rule;
 - documentary photographs from case materials, where the case has them (booking photographs, exhibits shown in court).
 
