@@ -11,7 +11,7 @@ lng: -90.5069
 yearStart: 2013
 yearEnd: 2018
 summary: A former dictator was convicted of genocide against the Maya Ixil in a Guatemalan court, the first former head of state found guilty of genocide by his own country's courts. Ten days later the Constitutional Court annulled the verdict.
-outcome: On 10 May 2013 the court sentenced Ríos Montt to 80 years. On 20 May the Constitutional Court annulled the proceedings. A retrial began in 2015 but was suspended, and he died on 1 April 2018 before any new verdict.
+outcome: On 10 May 2013 the court sentenced Ríos Montt to 80 years. On 20 May the Constitutional Court annulled the proceedings. A retrial began in 2015 but no sentence could be passed, and he died on 1 April 2018 before any new verdict.
 verdict: overturned
 glance:
   defendants: Efraín Ríos Montt; José Mauricio Rodríguez Sánchez (co-defendant)

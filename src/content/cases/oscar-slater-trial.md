@@ -15,7 +15,7 @@ outcome: Convicted by a majority on 6 May 1909 and sentenced to death, Slater wa
 verdict: overturned
 glance:
   defendants: Oscar Slater
-  charges: Murder of Marion Gilchrist, 82, in Glasgow, 21 December 1908
+  charges: Murder of Marion Gilchrist, 83, in Glasgow, 21 December 1908
   judge: Lord Guthrie
   prosecution: Alexander Ure, Lord Advocate
 timeline:

@@ -16,7 +16,7 @@ glance:
   defendants: John F. A. Sanford (named in the case as Sandford), administrator for the owner
   charges: Suit for freedom brought by Dred Scott and his wife Harriet
   judge: Roger B. Taney, Chief Justice
-  defence: Montgomery Blair for Scott; Reverdy Johnson and George Ticknor Curtis for Sandford
+  defence: Montgomery Blair and George Ticknor Curtis for Scott; Reverdy Johnson and Henry Geyer for Sandford
 timeline:
 - date: '1846'
   event: Dred and Harriet Scott file suits for freedom in St. Louis
@@ -24,7 +24,7 @@ timeline:
   event: Supreme Court decides against Scott
 - date: 26 May 1857
   event: Scott and his family are freed by their new owners
-- date: 17 Sep 1858
+- date: 7 Nov 1858
   event: Scott dies of tuberculosis
 - date: '1865'
   event: Thirteenth Amendment abolishes slavery
@@ -52,4 +52,4 @@ The Court decided the case in March 1857. Chief Justice Roger Taney's opinion he
 
 ## Aftermath
 
-The decision outraged Northerners and helped the new Republican Party, and it was cited in the Lincoln–Douglas debates of 1858. Scott's owners freed him soon after the ruling. He died of tuberculosis in 1858. The Civil War ended with the Thirteenth Amendment, and the Fourteenth in 1868 made all persons born in the United States citizens. Taney's opinion is generally regarded as one of the worst in the Court's history.
+The decision outraged Northerners and helped the new Republican Party, and it was cited in the Lincoln–Douglas debates of 1858. Scott's owners freed him soon after the ruling. He died of tuberculosis in November 1858. The Civil War ended with the Thirteenth Amendment, and the Fourteenth in 1868 made all persons born in the United States citizens. Taney's opinion is generally regarded as one of the worst in the Court's history.

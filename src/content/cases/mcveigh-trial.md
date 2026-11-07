@@ -10,7 +10,7 @@ lat: 39.7392
 lng: -104.9903
 yearStart: 1997
 summary: A former soldier bombed a federal office building in Oklahoma City, killing 168 people, 19 of them children. The trial was moved to Denver, where a jury convicted him and recommended death.
-outcome: McVeigh was convicted on 11 counts on 2 June 1997 and sentenced to death. He was executed by lethal injection at Terre Haute on 11 June 2001. His accomplice Terry Nichols received life sentences.
+outcome: McVeigh was convicted on all 11 counts on 2 June 1997 and sentenced to death on 13 August. He was executed by lethal injection at Terre Haute on 11 June 2001. His accomplice Terry Nichols received life sentences.
 verdict: guilty
 glance:
   defendants: Timothy James McVeigh
@@ -51,7 +51,7 @@ At 9:02 on the morning of 19 April 1995 a truck bomb exploded outside the Alfred
 
 ## In the courtroom
 
-Judge Richard Matsch ruled that a fair trial could not be held in Oklahoma, and moved it to Denver. Joseph Hartzler led a prosecution that traced the rented truck and the purchases of the explosives' ingredients to McVeigh and his friend Terry Nichols. Stephen Jones, for the defence, argued that others had been involved. On 2 June 1997 the jury found McVeigh guilty on all 11 counts and recommended death.
+Judge Richard Matsch ruled that a fair trial could not be held in Oklahoma, and moved it to Denver. Joseph Hartzler led a prosecution that traced the rented truck and the purchases of the explosives' ingredients to McVeigh and his friend Terry Nichols. Stephen Jones, for the defence, argued that others had been involved. On 2 June 1997 the jury found McVeigh guilty on all 11 counts; on 13 June it recommended death, and Matsch imposed the sentence on 13 August.
 
 ## Aftermath
 

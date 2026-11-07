@@ -10,7 +10,7 @@ lat: 53.7585
 lng: -2.704
 yearStart: 1999
 yearEnd: 2000
-summary: A respected family doctor in Greater Manchester was convicted of murdering fifteen of his patients with injections of diamorphine. An inquiry later concluded that he had killed at least 215 people over 23 years.
+summary: A respected family doctor in Greater Manchester was convicted of murdering fifteen of his patients with injections of diamorphine. An inquiry later concluded that he had killed at least 218 people over 23 years.
 outcome: On 31 January 2000 Shipman was given 15 life sentences and a sentence for forgery, and told that life would mean life. He was found hanged in his cell at Wakefield on 13 January 2004.
 verdict: guilty
 glance:
@@ -54,12 +54,12 @@ The trial opened at Preston Crown Court in October 1999 and lasted three months.
 
 ## Aftermath
 
-Shipman was found hanged in his cell at Wakefield Prison in January 2004. A public inquiry led by Dame Janet Smith concluded in 2005 that he had killed at least 215 patients, and probably more, between 1975 and 1998. The case led to reforms in the way that deaths are certified and doctors are regulated in Britain.
+Shipman was found hanged in his cell at Wakefield Prison in January 2004. A public inquiry led by Dame Janet Smith concluded that he had killed at least 218 patients between 1975 and 1998; the total is estimated at about 250. The case led to reforms in the way that deaths are certified and doctors are regulated in Britain.
 
 <section class="adult-only">
 
 ## 18+ · The pattern
 
-Most of Shipman's victims were elderly women, often found dead sitting in a chair or lying on a sofa, fully dressed, after he visited their home. He was the one who called the death in and signed the certificate. The inquiry named 215 victims that it was sure or nearly sure of, and a further 45 where it suspected that he was responsible. Why he did it was never explained, and he did not tell anyone.
+Most of Shipman's victims were elderly women, often found dead sitting in a chair or lying on a sofa, fully dressed, after he visited their home. He was the one who called the death in and signed the certificate. The inquiry identified 218 victims that it was sure or nearly sure of, and it believed that there were more. Why he did it was never explained, and he did not tell anyone.
 
 </section>

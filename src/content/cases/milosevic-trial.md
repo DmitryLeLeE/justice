@@ -16,7 +16,7 @@ verdict: dismissed
 glance:
   defendants: Slobodan Milošević
   charges: Genocide, crimes against humanity and war crimes in Kosovo, Croatia and Bosnia (66 counts)
-  judge: Richard May (presiding, resigned 2004); Patrick Robinson (presiding from 2004)
+  judge: Richard May (presiding, resigned 2005); Patrick Robinson (presiding from 2005)
   prosecution: Carla Del Ponte; Geoffrey Nice
 timeline:
 - date: May 1999
@@ -49,7 +49,7 @@ Milošević led Serbia from 1989 and Yugoslavia from 1997, and was in power thro
 
 ## In the courtroom
 
-The trial opened in February 2002. Milošević refused to recognise the Tribunal, dismissed court-appointed lawyers and defended himself, cross-examining prosecution witnesses at length and turning the hearings into political speeches. The prosecution case, presented by Carla Del Ponte and Geoffrey Nice, took more than two years and 295 witnesses. His blood pressure and heart disease caused many delays, and when presiding judge Richard May resigned for health reasons in 2004, Patrick Robinson took over. The Tribunal imposed defence counsel on him in 2004, and the defence case was still in progress when he died.
+The trial opened in February 2002. Milošević refused to recognise the Tribunal, dismissed court-appointed lawyers and defended himself, cross-examining prosecution witnesses at length and turning the hearings into political speeches. The prosecution case, presented by Carla Del Ponte and Geoffrey Nice, took more than two years and 295 witnesses. His blood pressure and heart disease caused many delays, and when presiding judge Richard May resigned for health reasons in 2005, Patrick Robinson took over. The Tribunal imposed defence counsel on him in 2004, and the defence case was still in progress when he died.
 
 ## Aftermath
 

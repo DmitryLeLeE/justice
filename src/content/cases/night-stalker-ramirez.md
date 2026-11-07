@@ -22,8 +22,8 @@ timeline:
   event: First known attacks around Los Angeles
 - date: 31 Aug 1985
   event: Ramirez is caught in East Los Angeles
-- date: Jul 1989
-  event: Trial opens after years of delay
+- date: Jul 1988
+  event: Jury selection begins; the trial runs through 1989
 - date: 20 Sep 1989
   event: Convicted
 - date: 7 Nov 1989
@@ -46,11 +46,11 @@ sources:
 
 ## The case
 
-Between June 1984 and August 1985 an intruder broke into homes across the Los Angeles area and San Francisco Bay Area at night and shot, stabbed or beat to death the people inside, and raped many of the women and children. The press called him the "Night Stalker". The police made a link through a shoe print and a matched fingerprint from a stolen car, which gave them a name and an old booking photograph, and the picture was published in newspapers on 30 August 1985. The following day Ramirez was recognised in East Los Angeles and chased by a group of residents, who held him until police arrived.
+Between April 1984 and August 1985 an intruder broke into homes across the Los Angeles area and San Francisco Bay Area at night and shot, stabbed or beat to death the people inside, and raped many of the women and children. The press called him the "Night Stalker". The police made a link through a shoe print and a matched fingerprint from a stolen car, which gave them a name and an old booking photograph, and the picture was published in newspapers on 30 August 1985. The following day Ramirez was recognised in East Los Angeles and chased by a group of residents, who held him until police arrived.
 
 ## In the courtroom
 
-The trial, which was delayed for years by disputes over lawyers and venue, began in 1989 before Judge Michael Tynan. The prosecution connected the crimes through ballistics, fingerprints and jewellery that Ramirez had taken from his victims, and through the survivors, some of whom described what had happened to them. Ramirez sat in court with a pentagram drawn on his palm and, on one occasion, shouted "Hail Satan" in the courtroom. The jury convicted him on 20 September 1989 of 13 murders, five attempted murders, 11 sexual assaults and 14 burglaries.
+The trial, delayed for years by disputes over lawyers and venue, began with jury selection in July 1988 and ran through 1989 before Judge Michael Tynan. The prosecution connected the crimes through ballistics, fingerprints and jewellery that Ramirez had taken from his victims, and through the survivors, some of whom described what had happened to them. Ramirez sat in court with a pentagram drawn on his palm and, on one occasion, shouted "Hail Satan" in the courtroom. The jury convicted him on 20 September 1989 of 13 murders, five attempted murders, 11 sexual assaults and 14 burglaries.
 
 ## Aftermath
 

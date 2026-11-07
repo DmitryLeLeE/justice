@@ -10,7 +10,7 @@ lat: 37.7793
 lng: -122.4193
 yearStart: 1976
 summary: The newspaper heiress was kidnapped by a small revolutionary group and then took part in a bank robbery with them. Her trial turned on whether she had joined by choice or under duress.
-outcome: On 20 March 1976 the jury convicted her of armed bank robbery. She received seven years, served 22 months, and had her sentence commuted by President Carter in 1979. President Clinton pardoned her on 20 January 2001.
+outcome: On 20 March 1976 the jury convicted her of armed bank robbery. She was sentenced to 35 years, which was later reduced to seven; she served 22 months and had her sentence commuted by President Carter in 1979. President Clinton pardoned her on 20 January 2001.
 verdict: guilty
 glance:
   defendants: Patricia Campbell Hearst
@@ -56,4 +56,4 @@ At the trial in San Francisco in early 1976, her defence, led by F. Lee Bailey, 
 
 ## Aftermath
 
-She was sentenced to seven years and served about 22 months, until President Jimmy Carter commuted her sentence in February 1979. President Bill Clinton pardoned her on his last day in office, in January 2001. The case is often cited in discussions of coercion and what is now called coercive control.
+She was sentenced to 35 years, a term later cut to seven, and served about 22 months, until President Jimmy Carter commuted her sentence in February 1979. President Bill Clinton pardoned her on his last day in office, in January 2001. The case is often cited in discussions of coercion and what is now called coercive control.

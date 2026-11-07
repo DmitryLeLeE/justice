@@ -23,7 +23,7 @@ timeline:
   event: Srebrenica falls
 - date: 21 Jul 2008
   event: Arrested in Belgrade, living under a false name
-- date: 26 Oct 2010
+- date: 26 Oct 2009
   event: Trial opens
 - date: 24 Mar 2016
   event: Convicted; sentenced to 40 years
@@ -49,7 +49,7 @@ Karadžić was president of the self-declared Republika Srpska during the Bosnia
 
 ## In the courtroom
 
-The trial opened in October 2010 and Karadžić defended himself, with a team of legal advisers. He argued that he had never ordered the killings and that Bosnian Serbs had acted in defence. His case, with the prosecution evidence, ran for around five years. In March 2016 the judges found him guilty of genocide for Srebrenica, and of persecution, extermination, murder, deportation and hostage-taking, but not of genocide in the municipalities of Bosnia. He was sentenced to 40 years.
+The trial opened in October 2009 with Karadžić boycotting the first session; the prosecution case began in April 2010, and he defended himself with a team of legal advisers. He argued that he had never ordered the killings and that Bosnian Serbs had acted in defence. His case, with the prosecution evidence, ran for around five years. In March 2016 the judges found him guilty of genocide for Srebrenica, and of persecution, extermination, murder, deportation and hostage-taking, but not of genocide in the municipalities of Bosnia. He was sentenced to 40 years.
 
 ## Aftermath
 

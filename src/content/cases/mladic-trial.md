@@ -11,7 +11,7 @@ lng: 4.3291
 yearStart: 2012
 yearEnd: 2017
 summary: The commander of the Bosnian Serb army during the Bosnian War was tried at The Hague for genocide at Srebrenica and the siege of Sarajevo. The trial ran for four and a half years.
-outcome: On 22 November 2017 the Tribunal convicted Mladić of genocide, crimes against humanity and war crimes and sentenced him to life imprisonment. The appeal was dismissed in 2021. He died in custody in 2025.
+outcome: On 22 November 2017 the Tribunal convicted Mladić of genocide, crimes against humanity and war crimes and sentenced him to life imprisonment. The appeal was dismissed in 2021. He died in custody in The Hague in August 2026.
 verdict: guilty
 glance:
   defendants: Ratko Mladić, commander of the Bosnian Serb army
@@ -30,8 +30,8 @@ timeline:
   event: Convicted; life imprisonment
 - date: 8 Jun 2021
   event: Appeals Chamber upholds the verdict
-- date: 26 Mar 2025
-  event: Mladić dies in custody in The Hague
+- date: 27 Aug 2026
+  event: Mladić dies in the UN detention unit in The Hague
 mature: true
 image:
   src: https://commons.wikimedia.org/wiki/Special:FilePath/Ratko%20Mladi%C4%87%20-%20Start%20of%20Trial.jpg?width=1400
@@ -56,7 +56,7 @@ The trial began on 16 May 2012 and lasted until December 2016, with almost 600 w
 
 ## Aftermath
 
-His appeal was dismissed in June 2021 by the Mechanism for International Criminal Tribunals. Mladić was transferred to a prison in Scheveningen and died in custody in March 2025.
+His appeal was dismissed in June 2021 by the Mechanism for International Criminal Tribunals. Mladić was transferred to a prison in Scheveningen and was held in the UN detention unit in The Hague, where he died on 27 August 2026, aged 84.
 
 <section class="adult-only">
 

@@ -21,7 +21,7 @@ glance:
 timeline:
 - date: 21 Jan 1793
   event: Louis XVI is guillotined
-- date: 2 Aug 1793
+- date: 1 Aug 1793
   event: Marie Antoinette is moved to the Conciergerie
 - date: 14–16 Oct 1793
   event: Trial before the Revolutionary Tribunal
@@ -42,7 +42,7 @@ sources:
 
 ## The case
 
-After the monarchy fell in 1792 the royal family was imprisoned in the Temple tower. Louis XVI was tried and executed in January 1793. Marie Antoinette, who was Austrian by birth, was separated from her son in July and moved on 2 August to the Conciergerie, the prison under the courts. The Revolution was at war with Austria and under internal threat, and the Committee of Public Safety decided to try her.
+After the monarchy fell in 1792 the royal family was imprisoned in the Temple tower. Louis XVI was tried and executed in January 1793. Marie Antoinette, who was Austrian by birth, was separated from her son in July and moved on 1 August to the Conciergerie, the prison under the courts. The Revolution was at war with Austria and under internal threat, and the Committee of Public Safety decided to try her.
 
 ## In the courtroom
 

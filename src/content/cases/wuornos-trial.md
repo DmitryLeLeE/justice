@@ -47,7 +47,7 @@ In the winter of 1989 and 1990 seven men were found shot dead along roads and in
 
 ## In the courtroom
 
-The first trial, for Mallory's murder, opened in Volusia County in January 1992. The state argued that she had killed to rob him, and was allowed to introduce evidence of the other killings. She testified for the defence, but was a poor witness, and the jury found her guilty after less than two hours; Judge Uriel Blount sentenced her to death. In the following year she pleaded no contest to several more killings and received further death sentences. The body of the seventh victim was never found, and she was not charged in his case.
+The first trial, for Mallory's murder, opened in Volusia County in January 1992. The state argued that she had killed to rob him, and was allowed to introduce evidence of the other killings. She testified for the defence, but was a poor witness, and the jury found her guilty after less than two hours; Judge Uriel Blount sentenced her to death. In March 1992 she pleaded no contest to several more killings and received further death sentences. The body of the seventh victim was never found, and she was not charged in his case.
 
 ## Aftermath
 

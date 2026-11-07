@@ -11,7 +11,7 @@ lng: -73.9895
 yearStart: 1957
 yearEnd: 1962
 summary: A Soviet intelligence officer posing as a Brooklyn artist was exposed by his assistant. A lawyer who had helped to prosecute Nazis at Nuremberg defended him, and later negotiated the spy swap on the Glienicke Bridge.
-outcome: Abel was convicted on 25 October 1957 and sentenced to 30 years in prison. In February 1962 he was exchanged on the Glienicke Bridge in Berlin for the U-2 pilot Francis Gary Powers.
+outcome: Abel was convicted on 25 October 1957 and on 15 November sentenced to 30 years in prison. In February 1962 he was exchanged on the Glienicke Bridge in Berlin for the U-2 pilot Francis Gary Powers.
 verdict: guilty
 glance:
   defendants: Rudolf Ivanovich Abel (William Fisher)
@@ -25,7 +25,9 @@ timeline:
 - date: Oct 1957
   event: Trial in Brooklyn
 - date: 25 Oct 1957
-  event: Guilty; 30 years in prison
+  event: Guilty
+- date: 15 Nov 1957
+  event: Sentenced to 30 years in prison
 - date: 28 Mar 1960
   event: Supreme Court upholds the conviction 5–4
 - date: 10 Feb 1962
@@ -49,7 +51,7 @@ Rudolf Abel was a Soviet colonel who ran an illegal spy network in the United St
 
 ## In the courtroom
 
-James Donovan, an insurance lawyer who had served as counsel at the Nuremberg trials, was named to defend him. He challenged the way the FBI had searched the studio and argued that the case rested on the word of Häyhänen, who had admitted to lying. The jury convicted Abel on 25 October 1957. The espionage conspiracy count carried the death penalty. Donovan, thinking that a live Soviet spy might one day be exchanged for an American, urged the judge to spare him, and Judge Byers imposed 30 years.
+James Donovan, an insurance lawyer who had served as counsel at the Nuremberg trials, was named to defend him. He challenged the way the FBI had searched the studio and argued that the case rested on the word of Häyhänen, who had admitted to lying. The jury convicted Abel on 25 October 1957. The espionage conspiracy count carried the death penalty. Donovan, thinking that a live Soviet spy might one day be exchanged for an American, urged the judge to spare him, and Judge Byers imposed 30 years on 15 November.
 
 ## Aftermath
 
