@@ -38,19 +38,18 @@ const drawers = categoryKeys
 <Base>
   <section class="hero">
     <div class="hero-text">
-      <p class="kicker">Case files from the world's courtrooms</p>
-      <h1>Atlas of <span class="strike">Justice</span></h1>
+      <p class="kicker">Famous trials around the world</p>
+      <h1>Atlas of Justice</h1>
       <p class="hero-lede">
-        Trials, tribunals and hearings, each with a picture from the room or the case file. Pick a pin, open a file:
-        who stood accused, what was said, how it ended.
+        Trials, tribunals and hearings, each with a picture from the courtroom or the case. Pick a pin and open
+        a case: who stood accused, what was said, how it ended.
       </p>
-      <p class="hand-note hero-note" aria-hidden="true">sketches from the room, photos from the file.</p>
     </div>
     <dl class="stats" aria-label="The archive in numbers">
-      <div><dt>Files</dt><dd><span class="only-safe">{safe.length}</span><span class="only-adult">{cases.length}</span></dd></div>
+      <div><dt>Cases</dt><dd><span class="only-safe">{safe.length}</span><span class="only-adult">{cases.length}</span></dd></div>
       <div><dt>Countries</dt><dd><span class="only-safe">{countriesSafe}</span><span class="only-adult">{countries}</span></dd></div>
-      <div><dt>Drawers</dt><dd>{drawers.length}</dd></div>
-      <div><dt>Span</dt><dd>{firstYear}–{lastYear}</dd></div>
+      <div><dt>Categories</dt><dd>{drawers.length}</dd></div>
+      <div><dt>Years</dt><dd>{firstYear}–{lastYear}</dd></div>
     </dl>
   </section>
 
@@ -59,14 +58,13 @@ const drawers = categoryKeys
   </div>
   <p class="map-note">Pins mark a city, not a courthouse address.</p>
 
-  <section id="drawers" class="drawers" aria-labelledby="drawers-h">
-    <h2 id="drawers-h" class="sect-light">The filing drawers</h2>
+  <section id="categories" class="drawers" aria-labelledby="drawers-h">
+    <h2 id="drawers-h" class="sect-light">Browse by category</h2>
     <ul>
       {
         drawers.map((d) => (
           <li>
             <a href={url(`category/${d.key}/`)}>
-              <span class="drawer-no">{CATEGORIES[d.key].numeral}</span>
               <span class="drawer-name">{CATEGORIES[d.key].label}</span>
               <span class="drawer-count"><span class="only-safe">{d.ns}</span><span class="only-adult">{d.n}</span></span>
             </a>
@@ -78,13 +76,13 @@ const drawers = categoryKeys
 
   <form class="filters" aria-label="Filters" onsubmit="return false">
     <label class="f-search">
-      Search the archive
+      Search
       <input type="search" id="f-q" placeholder="name, city, charge…" autocomplete="off" />
     </label>
     <label>
-      Drawer
+      Category
       <select id="f-category">
-        <option value="">All drawers</option>
+        <option value="">All categories</option>
         {drawers.map((d) => <option value={d.key}>{CATEGORIES[d.key].label}</option>)}
       </select>
     </label>
@@ -103,14 +101,14 @@ const drawers = categoryKeys
       </select>
     </label>
     <button type="button" id="f-reset">Reset</button>
-    <button type="button" id="f-random" class="accent">Pull a random file</button>
-    <p class="count" id="count" aria-live="polite">Files: {safe.length}</p>
+    <button type="button" id="f-random" class="accent">Random case</button>
+    <p class="count" id="count" aria-live="polite">Cases: {safe.length}</p>
   </form>
 
   <ul class="grid" id="grid" style="list-style:none">
     {cases.map((entry, i) => <li><CaseCard entry={entry} number={i + 1} /></li>)}
   </ul>
-  <p class="empty" id="empty" hidden>No files match these filters.</p>
+  <p class="empty" id="empty" hidden>No cases match these filters.</p>
 
 <script type="application/json" id="cases-data" set:html={JSON.stringify(points)} />
 
@@ -149,7 +147,7 @@ const drawers = categoryKeys
       s.textContent = p.summary;
       const a = document.createElement('a');
       a.href = p.href;
-      a.textContent = 'Open the file';
+      a.textContent = 'Open the case';
       el.append(h, m, s, a);
       return el;
     }
@@ -198,7 +196,7 @@ const drawers = categoryKeys
         c.hidden = !show;
         (c.parentElement as HTMLElement).hidden = !show;
       }
-      countEl.textContent = `Files: ${visible.length}`;
+      countEl.textContent = `Cases: ${visible.length}`;
       emptyEl.hidden = visible.length > 0;
       if (fit && visible.length) {
         map.fitBounds(L.latLngBounds(visible.map((p) => [p.lat, p.lng] as [number, number])), {

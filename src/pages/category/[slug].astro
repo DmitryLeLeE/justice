@@ -25,11 +25,11 @@ const others = categoryKeys.filter((k) => k !== slug && all.some((c) => c.data.c
 
 <Base title={cat.label} description={cat.blurb}>
   <section class="drawer-head">
-    <p class="kicker">Filing drawer {cat.numeral}</p>
+    <p class="kicker">Category</p>
     <h1>{cat.label}</h1>
     <p class="drawer-blurb">{cat.blurb}</p>
     <p class="drawer-stats">
-      <span><span class="only-safe">{safeInDrawer.length}</span><span class="only-adult">{inDrawer.length}</span> files</span><span><span class="only-safe">{countriesSafe}</span><span class="only-adult">{countries}</span> countries</span><span>{first}–{last}</span>
+      <span><span class="only-safe">{safeInDrawer.length}</span><span class="only-adult">{inDrawer.length}</span> cases</span><span><span class="only-safe">{countriesSafe}</span><span class="only-adult">{countries}</span> countries</span><span>{first}–{last}</span>
     </p>
     <p class="crumbs"><a href={url()}>← Back to the map</a></p>
   </section>
@@ -38,10 +38,10 @@ const others = categoryKeys.filter((k) => k !== slug && all.some((c) => c.data.c
     {inDrawer.map(({ entry, number }) => <li><CaseCard entry={entry} number={number} /></li>)}
   </ul>
 
-  <nav class="other-drawers" aria-label="Other drawers">
-    <h2>Other drawers</h2>
+  <nav class="other-drawers" aria-label="Other categories">
+    <h2>Other categories</h2>
     <ul>
-      {others.map((k) => <li><a href={url(`category/${k}/`)}><span>{CATEGORIES[k].numeral}</span> {CATEGORIES[k].label}</a></li>)}
+      {others.map((k) => <li><a href={url(`category/${k}/`)}>{CATEGORIES[k].label}</a></li>)}
     </ul>
   </nav>
 

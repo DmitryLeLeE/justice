@@ -23,7 +23,7 @@ export function imgSrc(src: string): string {
   return /^https?:\/\//.test(src) ? src : url(src);
 }
 
-/** Up to `n` files related to `entry`: the explicit list first, then the same drawer by closeness in time. */
+/** Up to `n` files related to `entry`: the explicit list first, then the same category by closeness in time. */
 export function relatedFor(entry: CaseEntry, all: CaseEntry[], n = 3): CaseEntry[] {
   const byId = new Map(all.map((c) => [c.id, c]));
   const picked: CaseEntry[] = [];

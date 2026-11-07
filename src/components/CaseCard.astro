@@ -10,7 +10,6 @@ interface Props {
 
 const { entry, number } = Astro.props;
 const d = entry.data;
-const fileNo = String(number).padStart(3, '0');
 const verdict = d.verdict ? VERDICTS[d.verdict] : null;
 const search = `${d.title} ${d.titleOriginal ?? ''} ${d.country} ${d.city} ${d.court} ${d.summary}`.toLowerCase();
 ---
@@ -26,17 +25,16 @@ const search = `${d.title} ${d.titleOriginal ?? ''} ${d.country} ${d.city} ${d.c
 >
   <a class="card-link" href={url(`cases/${entry.id}/`)}>
     <div class="thumb">
-      <span class="file-no">AJ-{fileNo}</span>
       {d.mature && <span class="adult-chip">18+</span>}
       <img src={imgSrc(d.image!.src)} alt={d.image!.alt} loading="lazy" referrerpolicy="no-referrer" />
-      {verdict && <span class={`verdict-stamp tone-${verdict.tone}`}>{verdict.label}</span>}
-    </div>
+      </div>
     <p class="meta">{d.city}, {d.country} · {yearsLabel(d)}</p>
     <h3>{d.title}</h3>
+    {verdict && <p class={`verdict tone-${verdict.tone}`}>{verdict.label}</p>}
     <p class="summary">{d.summary}</p>
   </a>
   <div class="card-foot">
     <a class="tag" href={url(`category/${d.category}/`)}>{CATEGORIES[d.category].label}</a>
-    <button type="button" class="show-on-map" data-focus={entry.id}>Locate</button>
+    <button type="button" class="show-on-map" data-focus={entry.id}>Show on map</button>
   </div>
 </article>

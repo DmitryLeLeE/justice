@@ -7,7 +7,7 @@ export const REGIONS = {
   oceania: 'Oceania',
 } as const;
 
-/** Filing drawers. Each case sits in exactly one. `blurb` is the flavour text on the drawer page. */
+/** Categories. Each case sits in exactly one. `blurb` is the intro text on the category page. */
 export const CATEGORIES = {
   murder: {
     label: 'Murder trials',

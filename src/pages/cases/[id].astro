@@ -20,13 +20,11 @@ export async function getStaticPaths() {
 }
 
 const { entry, number, prev, next, related } = Astro.props;
-const fileNo = `AJ-${String(number).padStart(3, '0')}`;
 const d = entry.data;
 const { Content } = await render(entry);
 const verdict = d.verdict ? VERDICTS[d.verdict] : null;
 const g = d.glance ?? {};
 const kindNote = { drawing: 'drawn in court, not a photograph', photo: 'a photograph from the case', other: 'not from the trial itself' }[d.image!.kind];
-const exhibitLabel = d.image!.kind === 'other' ? 'Exhibit A (not from the trial).' : 'Exhibit A.';
 const glanceRows = [
   ['Defendants', g.defendants],
   ['Charges', g.charges],
@@ -41,21 +39,19 @@ const glanceRows = [
     {d.mature && (
       <div class="gate-note">
         <p class="ag-badge">18+</p>
-        <h2>This file is in the 18+ edition</h2>
+        <h2>This case is in the 18+ edition</h2>
         <p>It describes violent crime in plain language. Switch the edition on to read it.</p>
         <button type="button" id="gate-open" class="ag-yes">Open the 18+ edition</button>
         <p><a href={url()}>← Back to the map</a></p>
       </div>
     )}
     <div class="case-body">
-    <div class="form-head"><span>Official case file</span><span>No. {fileNo}</span></div>
     <p class="crumbs">
       <a href={url(`#${entry.id}`)}>← Back to the map</a>
       <span aria-hidden="true"> · </span>
-      <a href={url(`category/${d.category}/`)}>Drawer {CATEGORIES[d.category].numeral}: {CATEGORIES[d.category].label}</a>
+      <a href={url(`category/${d.category}/`)}>{CATEGORIES[d.category].label}</a>
     </p>
-    {verdict && <p class={`big-stamp tone-${verdict.tone}`} aria-label={`Outcome: ${verdict.label}`}>{verdict.label}</p>}
-    <p class="stamp">{CATEGORIES[d.category].label}</p>
+    <p class="eyebrow">{CATEGORIES[d.category].label}{verdict && <> · <span class={`verdict tone-${verdict.tone}`}>{verdict.label}</span></>}</p>
     <h1>{d.title}</h1>
     {d.titleOriginal && <p class="orig">{d.titleOriginal}</p>}
     <p class="lede">{d.summary}</p>
@@ -63,12 +59,11 @@ const glanceRows = [
     <figure>
       <div class="frame">
         <img src={imgSrc(d.image!.src)} alt={d.image!.alt} referrerpolicy="no-referrer" />
-        <span class="hand-note" aria-hidden="true">{kindNote}</span>
       </div>
       <figcaption>
-        <strong>{exhibitLabel}</strong> {d.image!.caption && <>{d.image!.caption}. </>}
+        {d.image!.caption && <>{d.image!.caption}. </>}
         {d.image!.artist && <>{d.image!.kind === 'drawing' ? 'Artist' : 'Author'}: {d.image!.artist}. </>}
-        Credit: {d.image!.license}. <a href={d.image!.sourceUrl} rel="noopener">Source</a>
+        {kindNote.charAt(0).toUpperCase() + kindNote.slice(1)}. Credit: {d.image!.license}. <a href={d.image!.sourceUrl} rel="noopener">Source</a>
       </figcaption>
     </figure>
 
@@ -78,7 +73,7 @@ const glanceRows = [
       <dt>Court</dt><dd>{d.court}</dd>
       <dt>Years</dt><dd>{yearsLabel(d)}</dd>
       {glanceRows.map(([k, v]) => <><dt>{k}</dt><dd>{v}</dd></>)}
-      <dt>Drawer</dt><dd>{CATEGORIES[d.category].label} · {REGIONS[d.region]}</dd>
+      <dt>Category</dt><dd>{CATEGORIES[d.category].label} · {REGIONS[d.region]}</dd>
       <dt>Outcome</dt><dd>{d.outcome}</dd>
     </dl>
 
@@ -123,7 +118,7 @@ const glanceRows = [
     {
       related.length > 0 && (
         <section class="related">
-          <h2 class="sect">Related files</h2>
+          <h2 class="sect">Related cases</h2>
           <ul class="grid grid-small" style="list-style:none">
             {related.map((r) => <li><CaseCard entry={r.entry} number={r.number} /></li>)}
           </ul>

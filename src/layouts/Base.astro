@@ -1,11 +1,10 @@
 ---
-import '@fontsource/bebas-neue/400.css';
-import '@fontsource/special-elite/400.css';
 import '@fontsource/libre-baskerville/400.css';
 import '@fontsource/libre-baskerville/400-italic.css';
 import '@fontsource/libre-baskerville/700.css';
-import '@fontsource/caveat/500.css';
-import '@fontsource/caveat/700.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
 import '../styles/global.css';
 import { url } from '../lib/cases';
 
@@ -35,7 +34,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0a0908" />
+    <meta name="theme-color" content="#faf8f4" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
@@ -57,16 +56,13 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to the content</a>
-    <div class="tape" aria-hidden="true"></div>
-    <div class="classif" aria-hidden="true">Official record · Atlas of Justice · <span class="redact only-safe">drawings and case photographs</span><span class="redact only-adult">18+ edition · unredacted</span> · <span class="only-safe">Public record</span><span class="only-adult">Restricted file</span></div>
     <header class="site-header">
       <a class="brand" href={url()}>
-        <span class="brand-mark" aria-hidden="true">⚖</span>
         <span>Atlas of Justice</span>
       </a>
       <nav aria-label="Main navigation">
-        <a href={url()}>The Map</a>
-        <a href={url('#drawers')}>Drawers</a>
+        <a href={url()}>Map</a>
+        <a href={url('#categories')}>Categories</a>
         <a href={url('about/')}>About</a>
         <button type="button" id="adult-toggle" class="adult-toggle" aria-pressed="false" title="Switch the 18+ edition on or off">
           <span class="at-badge">18+</span><span class="at-state">off</span>
@@ -93,7 +89,7 @@ const pageTitle = title ? `${title} · ${siteName}` : siteName;
       </form>
     </dialog>
     <footer class="site-footer">
-      <p>Atlas of Justice. Case files are compiled from public sources, linked on each page. Every picture is credited to its author or archive. Verdict stamps show the final legal outcome described in each file.</p>
+      <p>Atlas of Justice. Case files are compiled from public sources, linked on each page. Every picture is credited to its author or archive. Outcome labels give the final legal result described in each case.</p>
     </footer>
     <script is:inline>
       (function () {

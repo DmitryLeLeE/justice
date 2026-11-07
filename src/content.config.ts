@@ -23,9 +23,9 @@ const cases = defineCollection({
     summary: z.string().max(240),
     // How it ended, in a sentence or two
     outcome: z.string(),
-    // Drives the coloured stamp on the card and the dossier
+    // Drives the outcome label on the card and the case page
     verdict: z.enum(verdictKeys).optional(),
-    // "At a glance" block on the dossier page. Every field is optional
+    // "At a glance" block on the case page. Every field is optional
     glance: z
       .object({
         defendants: z.string().optional(),
@@ -37,7 +37,7 @@ const cases = defineCollection({
       .optional(),
     // Key dates, oldest first
     timeline: z.array(z.object({ date: z.string(), event: z.string() })).optional(),
-    // Slugs of related files; when absent the page picks neighbours from the same drawer
+    // Slugs of related files; when absent the page picks neighbours from the same category
     related: z.array(z.string()).optional(),
     // Main picture (courtroom drawing or documentary photograph), hot-linked from the archive that hosts it (absolute URL). Every case published on the site has one
     image: z
