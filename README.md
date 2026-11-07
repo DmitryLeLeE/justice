@@ -6,16 +6,16 @@ An interactive map of famous trials: one case file per trial, with a courtroom d
 
 ## What is in it
 
-- **132 case files** from 1633 to 2026, in 13 categories (murder, serial killers, mob, assassination, terrorism, spies, political trials, war crimes, fraud, celebrity, wrongful conviction, landmark rulings, inquiries).
+- **137 case files** from 1633 to 2026, in 13 categories (murder, serial killers, mob, assassination, terrorism, spies, political trials, war crimes, fraud, celebrity, wrongful conviction, landmark rulings, inquiries).
 - A **world map** with a pin per case, filters by category, region, verdict and period, and a random-case button.
 - Each case page has "at a glance" facts (defendants, charges, judge, prosecution, defence), a timeline, related cases and a source list.
 - Pictures are **hot-linked** from the archives that hold them (Wikimedia Commons, Library of Congress and others). Each one carries a credit line and says whether it is a courtroom drawing, a photograph or another kind of picture.
 
 ## The 18+ edition
 
-The site has two editions on the same pages. The standard edition shows 124 cases. The **18+ switch** in the navigation bar asks the reader to confirm their age and then adds:
+The site has two editions on the same pages. The standard edition shows 128 cases. The **18+ switch** in the navigation bar asks the reader to confirm their age and then adds:
 
-- 8 further cases marked 18+ (for example Leopold and Loeb, Emmett Till, Bundy, Breivik, McVeigh, Gacy, the Doctors' Trial, Saddam Hussein);
+- 9 further cases marked 18+ (for example Leopold and Loeb, Emmett Till, Bundy, Breivik, McVeigh, Gacy, the Doctors' Trial, Mladić);
 - frank "18+" sections inside existing case files, set off with a red rule;
 - documentary photographs from case materials, where the case has them (booking photographs, exhibits shown in court).
 
